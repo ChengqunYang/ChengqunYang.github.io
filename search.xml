@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[mysql事务]]></title>
+    <url>%2F2019%2F04%2F15%2Fmysql%E4%BA%8B%E5%8A%A1%2F</url>
+    <content type="text"><![CDATA[事务练习代码8HRJ{61HZ}9_39V[0.png) 概念代码里面的事务主要是针对连接来的，是用来防止当出现异常时对数据库的增删改操作只完成了一般，另一半未做，造成数据的错误。关闭自动提交后，当出现异常时，已完成的一般也会被恢复。 设置方法 通过conn.setAutocommit (false)；来关闭自动提交的设置 提交事务 conn.commit(); 回滚事务 conn.rollback(); 在catch中写明当出现问题时回滚。]]></content>
+      <categories>
+        <category>sql</category>
+        <category>mysql</category>
+      </categories>
+      <tags>
+        <tag>事务</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Hello World]]></title>
     <url>%2F2019%2F04%2F12%2Fhello-world%2F</url>
     <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
