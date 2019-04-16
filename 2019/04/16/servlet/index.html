@@ -110,20 +110,21 @@
 
 
 
-  <meta name="description" content="title: servlet学习笔记date: 2019-04-16 16:26:32tags:  Java javawebcategories: java  sevlet详细连接  servlet相关概念 Servlet 为创建基于 web 的应用程序提供了基于组件、独立于平台的方法，可以不受 CGI 程序的性能限制。Servlet 有权限访问所有的 Java API，包括访问企业级数据库的 J">
+  <meta name="description" content="sevlet详细连接  servlet相关概念 Servlet 为创建基于 web 的应用程序提供了基于组件、独立于平台的方法，可以不受 CGI 程序的性能限制。Servlet 有权限访问所有的 Java API，包括访问企业级数据库的 JDBC API.  Java Servlet 是运行在 Web 服务器或应用服务器上的程序，它是作为来自 Web 浏览器或其他 HTTP 客户端的请求和 HTT">
+<meta name="keywords" content="Java,javaweb">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Talk is cheap.  Show me the code.">
+<meta property="og:title" content="servlet学习笔记">
 <meta property="og:url" content="https://ChengqunYang.github.io/2019/04/16/servlet/index.html">
 <meta property="og:site_name" content="Talk is cheap.  Show me the code.">
-<meta property="og:description" content="title: servlet学习笔记date: 2019-04-16 16:26:32tags:  Java javawebcategories: java  sevlet详细连接  servlet相关概念 Servlet 为创建基于 web 的应用程序提供了基于组件、独立于平台的方法，可以不受 CGI 程序的性能限制。Servlet 有权限访问所有的 Java API，包括访问企业级数据库的 J">
+<meta property="og:description" content="sevlet详细连接  servlet相关概念 Servlet 为创建基于 web 的应用程序提供了基于组件、独立于平台的方法，可以不受 CGI 程序的性能限制。Servlet 有权限访问所有的 Java API，包括访问企业级数据库的 JDBC API.  Java Servlet 是运行在 Web 服务器或应用服务器上的程序，它是作为来自 Web 浏览器或其他 HTTP 客户端的请求和 HTT">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://chengqunyang.github.io/2019/04/16/servlet/架构图.png">
 <meta property="og:image" content="https://chengqunyang.github.io/2019/04/16/servlet/架构图2.png">
 <meta property="og:image" content="https://chengqunyang.github.io/2019/04/16/servlet/代码位置.png">
-<meta property="og:updated_time" content="2019-04-16T10:00:10.880Z">
+<meta property="og:updated_time" content="2019-04-16T10:29:12.275Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Talk is cheap.  Show me the code.">
-<meta name="twitter:description" content="title: servlet学习笔记date: 2019-04-16 16:26:32tags:  Java javawebcategories: java  sevlet详细连接  servlet相关概念 Servlet 为创建基于 web 的应用程序提供了基于组件、独立于平台的方法，可以不受 CGI 程序的性能限制。Servlet 有权限访问所有的 Java API，包括访问企业级数据库的 J">
+<meta name="twitter:title" content="servlet学习笔记">
+<meta name="twitter:description" content="sevlet详细连接  servlet相关概念 Servlet 为创建基于 web 的应用程序提供了基于组件、独立于平台的方法，可以不受 CGI 程序的性能限制。Servlet 有权限访问所有的 Java API，包括访问企业级数据库的 JDBC API.  Java Servlet 是运行在 Web 服务器或应用服务器上的程序，它是作为来自 Web 浏览器或其他 HTTP 客户端的请求和 HTT">
 <meta name="twitter:image" content="https://chengqunyang.github.io/2019/04/16/servlet/架构图.png">
 
 
@@ -142,7 +143,7 @@
   };
 </script>
 
-  <title> | Talk is cheap.  Show me the code.</title>
+  <title>servlet学习笔记 | Talk is cheap.  Show me the code.</title>
   
 
 
@@ -463,7 +464,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">servlet学习笔记
 
               
             
@@ -489,7 +490,7 @@
                 
               
 
-              <time title="Erstellt: 2019-04-16 16:26:32 / Geändert am: 18:00:10" itemprop="dateCreated datePublished" datetime="2019-04-16T16:26:32+08:00">2019-04-16</time>
+              <time title="Erstellt: 2019-04-16 16:26:32 / Geändert am: 18:29:12" itemprop="dateCreated datePublished" datetime="2019-04-16T16:26:32+08:00">2019-04-16</time>
             
 
             
@@ -499,6 +500,24 @@
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">in</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/java/" itemprop="url" rel="index"><span itemprop="name">java</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -522,7 +541,7 @@
                 
                   <span class="post-meta-item-text">Symbole im Artikel gezählt: </span>
                 
-                <span title="Symbole im Artikel gezählt">1.4k</span>
+                <span title="Symbole im Artikel gezählt">1.3k</span>
               
 
               
@@ -556,13 +575,7 @@
       
 
       
-        <p>title: servlet学习笔记<br>date: 2019-04-16 16:26:32<br>tags:</p>
-<ul>
-<li>Java</li>
-<li>javaweb<br>categories:</li>
-<li>java</li>
-</ul>
-<h1 id="sevlet"><a href="#sevlet" class="headerlink" title="sevlet"></a>sevlet</h1><p><a href="http://www.runoob.com/servlet/servlet-tutorial.html" target="_blank" rel="noopener">详细连接</a> </p>
+        <h1 id="sevlet"><a href="#sevlet" class="headerlink" title="sevlet"></a>sevlet</h1><p><a href="http://www.runoob.com/servlet/servlet-tutorial.html" target="_blank" rel="noopener">详细连接</a> </p>
 <h2 id="servlet相关概念"><a href="#servlet相关概念" class="headerlink" title="servlet相关概念"></a>servlet相关概念</h2><ul>
 <li><p>Servlet 为创建基于 web 的应用程序提供了基于组件、独立于平台的方法，可以不受 CGI 程序的性能限制。Servlet 有权限访问所有的 Java API，包括访问企业级数据库的 JDBC API.</p>
 </li>
@@ -666,7 +679,7 @@
   <li class="post-copyright-link">
     <strong>Beitragslink: </strong>
     
-    <a href="https://ChengqunYang.github.io/2019/04/16/servlet/">https://ChengqunYang.github.io/2019/04/16/servlet/</a>
+    <a href="https://ChengqunYang.github.io/2019/04/16/servlet/" title="servlet学习笔记">https://ChengqunYang.github.io/2019/04/16/servlet/</a>
   </li>
   <li class="post-copyright-license">
     <strong>Urheberrechtshinweis:  </strong>Alle Artikel in diesem Blog sind unter <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> lizenziert, außer es wird anders angegeben.</li>
@@ -676,6 +689,14 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Java/" rel="tag"><i class="fa fa-tag"></i> Java</a>
+          
+            <a href="/tags/javaweb/" rel="tag"><i class="fa fa-tag"></i> javaweb</a>
+          
+        </div>
       
 
       
@@ -854,7 +875,7 @@
                     
                       
                     
-                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-count">4</span>
                     <span class="site-state-item-name">Kategorien</span>
                   </a>
                 </div>
@@ -883,7 +904,7 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-count">6</span>
                     <span class="site-state-item-name">schlagwörter</span>
                   </a>
                 </div>
@@ -1019,7 +1040,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="Insgesamt gezählte Symbole">4k</span>
+    <span title="Insgesamt gezählte Symbole">3k</span>
   
 
   
