@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[servlet学习笔记]]></title>
+    <url>%2F2019%2F04%2F16%2Fservlet%2F</url>
+    <content type="text"><![CDATA[sevletservlet相关概念 Servlet 为创建基于 web 的应用程序提供了基于组件、独立于平台的方法，可以不受 CGI 程序的性能限制。Servlet 有权限访问所有的 Java API，包括访问企业级数据库的 JDBC API. Java Servlet 是运行在 Web 服务器或应用服务器上的程序，它是作为来自 Web 浏览器或其他 HTTP 客户端的请求和 HTTP 服务器上的数据库或应用程序之间的中间层。 使用 Servlet，您可以收集来自网页表单的用户输入，呈现来自数据库或者其他源的记录，还可以动态创建网页。 架构图: ​]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>javaweb</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[mysql事务]]></title>
     <url>%2F2019%2F04%2F15%2Fmysql%E4%BA%8B%E5%8A%A1%2F</url>
     <content type="text"><![CDATA[事务练习代码 概念代码里面的事务主要是针对连接来的，是用来防止当出现异常时对数据库的增删改操作只完成了一般，另一半未做，造成数据的错误。关闭自动提交后，当出现异常时，已完成的一般也会被恢复。 设置方法 通过conn.setAutocommit (false)；来关闭自动提交的设置 提交事务 conn.commit(); 回滚事务 conn.rollback(); 在catch中写明当出现问题时回滚。]]></content>
