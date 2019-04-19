@@ -110,18 +110,18 @@
 
 
 
-  <meta name="description" content="AjaxAjax:是什么? 使用css和XHTML来表示. 使用DOM模型来交互和动态显示. 使用XMLHttpRequest来和服务器进行异步通信. 使用JavaScript来绑定和调用.    有什么用? 咱们的网页如果想要刷新局部内容,那么需要重新载入整个网页,用户体验不是很好.就是为了解决局部刷新问题,其他部分不动,只改变更新了的地方.">
+  <meta name="description" content="AjaxAjax:是什么? 使用css和XHTML来表示. 使用DOM模型来交互和动态显示. 使用XMLHttpRequest来和服务器进行异步通信. 使用JavaScript来绑定和调用.    有什么用? 咱们的网页如果想要刷新局部内容,那么需要重新载入整个网页,用户体验不是很好.就是为了解决局部刷新问题,其他部分不动,只改变更新了的地方.    数据请求:    Get 创建对象: 1234">
 <meta name="keywords" content="JavaScript,JavaWeb,Java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Ajax">
 <meta property="og:url" content="https://ChengqunYang.github.io/2019/04/19/Ajax/index.html">
 <meta property="og:site_name" content="Talk is cheap.  Show me the code.">
-<meta property="og:description" content="AjaxAjax:是什么? 使用css和XHTML来表示. 使用DOM模型来交互和动态显示. 使用XMLHttpRequest来和服务器进行异步通信. 使用JavaScript来绑定和调用.    有什么用? 咱们的网页如果想要刷新局部内容,那么需要重新载入整个网页,用户体验不是很好.就是为了解决局部刷新问题,其他部分不动,只改变更新了的地方.">
+<meta property="og:description" content="AjaxAjax:是什么? 使用css和XHTML来表示. 使用DOM模型来交互和动态显示. 使用XMLHttpRequest来和服务器进行异步通信. 使用JavaScript来绑定和调用.    有什么用? 咱们的网页如果想要刷新局部内容,那么需要重新载入整个网页,用户体验不是很好.就是为了解决局部刷新问题,其他部分不动,只改变更新了的地方.    数据请求:    Get 创建对象: 1234">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-04-19T15:45:00.041Z">
+<meta property="og:updated_time" content="2019-04-19T15:56:33.954Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ajax">
-<meta name="twitter:description" content="AjaxAjax:是什么? 使用css和XHTML来表示. 使用DOM模型来交互和动态显示. 使用XMLHttpRequest来和服务器进行异步通信. 使用JavaScript来绑定和调用.    有什么用? 咱们的网页如果想要刷新局部内容,那么需要重新载入整个网页,用户体验不是很好.就是为了解决局部刷新问题,其他部分不动,只改变更新了的地方.">
+<meta name="twitter:description" content="AjaxAjax:是什么? 使用css和XHTML来表示. 使用DOM模型来交互和动态显示. 使用XMLHttpRequest来和服务器进行异步通信. 使用JavaScript来绑定和调用.    有什么用? 咱们的网页如果想要刷新局部内容,那么需要重新载入整个网页,用户体验不是很好.就是为了解决局部刷新问题,其他部分不动,只改变更新了的地方.    数据请求:    Get 创建对象: 1234">
 
 
 
@@ -486,7 +486,7 @@
                 
               
 
-              <time title="Erstellt: 2019-04-19 23:37:54 / Geändert am: 23:45:00" itemprop="dateCreated datePublished" datetime="2019-04-19T23:37:54+08:00">2019-04-19</time>
+              <time title="Erstellt: 2019-04-19 23:37:54 / Geändert am: 23:56:33" itemprop="dateCreated datePublished" datetime="2019-04-19T23:37:54+08:00">2019-04-19</time>
             
 
             
@@ -537,7 +537,7 @@
                 
                   <span class="post-meta-item-text">Symbole im Artikel gezählt: </span>
                 
-                <span title="Symbole im Artikel gezählt">177</span>
+                <span title="Symbole im Artikel gezählt">928</span>
               
 
               
@@ -580,7 +580,15 @@
 <h2 id="有什么用"><a href="#有什么用" class="headerlink" title="有什么用?"></a>有什么用?</h2><ul>
 <li>咱们的网页如果想要刷新局部内容,那么需要重新载入整个网页,用户体验不是很好.就是为了解决局部刷新问题,其他部分不动,只改变更新了的地方.  </li>
 </ul>
-
+<h2 id="数据请求-Get"><a href="#数据请求-Get" class="headerlink" title="数据请求:    Get"></a>数据请求:    Get</h2><ol>
+<li><p>创建对象:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">function <span class="title">ajaxFunction</span><span class="params">()</span></span>&#123;</span><br><span class="line">  <span class="keyword">var</span> xmlHttp;</span><br><span class="line">  <span class="keyword">try</span>&#123; <span class="comment">// Firefox, Opera 8.0+, Safari</span></span><br><span class="line">       xmlHttp=<span class="keyword">new</span> XMLHttpRequest();</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="keyword">catch</span> (e)&#123;</span><br><span class="line">   <span class="keyword">try</span>&#123;<span class="comment">// Internet Explorer</span></span><br><span class="line">         xmlHttp=<span class="keyword">new</span> ActiveXObject(<span class="string">"Msxml2.XMLHTTP"</span>);</span><br><span class="line">      &#125;</span><br><span class="line">    <span class="keyword">catch</span> (e)&#123;</span><br><span class="line">      <span class="keyword">try</span>&#123;</span><br><span class="line">         xmlHttp=<span class="keyword">new</span> ActiveXObject(<span class="string">"Microsoft.XMLHTTP"</span>);</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">catch</span> (e)&#123;&#125;</span><br><span class="line">      &#125;</span><br><span class="line">   &#125;</span><br><span class="line"><span class="keyword">return</span> xmlHttp;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>发送请求:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//执行get请求</span></span><br><span class="line">	<span class="function">function <span class="title">get</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="comment">//1.创建xmlhttprequest 对象</span></span><br><span class="line">		<span class="keyword">var</span> request = ajaxFunction();</span><br><span class="line">		<span class="comment">//2.发送请求</span></span><br><span class="line">		</span><br><span class="line">		<span class="comment">/*</span></span><br><span class="line"><span class="comment">			参数1:请求类型 GET or POST</span></span><br><span class="line"><span class="comment">			参数2:请求的路径</span></span><br><span class="line"><span class="comment">			参数3:是否同步  true  or false</span></span><br><span class="line"><span class="comment">		*/</span></span><br><span class="line">		request.open(<span class="string">"GET"</span>,<span class="string">"/ajax/DemoServlet01"</span>,<span class="keyword">true</span>);</span><br><span class="line">		</span><br><span class="line">		request.send();</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="数据请求-Post"><a href="#数据请求-Post" class="headerlink" title="数据请求:    Post"></a>数据请求:    Post</h2>
       
     </div>
 
@@ -976,7 +984,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Ajax"><span class="nav-number">1.</span> <span class="nav-text">Ajax</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Ajax-是什么"><span class="nav-number">1.1.</span> <span class="nav-text">Ajax:是什么?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#有什么用"><span class="nav-number">1.2.</span> <span class="nav-text">有什么用?</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Ajax"><span class="nav-number">1.</span> <span class="nav-text">Ajax</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Ajax-是什么"><span class="nav-number">1.1.</span> <span class="nav-text">Ajax:是什么?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#有什么用"><span class="nav-number">1.2.</span> <span class="nav-text">有什么用?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据请求-Get"><span class="nav-number">1.3.</span> <span class="nav-text">数据请求:    Get</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据请求-Post"><span class="nav-number">1.4.</span> <span class="nav-text">数据请求:    Post</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -1018,7 +1026,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="Insgesamt gezählte Symbole">4k</span>
+    <span title="Insgesamt gezählte Symbole">5k</span>
   
 
   
@@ -1027,7 +1035,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="Insgesamte Lesezeit">4 minuten.</span>
+    <span title="Insgesamte Lesezeit">5 minuten.</span>
   
 </div>
 
