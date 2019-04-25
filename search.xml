@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[设计模式]]></title>
+    <url>%2F2019%2F04%2F25%2F%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%2F</url>
+    <content type="text"><![CDATA[设计原则 找出应用中可能需要变化之处，把他们独立出来，不要和那些不需要变化的代码混在一起。 针对接口编程，而不是针对实现编程。 多用组合，少用继承。 为了交互对象之间的松耦合设计而努力。 设计模式策略模式 定义了算法族,分别封装起来,让他们之间可以互相替换,此模式让算法的变换独立于使用算法的客户。 ### 观察者模式 定义了对象之间的一对多依赖，这样一来，当一个对象改变状态时，它的所有依赖者都会收到通知并自动更新。]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>DesignMode</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[关于java中的注解]]></title>
     <url>%2F2019%2F04%2F23%2F%E5%85%B3%E4%BA%8Ejava%E4%B8%AD%E7%9A%84%E6%B3%A8%E8%A7%A3%2F</url>
     <content type="text"><![CDATA[什么是注解?定义 注解（Annotation），也叫元数据。一种代码级别的说明。它是JDK1.5及以后版本引入的一个特性，与类、接口、枚举是在同一个层次。它可以声明在包、类、字段、方法、局部变量、方法参数等的前面，用来对这些元素进行说明，注释。 练习代码 JDK中的三种注解 @Override 它的作用是对覆盖超类中方法的方法进行标记，如果被标记的方法并没有实际覆盖超类中的方法，则编译器会发出错误警告。 @Deprecated 它的作用是对不应该再使用的方法添加注解，当编程人员使用这些方法时，将会在编译时显示提示信息，它与javadoc里的@deprecated标记有相同的功能，准确的说，它还不如javadoc @deprecated，因为它不支持参数，使用@Deprecated的示例代码示例如下： @SuppressWarnings 其参数有：deprecation，使用了过时的类或方法时的警告unchecked，执行了未检查的转换时的警告fallthrough，当 switch 程序块直接通往下一种情况而没有 break 时的警告path，在类路径、源文件路径等中有不存在的路径时的警告serial，当在可序列化的类上缺少serialVersionUID 定义时的警告finally ，任何 finally 子句不能正常完成时的警告all，关于以上所有情况的警告12//以下注解的含义为: 抑制编译器发生警告信息(如果变量未使用或者未遵循泛型格式错误的不报警告) @SuppressWarnings(&#123; "unused", "rawtypes" &#125;) 注解的特点 注解和接口,类一样都是数据类型. 注解可以加在变量,方法,类上. 注解可以有属性也可以没有属性@override @Test(timeout=1000) 注解是有作用范围的(源码期间有效,编译期间有效,运行期间有效) 源码期间有效: String 类上的@Author,@Since,@See 作用:使用命令 javadoc 命令将当前的源码生成帮助文件,可以识别String类上的相关的注解. 编译期间有效:@Override,@Deprecated,@Suppresswarning 作用:告诉编译器部分信息 运行期间有效:@Test 作用当我们在我们当前的代码上以Junit方式运行时,Junit会运行方法上包含@Test注解的方法 自定义注解 格式: 12345678910public @interface 注解名称 &#123; //在注解中定义一个属性 public long timeout() default -1; //only primitive type, String, Class, annotation, enumeration are permitted or 1- dimensional arrays thereof //报错,原因是属性不支持自定义类类型 //public TestAnnotation aa(); //注解的属性支持的类型有:基本数据类型(4类8种),String,Class,Annotation(注解类型),枚举类型,以及以上类型的一维数组类型 &#125; 注解作用: 配置作用 配置:开发的时候部分信息不希望写死在程序中,例如数据库的用户名和密码,可以将用户名和密码存放在.txt,.properties,.xml文件中,利用程序来读取文件中的内容. 什么时候用注解来做配置 如果配置信息不会发生频繁的改动,例如Servlet路径,建议使用注解的形式. 如果配置信息需要发生频繁的修改,例如数据库的用户名和密码信息,建议采用传统方法(.txt,.xml,.properties).]]></content>
