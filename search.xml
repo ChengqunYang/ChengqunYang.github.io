@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Spring的相关配置]]></title>
+    <url>%2F2019%2F04%2F29%2FSpring%E7%9A%84%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE%2F</url>
+    <content type="text"><![CDATA[XML提示的配置​ Scheme的配置]]></content>
+      <categories>
+        <category>Java</category>
+        <category>Spring</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>Spring</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Linux使用心得]]></title>
     <url>%2F2019%2F04%2F27%2FLinux%E4%BD%BF%E7%94%A8%E5%BF%83%E5%BE%97%2F</url>
     <content type="text"></content>
