@@ -119,7 +119,7 @@
 <meta property="og:description" content="基本概念 IOC:(Inverse of Control)控制反转　　　　　将对象的创建权反转(交给)Spring DI:(Dependency Injection)依赖注入　　　　前提必须得有IOC的环境,Spring管理这个类的时候将类的依赖的属性注入(设置)进来 AOP:(Aspect Oriented Programming)面向切面编程    　　　通过预编译方式和运行期动态代理实现程序">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://chengqunyang.github.io/2019/04/29/Spring的相关配置/XML的schema配置.png">
-<meta property="og:updated_time" content="2019-05-03T09:37:13.365Z">
+<meta property="og:updated_time" content="2019-05-03T09:47:43.113Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Spring的相关配置">
 <meta name="twitter:description" content="基本概念 IOC:(Inverse of Control)控制反转　　　　　将对象的创建权反转(交给)Spring DI:(Dependency Injection)依赖注入　　　　前提必须得有IOC的环境,Spring管理这个类的时候将类的依赖的属性注入(设置)进来 AOP:(Aspect Oriented Programming)面向切面编程    　　　通过预编译方式和运行期动态代理实现程序">
@@ -505,7 +505,7 @@
                 
                   <span class="post-meta-item-text">Bearbeitet am</span>
                 
-                <time title="Geändert am: 2019-05-03 17:37:13" itemprop="dateModified" datetime="2019-05-03T17:37:13+08:00">2019-05-03</time>
+                <time title="Geändert am: 2019-05-03 17:47:43" itemprop="dateModified" datetime="2019-05-03T17:47:43+08:00">2019-05-03</time>
               
             
           </span>
@@ -602,12 +602,14 @@
 <h4 id="Bean的相关配置-XML"><a href="#Bean的相关配置-XML" class="headerlink" title="Bean的相关配置(XML)"></a>Bean的相关配置(XML)</h4><ul>
 <li><p><bean>标签的id和name的配置 　　　大部分情况下作用相同</bean></p>
 <ul>
-<li><p>id    :使用了约束中的唯一约束.里面不能出现特殊字符</p>
-</li>
-<li><p>name: 没有使用约束中的唯一约束(理论上可以出现重复的,但是实际开发不能出现的),name里面可以出现特殊字符</p>
-</li>
+<li>id    :使用了约束中的唯一约束.里面不能出现特殊字符</li>
 </ul>
 </li>
+</ul>
+<ul>
+<li>name: 没有使用约束中的唯一约束(理论上可以出现重复的,但是实际开发不能出现的),name里面可以出现特殊字符</li>
+</ul>
+<ul>
 <li><p>Bean的生命周期的配置</p>
 <p>  init-method    :Bean被初始化的时候执行的方法</p>
 <p>  destroy            :Bean被销毁的时候执行的方法   执行条件（1.Bean是单例创建的（默认就是单例创建的） 2.工厂关闭）   如果是多例模式下不知道销毁哪个所以就不会销毁。</p>
@@ -738,24 +740,35 @@
 </li>
 </ul>
 </li>
-<li>Bean的其他的注解<ul>
+<li><p>Bean的其他的注解</p>
+<ul>
 <li>生命周期相关的注解<ul>
 <li>@PostConstruct:初始化方法</li>
 <li>@PreDestory:     销毁方法</li>
 </ul>
 </li>
-<li>Bean作用范围的注解<ul>
-<li>@Scope:    作用范围<pre><code>1. singleton        :默认的，Spring会采用单例模式来创建这个对象 
-   2. prototype      :多例模式
-   3. request          :应用在web项目中，Spring创建这个类以后，将这个类存入到request范围中。
-   4. session          :应用在web项目中，Spring创建这个类以后，将这个类存入到session范围中。
-   5. globalsession:应用在web项目中，必须在porlet环境下使用，如果没有这种环境，相当于session。
-</code></pre></li>
+<li><p>Bean作用范围的注解</p>
+<ul>
+<li>@Scope</li>
 </ul>
+<ol>
+<li><p>singleton        :默认的，Spring会采用单例模式来创建这个对象</p>
+</li>
+<li><p>prototype      :多例模式</p>
+</li>
+<li><p>request          :应用在web项目中，Spring创建这个类以后，将这个类存入到request范围中。</p>
+</li>
+<li><p>session          :应用在web项目中，Spring创建这个类以后，将这个类存入到session范围中。</p>
+<ol start="5">
+<li>globalsession:应用在web项目中，必须在porlet环境下使用，如果没有这种环境，相当于session。</li>
+</ol>
+</li>
+</ol>
 </li>
 </ul>
 </li>
 </ul>
+<p>开发中常用的就是singleton和prototype</p>
 <h4 id="XML模式和注解模式的比较"><a href="#XML模式和注解模式的比较" class="headerlink" title="XML模式和注解模式的比较"></a>XML模式和注解模式的比较</h4><ul>
 <li>使用场景<ul>
 <li>XML:可以适用于任何场景,结构清晰,维护方便</li>
