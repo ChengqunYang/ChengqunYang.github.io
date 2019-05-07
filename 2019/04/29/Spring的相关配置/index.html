@@ -119,7 +119,7 @@
 <meta property="og:description" content="基本概念 IOC:(Inverse of Control)控制反转　　　　　将对象的创建权反转(交给)Spring DI:(Dependency Injection)依赖注入　　　　前提必须得有IOC的环境,Spring管理这个类的时候将类的依赖的属性注入(设置)进来 AOP:(Aspect Oriented Programming)面向切面编程    　　　通过预编译方式和运行期动态代理实现程序">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://chengqunyang.github.io/2019/04/29/Spring的相关配置/XML的schema配置.png">
-<meta property="og:updated_time" content="2019-05-06T12:48:57.732Z">
+<meta property="og:updated_time" content="2019-05-07T13:07:48.940Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Spring的相关配置">
 <meta name="twitter:description" content="基本概念 IOC:(Inverse of Control)控制反转　　　　　将对象的创建权反转(交给)Spring DI:(Dependency Injection)依赖注入　　　　前提必须得有IOC的环境,Spring管理这个类的时候将类的依赖的属性注入(设置)进来 AOP:(Aspect Oriented Programming)面向切面编程    　　　通过预编译方式和运行期动态代理实现程序">
@@ -505,7 +505,7 @@
                 
                   <span class="post-meta-item-text">Bearbeitet am</span>
                 
-                <time title="Geändert am: 2019-05-06 20:48:57" itemprop="dateModified" datetime="2019-05-06T20:48:57+08:00">2019-05-06</time>
+                <time title="Geändert am: 2019-05-07 21:07:48" itemprop="dateModified" datetime="2019-05-07T21:07:48+08:00">2019-05-07</time>
               
             
           </span>
@@ -558,7 +558,7 @@
                 
                   <span class="post-meta-item-text">Symbole im Artikel gezählt: </span>
                 
-                <span title="Symbole im Artikel gezählt">5.9k</span>
+                <span title="Symbole im Artikel gezählt">10k</span>
               
 
               
@@ -572,7 +572,7 @@
                 
                   <span class="post-meta-item-text">Lesezeit &asymp;</span>
                 
-                <span title="Lesezeit">5 minuten.</span>
+                <span title="Lesezeit">9 minuten.</span>
               
             </div>
           
@@ -694,7 +694,7 @@
 <ul>
 <li><p>数组类型,list类型,set类型,map类型</p>
 </li>
-<li><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">        </span><br><span class="line"><span class="comment">&lt;!-- Spring的集合属性的注入     --&gt;</span></span><br><span class="line">        </span><br><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"collectionBean"</span> <span class="attr">class</span>=<span class="string">"spring.demo4.CollectionBean"</span>&gt;</span></span><br><span class="line">       <span class="comment">&lt;!-- 注入数组类型 --&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"arrs"</span> &gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">list</span>&gt;</span></span><br><span class="line">		  <span class="comment">&lt;!-- 	&lt;ref/&gt; 引入对象类型 --&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">value</span>&gt;</span>王东<span class="tag">&lt;/<span class="name">value</span>&gt;</span>   <span class="comment">&lt;!-- 引入一般类型 --&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">value</span>&gt;</span>赵红<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">value</span>&gt;</span>李冠希<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;/<span class="name">list</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">	   <span class="comment">&lt;!-- 注入List集合类型 --&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"list"</span> &gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">list</span>&gt;</span></span><br><span class="line">		  <span class="comment">&lt;!-- 	&lt;ref/&gt; 引入对象类型 --&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">value</span>&gt;</span>小明<span class="tag">&lt;/<span class="name">value</span>&gt;</span>   <span class="comment">&lt;!-- 引入一般类型 --&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">value</span>&gt;</span>小红<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">value</span>&gt;</span>小狗<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;/<span class="name">list</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">	</span><br><span class="line">	  <span class="comment">&lt;!-- 注入Set集合类型--&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"set"</span> &gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">set</span>&gt;</span></span><br><span class="line">		  <span class="comment">&lt;!-- 	&lt;ref/&gt; 引入对象类型 --&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">value</span>&gt;</span>aaa<span class="tag">&lt;/<span class="name">value</span>&gt;</span>   <span class="comment">&lt;!-- 引入一般类型 --&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">value</span>&gt;</span>bbb<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">value</span>&gt;</span>ccc<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;/<span class="name">set</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">	</span><br><span class="line">	<span class="comment">&lt;!-- 注入Map集合 --&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"map"</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">map</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">entry</span> <span class="attr">key</span>=<span class="string">"aaa"</span> <span class="attr">value</span>=<span class="string">"111"</span>/&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">entry</span> <span class="attr">key</span>=<span class="string">"bbb"</span> <span class="attr">value</span>=<span class="string">"222"</span>/&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">entry</span> <span class="attr">key</span>=<span class="string">"ccc"</span> <span class="attr">value</span>=<span class="string">"333"</span>/&gt;</span></span><br><span class="line">		<span class="tag">&lt;/<span class="name">map</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">	</span><br><span class="line"><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<li><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">    </span><br><span class="line"><span class="comment">&lt;!-- Spring的集合属性的注入     --&gt;</span></span><br><span class="line">        </span><br><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"collectionBean"</span> <span class="attr">class</span>=<span class="string">"spring.demo4.CollectionBean"</span>&gt;</span></span><br><span class="line">       <span class="comment">&lt;!-- 注入数组类型 --&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"arrs"</span> &gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">list</span>&gt;</span></span><br><span class="line">		  <span class="comment">&lt;!-- 	&lt;ref/&gt; 引入对象类型 --&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">value</span>&gt;</span>王东<span class="tag">&lt;/<span class="name">value</span>&gt;</span>   <span class="comment">&lt;!-- 引入一般类型 --&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">value</span>&gt;</span>赵红<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">value</span>&gt;</span>李冠希<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;/<span class="name">list</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">	   <span class="comment">&lt;!-- 注入List集合类型 --&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"list"</span> &gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">list</span>&gt;</span></span><br><span class="line">		  <span class="comment">&lt;!-- 	&lt;ref/&gt; 引入对象类型 --&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">value</span>&gt;</span>小明<span class="tag">&lt;/<span class="name">value</span>&gt;</span>   <span class="comment">&lt;!-- 引入一般类型 --&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">value</span>&gt;</span>小红<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">value</span>&gt;</span>小狗<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;/<span class="name">list</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">	</span><br><span class="line">	  <span class="comment">&lt;!-- 注入Set集合类型--&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"set"</span> &gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">set</span>&gt;</span></span><br><span class="line">		  <span class="comment">&lt;!-- 	&lt;ref/&gt; 引入对象类型 --&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">value</span>&gt;</span>aaa<span class="tag">&lt;/<span class="name">value</span>&gt;</span>   <span class="comment">&lt;!-- 引入一般类型 --&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">value</span>&gt;</span>bbb<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">value</span>&gt;</span>ccc<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;/<span class="name">set</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">	</span><br><span class="line">	<span class="comment">&lt;!-- 注入Map集合 --&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"map"</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">map</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">entry</span> <span class="attr">key</span>=<span class="string">"aaa"</span> <span class="attr">value</span>=<span class="string">"111"</span>/&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">entry</span> <span class="attr">key</span>=<span class="string">"bbb"</span> <span class="attr">value</span>=<span class="string">"222"</span>/&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">entry</span> <span class="attr">key</span>=<span class="string">"ccc"</span> <span class="attr">value</span>=<span class="string">"333"</span>/&gt;</span></span><br><span class="line">		<span class="tag">&lt;/<span class="name">map</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">	</span><br><span class="line"><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
@@ -717,8 +717,11 @@
 <ul>
 <li><p><strong>@Component:组件</strong></p>
 <ul>
-<li>修饰一个类，将这个类交给Spring管理</li>
-<li>这个注解有三个衍生注解（功能类似），修饰类<ul>
+<li><p>修饰一个类，将这个类交给Spring管理相当于</p>
+<p><code>&lt;bean id=&quot;orderDao&quot; class=&quot;spring.demo1.OrderDao&quot;&gt;&lt;/bean&gt;</code></p>
+</li>
+<li><p>这个注解有三个衍生注解（功能类似），修饰类</p>
+<ul>
 <li>Controller:    web层</li>
 <li>Service:         servcice层</li>
 <li>Repository:   dao层</li>
@@ -780,8 +783,9 @@
 </ul>
 </li>
 </ul>
-<h4 id="Spring-的AOP的开发-AspectJ的XML的方式"><a href="#Spring-的AOP的开发-AspectJ的XML的方式" class="headerlink" title="Spring 的AOP的开发(AspectJ的XML的方式)"></a>Spring 的AOP的开发(AspectJ的XML的方式)</h4><ul>
-<li>Spring的AOP的简介<ul>
+<h4 id="Spring-的AOP的开发-XML"><a href="#Spring-的AOP的开发-XML" class="headerlink" title="Spring 的AOP的开发(XML)"></a>Spring 的AOP的开发(XML)</h4><ul>
+<li><p>Spring的AOP的简介</p>
+<ul>
 <li>AOP思想最早是由AOP联盟组织提出的,Spring是使用这种框架最好的组织.Spring的AOP自己的实现方式非常繁琐,AspectJ是一个AOP的框架,后来Spring引入AspectJ作为自身AOP的开发.</li>
 <li>Spring两套AOP开发的方式<ul>
 <li>Spring传统方式(弃用)</li>
@@ -790,7 +794,17 @@
 </li>
 </ul>
 </li>
-<li>AOP开发中相关的术语<ul>
+<li><p>Spring底层的AOP实现原理</p>
+<ul>
+<li>动态代理：<ul>
+<li>JDK的动态代理　　　只能对实现了接口的类产生代理(自动的)</li>
+<li>Cglib的动态代理　　对没有实现接口的类产生代理对象,产生子类对象</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>AOP开发中相关的术语</p>
+<ul>
 <li>JoinPoint(连接点):可以被拦截到的点,增删改查的方法都可以被增强,这些方法就可以被称为是连接点</li>
 <li>Pointcut(切入点):真正被拦截到的点,在实际开发中只对save方法进行了增强,所以save方法就称为是切入点</li>
 <li>Advice(通知,增强):方法层面的增强.现在对save方法进行权限校验,权限校验的方法称之为通知</li>
@@ -800,12 +814,137 @@
 <li>Aspect(切面):多个通知和多个切入点组合!!!</li>
 </ul>
 </li>
-<li>AspectJ的XML的方式<ul>
+<li><p>AspectJ的XML的方式</p>
+<ul>
 <li>引入基本的开发包(6个)</li>
 <li>引入AOP开发的相关Jar包(4个)</li>
 <li>引入Spring的配置文件<ul>
 <li>引入aop的约束</li>
 </ul>
+</li>
+</ul>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">aop:config</span>&gt;</span></span><br><span class="line">		<span class="comment">&lt;!-- expression=表达式的配置来决定哪些类的那些方法需要进行增强(切入点) --&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">aop:pointcut</span> <span class="attr">expression</span>=<span class="string">"execution(* spring.demo2.ProductDaoImpl.save(..))"</span> <span class="attr">id</span>=<span class="string">"pointcut1"</span>/&gt;</span>   </span><br><span class="line">		<span class="tag">&lt;<span class="name">aop:pointcut</span> <span class="attr">expression</span>=<span class="string">"execution(* spring.demo2.ProductDaoImpl.delete(..))"</span> <span class="attr">id</span>=<span class="string">"pointcut2"</span>/&gt;</span>   </span><br><span class="line">		<span class="tag">&lt;<span class="name">aop:pointcut</span> <span class="attr">expression</span>=<span class="string">"execution(* spring.demo2.ProductDaoImpl.update(..))"</span> <span class="attr">id</span>=<span class="string">"pointcut3"</span>/&gt;</span>   </span><br><span class="line">		<span class="tag">&lt;<span class="name">aop:pointcut</span> <span class="attr">expression</span>=<span class="string">"execution(* spring.demo2.ProductDaoImpl.find(..))"</span> <span class="attr">id</span>=<span class="string">"pointcut4"</span>/&gt;</span>		</span><br><span class="line">		</span><br><span class="line">		<span class="comment">&lt;!-- 配置切面 --&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">aop:aspect</span> <span class="attr">ref</span>=<span class="string">"myAspect"</span>&gt;</span></span><br><span class="line">				<span class="comment">&lt;!-- 前置通知 --&gt;</span></span><br><span class="line">				<span class="comment">&lt;!-- 在pointcut1这个切入点的前面应用checkPri方法 --&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">aop:before</span> <span class="attr">method</span>=<span class="string">"checkPri"</span> <span class="attr">pointcut-ref</span>=<span class="string">"pointcut1"</span>/&gt;</span></span><br><span class="line">			</span><br><span class="line">				<span class="comment">&lt;!-- 后置通知 --&gt;</span></span><br><span class="line">				<span class="comment">&lt;!-- 在pointcut2这个切入点的后面应用writelog方法 --&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">aop:after-returning</span> <span class="attr">method</span>=<span class="string">"writelog"</span> <span class="attr">pointcut-ref</span>=<span class="string">"pointcut2"</span> <span class="attr">returning</span>=<span class="string">"result"</span>/&gt;</span></span><br><span class="line">			</span><br><span class="line">				<span class="comment">&lt;!-- 环绕通知 --&gt;</span></span><br><span class="line">				<span class="comment">&lt;!-- 在pointcut3这个切入点环绕around方法 --&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">aop:around</span> <span class="attr">method</span>=<span class="string">"around"</span> <span class="attr">pointcut-ref</span>=<span class="string">"pointcut3"</span>/&gt;</span>	</span><br><span class="line">			</span><br><span class="line">				<span class="comment">&lt;!-- 异常抛出通知 --&gt;</span></span><br><span class="line">				<span class="comment">&lt;!-- 在pointcut3这个切入点加入异常抛出通知afterThrowing方法 --&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">aop:after-throwing</span> <span class="attr">method</span>=<span class="string">"afterThrowing"</span> <span class="attr">pointcut-ref</span>=<span class="string">"pointcut4"</span> <span class="attr">throwing</span>=<span class="string">"ex"</span>/&gt;</span>	</span><br><span class="line">			</span><br><span class="line">				<span class="comment">&lt;!-- 最终通知 --&gt;</span></span><br><span class="line">				<span class="comment">&lt;!-- 在pointcut3这个切入点加入异常抛出通知afterThrowing方法 --&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">aop:after</span> <span class="attr">method</span>=<span class="string">"after"</span> <span class="attr">pointcut-ref</span>=<span class="string">"pointcut4"</span>/&gt;</span>	</span><br><span class="line">		<span class="tag">&lt;/<span class="name">aop:aspect</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">aop:config</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li><p>Spring中的通知类型</p>
+<ul>
+<li><p>前置通知　　　在目标方法执行之前进行操作</p>
+<ul>
+<li>配置前置通知<ul>
+<li><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 配置切面 --&gt;</span></span><br><span class="line">   	<span class="tag">&lt;<span class="name">aop:aspect</span> <span class="attr">ref</span>=<span class="string">"myAspect"</span>&gt;</span></span><br><span class="line">   	<span class="comment">&lt;!-- 在pointcut1这个切入点的前面应用checkPri方法 --&gt;</span></span><br><span class="line">   		<span class="tag">&lt;<span class="name">aop:before</span> <span class="attr">method</span>=<span class="string">"checkPri"</span> <span class="attr">pointcut-ref</span>=<span class="string">"pointcut1"</span>/&gt;</span></span><br><span class="line">   	<span class="tag">&lt;/<span class="name">aop:aspect</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<pre><code>* 可以获得切入点信息
+
+  * <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">checkPri</span><span class="params">(JoinPoint joinpoint)</span></span>&#123;</span><br><span class="line">System.out.println(<span class="string">"权限校验..."</span>+joinpoint);</span><br></pre></td></tr></table></figure>
+</code></pre><ul>
+<li><p>后置通知　　　在目标方法执行之后进行操作</p>
+<ul>
+<li>配置后置通知<ul>
+<li><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 后置通知 --&gt;</span></span><br><span class="line">            	<span class="comment">&lt;!-- 在pointcut2这个切入点的后面应用writelog方法 --&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">aop:after-returning</span> <span class="attr">method</span>=<span class="string">"writelog"</span> <span class="attr">pointcut-ref</span>=<span class="string">"pointcut2"</span> <span class="attr">returning</span>=<span class="string">"result"</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<pre><code>* 可以获得方法返回值
+
+  * <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">writelog</span><span class="params">(Object result)</span></span>&#123;</span><br><span class="line"> 		System.out.println(<span class="string">"日志记录..."</span>+result);</span><br><span class="line"> 	&#125;</span><br></pre></td></tr></table></figure>
+</code></pre><ul>
+<li><p>环绕通知　　　在目标方法执行前和后进行操作</p>
+<ul>
+<li><p>配置环绕通知</p>
+<ul>
+<li><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 环绕通知 --&gt;</span></span><br><span class="line">				<span class="comment">&lt;!-- 在pointcut3这个切入点环绕around方法 --&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">aop:around</span> <span class="attr">method</span>=<span class="string">"around"</span> <span class="attr">pointcut-ref</span>=<span class="string">"pointcut3"</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<pre><code>* 可以阻止目标方法的执行
+</code></pre><ul>
+<li><p>异常抛出通知　在程序出现异常的时候进行的操作</p>
+<ul>
+<li><p>配置异常抛出通知</p>
+<ul>
+<li><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 异常抛出通知 --&gt;</span></span><br><span class="line">				<span class="comment">&lt;!-- 在pointcut3这个切入点加入异常抛出通知afterThrowing方法 --&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">aop:after-throwing</span> <span class="attr">method</span>=<span class="string">"afterThrowing"</span> <span class="attr">pointcut-ref</span>=<span class="string">"pointcut4"</span> <span class="attr">throwing</span>=<span class="string">"ex"</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<pre><code>* <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">afterThrowing</span><span class="params">(Throwable ex)</span></span>&#123;</span><br><span class="line"> 		System.out.println(<span class="string">"异常抛出通知..."</span>+ex.getMessage());</span><br><span class="line"> 	&#125;</span><br></pre></td></tr></table></figure>
+</code></pre><ul>
+<li><p>最终通知　　　无论代码是否有异常总是会执行的操作</p>
+<ul>
+<li><p>配置最终通知</p>
+<ul>
+<li><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 最终通知 --&gt;</span></span><br><span class="line">				<span class="comment">&lt;!-- 在pointcut3这个切入点加入异常抛出通知afterThrowing方法 --&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">aop:after</span> <span class="attr">method</span>=<span class="string">"after"</span> <span class="attr">pointcut-ref</span>=<span class="string">"pointcut4"</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<pre><code>* <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> 	 *最终通知:相当于finally代码块中的内容 </span></span><br><span class="line"><span class="comment"> 	 */</span></span><br><span class="line"> 	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">after</span><span class="params">()</span></span>&#123;</span><br><span class="line"> 		System.out.println(<span class="string">"最终通知..."</span>);</span><br></pre></td></tr></table></figure>
+</code></pre><ul>
+<li><p>Spring的切入点表达式写法</p>
+<ul>
+<li>基于execution的函数完成的</li>
+<li>语法<ul>
+<li>[访问修饰符] 方法返回值 包名.类名.方法名(参数)</li>
+<li>public void spring.demo2.ProductDaoImpl.save(..)<ul>
+<li>*为通配符  　　+表示该类和子类   　 ..表示该包和子包</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="Spring-的AOP的开发-注解"><a href="#Spring-的AOP的开发-注解" class="headerlink" title="Spring  的AOP的开发(注解)"></a>Spring  的AOP的开发(注解)</h4><ul>
+<li><p>AspectJ的注解的方式</p>
+<ul>
+<li>引入基本的6个jar包</li>
+<li>引入aspectJ相关的4个jar包</li>
+<li>引入配置文件</li>
+<li>编写目标类并配置</li>
+<li>编写切面类并配置</li>
+</ul>
+</li>
+<li><p>使用注解的AOP对目标类进行增强</p>
+<ul>
+<li><p>在配置文件中去打开注解的AOP开发</p>
+<p><code>&lt;aop:aspectj-autoproxy/&gt;</code></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Aspect</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyAspectAnno</span> </span>&#123;</span><br><span class="line">	<span class="meta">@Before</span>(value=<span class="string">"execution(* spring.demo1.OrderDao.save(..))"</span> )</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">before</span><span class="params">()</span></span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"前置增强..."</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<pre><code><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@RunWith</span>(SpringJUnit4ClassRunner.class)</span><br><span class="line"><span class="meta">@ContextConfiguration</span>(<span class="string">"classpath:applicationContext.xml"</span>)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SpringDemo1</span> </span>&#123;</span><br><span class="line">	</span><br><span class="line">	<span class="meta">@Resource</span>(name=<span class="string">"orderDao"</span>)</span><br><span class="line">	<span class="keyword">private</span> OrderDao orderDao;</span><br><span class="line">	<span class="meta">@Test</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">demo1</span><span class="params">()</span></span>&#123;</span><br><span class="line">		orderDao.save();</span><br><span class="line">		orderDao.update();</span><br><span class="line">		orderDao.find();</span><br><span class="line">		orderDao.delete();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</code></pre><ul>
+<li><p>Spring的注解的AOP的通知类型</p>
+<ul>
+<li>@Before:　　　　前置通知</li>
+<li>@AfterReturning:后置通知</li>
+<li>@Around:　　　  环绕通知</li>
+<li>@AfterThrowing: 异常抛出通知   </li>
+<li>@After:　　　　   最终通知</li>
+</ul>
+</li>
+<li><p>Spring的AOP的切入点的配置</p>
+<ul>
+<li><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//切入点注解:</span></span><br><span class="line">	<span class="meta">@Pointcut</span>(value=<span class="string">"execution(* spring.demo1.OrderDao.find(..))"</span>)</span><br><span class="line">	<span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">pointcut1</span><span class="params">()</span></span>&#123;&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
@@ -1206,7 +1345,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#基本概念"><span class="nav-number">1.</span> <span class="nav-text">基本概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#XML提示的配置"><span class="nav-number">2.</span> <span class="nav-text">XML提示的配置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Bean的相关配置-XML"><span class="nav-number">3.</span> <span class="nav-text">Bean的相关配置(XML)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Spring分模块开发的配置"><span class="nav-number">4.</span> <span class="nav-text">Spring分模块开发的配置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Spring-的IOC的注解的详解-注解"><span class="nav-number">5.</span> <span class="nav-text">Spring 的IOC的注解的详解(注解)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#XML模式和注解模式的比较"><span class="nav-number">6.</span> <span class="nav-text">XML模式和注解模式的比较</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Spring-的AOP的开发-AspectJ的XML的方式"><span class="nav-number">7.</span> <span class="nav-text">Spring 的AOP的开发(AspectJ的XML的方式)</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#基本概念"><span class="nav-number">1.</span> <span class="nav-text">基本概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#XML提示的配置"><span class="nav-number">2.</span> <span class="nav-text">XML提示的配置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Bean的相关配置-XML"><span class="nav-number">3.</span> <span class="nav-text">Bean的相关配置(XML)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Spring分模块开发的配置"><span class="nav-number">4.</span> <span class="nav-text">Spring分模块开发的配置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Spring-的IOC的注解的详解-注解"><span class="nav-number">5.</span> <span class="nav-text">Spring 的IOC的注解的详解(注解)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#XML模式和注解模式的比较"><span class="nav-number">6.</span> <span class="nav-text">XML模式和注解模式的比较</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Spring-的AOP的开发-XML"><span class="nav-number">7.</span> <span class="nav-text">Spring 的AOP的开发(XML)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Spring-的AOP的开发-注解"><span class="nav-number">8.</span> <span class="nav-text">Spring  的AOP的开发(注解)</span></a></li></ol></div>
             
 
           </div>
@@ -1248,7 +1387,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="Insgesamt gezählte Symbole">15k</span>
+    <span title="Insgesamt gezählte Symbole">19k</span>
   
 
   
@@ -1257,7 +1396,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="Insgesamte Lesezeit">13 minuten.</span>
+    <span title="Insgesamte Lesezeit">17 minuten.</span>
   
 </div>
 
