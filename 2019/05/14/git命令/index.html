@@ -110,18 +110,18 @@
 
 
 
-  <meta name="description" content="git init //把这个目录变成Git可以管理的仓库 git add README.md //文件添加到仓库 git add . //不但可以跟单一文件，还可以跟通配符，更可以跟目录。一个点就把当前目录下所有未追踪的文件全部add了  git commit -m “first commit” //把文件提交到仓库 git remote add origin git@github.com:you">
+  <meta name="description" content="git常用操作：git init:使用 git init 在目录中创建新的 Git 仓库。 你可以在任何时候、任何目录中这么做，完全是本地化的。 git clone: 使用 git clone 拷贝一个 Git 仓库到本地，让自己能够查看该项目，或者进行修改。 git  add:使用git add 命令可将该文件添加到缓存。新项目中，添加所有文件很普遍，我们可以使用 git add . 命令来添加">
 <meta name="keywords" content="git,github">
 <meta property="og:type" content="article">
 <meta property="og:title" content="git命令">
 <meta property="og:url" content="https://ChengqunYang.github.io/2019/05/14/git命令/index.html">
 <meta property="og:site_name" content="Talk is cheap.  Show me the code.">
-<meta property="og:description" content="git init //把这个目录变成Git可以管理的仓库 git add README.md //文件添加到仓库 git add . //不但可以跟单一文件，还可以跟通配符，更可以跟目录。一个点就把当前目录下所有未追踪的文件全部add了  git commit -m “first commit” //把文件提交到仓库 git remote add origin git@github.com:you">
+<meta property="og:description" content="git常用操作：git init:使用 git init 在目录中创建新的 Git 仓库。 你可以在任何时候、任何目录中这么做，完全是本地化的。 git clone: 使用 git clone 拷贝一个 Git 仓库到本地，让自己能够查看该项目，或者进行修改。 git  add:使用git add 命令可将该文件添加到缓存。新项目中，添加所有文件很普遍，我们可以使用 git add . 命令来添加">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-14T10:14:38.999Z">
+<meta property="og:updated_time" content="2019-05-14T13:06:43.715Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git命令">
-<meta name="twitter:description" content="git init //把这个目录变成Git可以管理的仓库 git add README.md //文件添加到仓库 git add . //不但可以跟单一文件，还可以跟通配符，更可以跟目录。一个点就把当前目录下所有未追踪的文件全部add了  git commit -m “first commit” //把文件提交到仓库 git remote add origin git@github.com:you">
+<meta name="twitter:description" content="git常用操作：git init:使用 git init 在目录中创建新的 Git 仓库。 你可以在任何时候、任何目录中这么做，完全是本地化的。 git clone: 使用 git clone 拷贝一个 Git 仓库到本地，让自己能够查看该项目，或者进行修改。 git  add:使用git add 命令可将该文件添加到缓存。新项目中，添加所有文件很普遍，我们可以使用 git add . 命令来添加">
 
 
 
@@ -486,7 +486,7 @@
                 
               
 
-              <time title="Erstellt: 2019-05-14 18:13:16 / Geändert am: 18:14:38" itemprop="dateCreated datePublished" datetime="2019-05-14T18:13:16+08:00">2019-05-14</time>
+              <time title="Erstellt: 2019-05-14 18:13:16 / Geändert am: 21:06:43" itemprop="dateCreated datePublished" datetime="2019-05-14T18:13:16+08:00">2019-05-14</time>
             
 
             
@@ -519,7 +519,7 @@
                 
                   <span class="post-meta-item-text">Symbole im Artikel gezählt: </span>
                 
-                <span title="Symbole im Artikel gezählt">312</span>
+                <span title="Symbole im Artikel gezählt">1.3k</span>
               
 
               
@@ -553,7 +553,28 @@
       
 
       
-        <p>git init //把这个目录变成Git可以管理的仓库</p>
+        <h4 id="git常用操作："><a href="#git常用操作：" class="headerlink" title="git常用操作："></a>git常用操作：</h4><p>git init:使用 <strong>git init</strong> 在目录中创建新的 Git 仓库。 你可以在任何时候、任何目录中这么做，完全是本地化的。</p>
+<p>git clone: 使用 <strong>git clone</strong> 拷贝一个 Git 仓库到本地，让自己能够查看该项目，或者进行修改。</p>
+<p>git  add:使用git add 命令可将该文件添加到缓存。新项目中，添加所有文件很普遍，我们可以使用 <strong>git add .</strong> 命令来添加当前项目的所有文件。</p>
+<p>git status: 使用g<strong>it status</strong> 命令用于查看项目的当前状态。</p>
+<p>git diff: 执行 <strong>git diff</strong> 来查看执行 git status 的结果的详细信息。</p>
+<p>git commit:使用 <strong>git add</strong> 命令将想要快照的内容写入缓存区， 而执行 <strong>git commit</strong> 将缓存区内容添加到仓库中</p>
+<p>git reset HEDA:<strong>git reset HEAD</strong> 命令用于取消已缓存的内容。执行 git reset HEAD 以取消之前 git add 添加，但不希望包含在下一提交快照中的缓存。</p>
+<p>git rm:如果只是简单地从工作目录中手工删除文件，运行 <strong>git status</strong> 时就会在 <strong>Changes not staged for commit</strong> 的提示。要从 Git 中移除某个文件，就必须要从已跟踪文件清单中移除，然后提交。git rm <file></file></p>
+<p>如果删除之前修改过并且已经放到暂存区域的话，则必须要用强制删除选项 <strong>-f</strong>      即：git rm -f <file></file></p>
+<p>如果把文件从暂存区域移除，但仍然希望保留在当前工作目录中，换句话说，仅是从跟踪清单中删除，使用 <strong>–cached</strong> 选项即可 即：git rm –cached <file></file></p>
+<p>git mv:git mv 命令用于移动或重命名一个文件、目录、软连接。</p>
+<blockquote>
+<h3 id="git-diff"><a href="#git-diff" class="headerlink" title="git diff"></a>git diff</h3><p>执行 git diff 来查看执行 git status 的结果的详细信息。</p>
+<p>git diff 命令显示已写入缓存与已修改但尚未写入缓存的改动的区别。git diff 有两个主要的应用场景。</p>
+<ul>
+<li>尚未缓存的改动：<strong>git diff</strong></li>
+<li>查看已缓存的改动： <strong>git diff –cached</strong></li>
+<li>查看已缓存的与未缓存的所有改动：<strong>git diff HEAD</strong></li>
+<li>显示摘要而非整个 diff：<strong>git diff –stat</strong></li>
+</ul>
+</blockquote>
+<h4 id="把一个自己的文件夹上传到github上的库内："><a href="#把一个自己的文件夹上传到github上的库内：" class="headerlink" title="把一个自己的文件夹上传到github上的库内："></a>把一个自己的文件夹上传到github上的库内：</h4><p>git init //把这个目录变成Git可以管理的仓库</p>
 <p>git add README.md //文件添加到仓库</p>
 <p>git add . //不但可以跟单一文件，还可以跟通配符，更可以跟目录。一个点就把当前目录下所有未追踪的文件全部add了 </p>
 <p>git commit -m “first commit” //把文件提交到仓库</p>
@@ -770,8 +791,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Inhaltsverzeichnis
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Übersicht
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -941,6 +971,23 @@
       </div>
 
       
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#git常用操作："><span class="nav-number">1.</span> <span class="nav-text">git常用操作：</span></a></li></ol><li class="nav-item nav-level-3"><a class="nav-link" href="#git-diff"><span class="nav-number"></span> <span class="nav-text">git diff</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#把一个自己的文件夹上传到github上的库内："><span class="nav-number">1.</span> <span class="nav-text">把一个自己的文件夹上传到github上的库内：</span></a></li></ol></li></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
 
       
         <div class="back-to-top">
@@ -976,7 +1023,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="Insgesamt gezählte Symbole">30k</span>
+    <span title="Insgesamt gezählte Symbole">31k</span>
   
 
   
@@ -985,7 +1032,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="Insgesamte Lesezeit">27 minuten.</span>
+    <span title="Insgesamte Lesezeit">28 minuten.</span>
   
 </div>
 
