@@ -118,7 +118,7 @@
 <meta property="og:site_name" content="Talk is cheap.  Show me the code.">
 <meta property="og:description" content="git常用操作：git init:使用 git init 在目录中创建新的 Git 仓库。 你可以在任何时候、任何目录中这么做，完全是本地化的。 git clone: 使用 git clone 拷贝一个 Git 仓库到本地，让自己能够查看该项目，或者进行修改。 git  add:使用git add 命令可将该文件添加到缓存。新项目中，添加所有文件很普遍，我们可以使用 git add . 命令来添加">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-14T13:06:43.715Z">
+<meta property="og:updated_time" content="2019-05-17T04:49:31.838Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git命令">
 <meta name="twitter:description" content="git常用操作：git init:使用 git init 在目录中创建新的 Git 仓库。 你可以在任何时候、任何目录中这么做，完全是本地化的。 git clone: 使用 git clone 拷贝一个 Git 仓库到本地，让自己能够查看该项目，或者进行修改。 git  add:使用git add 命令可将该文件添加到缓存。新项目中，添加所有文件很普遍，我们可以使用 git add . 命令来添加">
@@ -486,12 +486,24 @@
                 
               
 
-              <time title="Erstellt: 2019-05-14 18:13:16 / Geändert am: 21:06:43" itemprop="dateCreated datePublished" datetime="2019-05-14T18:13:16+08:00">2019-05-14</time>
+              <time title="Erstellt: 2019-05-14 18:13:16" itemprop="dateCreated datePublished" datetime="2019-05-14T18:13:16+08:00">2019-05-14</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Bearbeitet am</span>
+                
+                <time title="Geändert am: 2019-05-17 12:49:31" itemprop="dateModified" datetime="2019-05-17T12:49:31+08:00">2019-05-17</time>
               
             
           </span>
@@ -519,7 +531,7 @@
                 
                   <span class="post-meta-item-text">Symbole im Artikel gezählt: </span>
                 
-                <span title="Symbole im Artikel gezählt">1.3k</span>
+                <span title="Symbole im Artikel gezählt">2.7k</span>
               
 
               
@@ -533,7 +545,7 @@
                 
                   <span class="post-meta-item-text">Lesezeit &asymp;</span>
                 
-                <span title="Lesezeit">1 minuten.</span>
+                <span title="Lesezeit">2 minuten.</span>
               
             </div>
           
@@ -563,7 +575,7 @@
 <p>git rm:如果只是简单地从工作目录中手工删除文件，运行 <strong>git status</strong> 时就会在 <strong>Changes not staged for commit</strong> 的提示。要从 Git 中移除某个文件，就必须要从已跟踪文件清单中移除，然后提交。git rm <file></file></p>
 <p>如果删除之前修改过并且已经放到暂存区域的话，则必须要用强制删除选项 <strong>-f</strong>      即：git rm -f <file></file></p>
 <p>如果把文件从暂存区域移除，但仍然希望保留在当前工作目录中，换句话说，仅是从跟踪清单中删除，使用 <strong>–cached</strong> 选项即可 即：git rm –cached <file></file></p>
-<p>git mv:git mv 命令用于移动或重命名一个文件、目录、软连接。</p>
+<p>git mv:<strong>git mv</strong> 命令用于移动或重命名一个文件、目录、软连接。</p>
 <blockquote>
 <h3 id="git-diff"><a href="#git-diff" class="headerlink" title="git diff"></a>git diff</h3><p>执行 git diff 来查看执行 git status 的结果的详细信息。</p>
 <p>git diff 命令显示已写入缓存与已修改但尚未写入缓存的改动的区别。git diff 有两个主要的应用场景。</p>
@@ -574,7 +586,41 @@
 <li>显示摘要而非整个 diff：<strong>git diff –stat</strong></li>
 </ul>
 </blockquote>
-<h4 id="把一个自己的文件夹上传到github上的库内："><a href="#把一个自己的文件夹上传到github上的库内：" class="headerlink" title="把一个自己的文件夹上传到github上的库内："></a>把一个自己的文件夹上传到github上的库内：</h4><p>git init //把这个目录变成Git可以管理的仓库</p>
+<h4 id="Git分支管理"><a href="#Git分支管理" class="headerlink" title="Git分支管理:"></a>Git分支管理:</h4><p>乎每一种版本控制系统都以某种形式支持分支。使用分支意味着你可以从开发主线上分离开来，然后在不影响主线的同时继续工作。</p>
+<p>有人把 Git 的分支模型称为<strong>必杀技特性</strong>，而正是因为它，将 <strong>Git</strong> 从版本控制系统家族里区分出来。</p>
+<p>创建分支命令: git branch (branchname)</p>
+<p>切换分支命令:git checkout (branchname)</p>
+<blockquote>
+<p>你切换分支的时候，Git 会用该分支的最后提交的快照替换你的工作目录的内容， 所以多个分支不需要多个目录。</p>
+<blockquote>
+<p>我们也可以使用 git checkout -b (branchname) 命令来创建新分支并立即切换到该分支下，从而在该分支中操作。</p>
+</blockquote>
+</blockquote>
+<p>合并分支命令: git merge 你可以多次合并到统一分支， 也可以选择在合并之后直接删除被并入的分支</p>
+<p>列出分支命令:git branch </p>
+<p>删除分支命令:git branch -d (branchname)</p>
+<p>分支合并命令:git merge (branchname) 一旦某分支有了独立内容，你终究会希望将它合并回到你的主分支。 你可以使用git merge命令branchname分支合并到当前分支中去</p>
+<h4 id="Git远程仓库"><a href="#Git远程仓库" class="headerlink" title="Git远程仓库:"></a>Git远程仓库:</h4><p>git remote:添加远程仓库,<strong><em>git remote add [shortname] [url]</em></strong></p>
+<blockquote>
+<p>由于你的本地 Git 仓库和 GitHub 仓库之间的传输是通过SSH加密的，所以我们需要配置验证信息：</p>
+<blockquote>
+<p>使用以下命令生成 SSH Key：<br> ssh-keygen -t rsa -C “<a href="mailto:email@xx.XXX" target="_blank" rel="noopener">email@xx.XXX</a>“</p>
+</blockquote>
+</blockquote>
+<p>git remote:查看当前的远程库   执行时加上 -v 参数，你还可以看到每个别名的实际链接地址。</p>
+<p>git fetch:提取远程仓库,从远程仓库下载分支与数据<strong><em>git fetch origin</em></strong></p>
+<p>git merge:从远程仓库提取数据并尝试合并到当前分支<strong><em>git merge origin/master</em></strong></p>
+<p>git push:推送你的新分支与数据到某个远端仓库命令:,<strong><em>git push [alias] [branch]</em></strong></p>
+<blockquote>
+<p> git push &lt;远程主机名&gt; &lt;本地分支名&gt;  &lt;远程分支名&gt; </p>
+<p>如果远程分支被省略，则表示将本地分支推送到与之存在追踪关系的远程分支（通常两者同名），如果该远程分支不存在，则会被新建</p>
+<p>如果省略本地分支名，则表示删除指定的远程分支，因为这等同于推送一个空的本地分支到远程分支，等同于 git push origin –delete master</p>
+<p>如果当前分支与远程分支存在追踪关系，则本地分支和远程分支都可以省略，将当前分支推送到origin主机的对应分支 </p>
+<p>git push -u origin master 如果当前分支与多个主机存在追踪关系，则可以使用 -u 参数指定一个默认主机，这样后面就可以不加任何参数使用git push，不带任何参数的git push，默认只推送当前分支，这叫做simple方式</p>
+</blockquote>
+<p>git remote rm [别名]:删除远程仓库</p>
+<p>git pull 获取并合并其他的厂库，或者本地的其他分支。<strong><em>git pull &lt;远程主机&gt; &lt;远程分支&gt;:&lt;本地分支&gt;</em></strong></p>
+<h4 id="文件夹上传到github库："><a href="#文件夹上传到github库：" class="headerlink" title="文件夹上传到github库："></a>文件夹上传到github库：</h4><p>git init //把这个目录变成Git可以管理的仓库</p>
 <p>git add README.md //文件添加到仓库</p>
 <p>git add . //不但可以跟单一文件，还可以跟通配符，更可以跟目录。一个点就把当前目录下所有未追踪的文件全部add了 </p>
 <p>git commit -m “first commit” //把文件提交到仓库</p>
@@ -981,7 +1027,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#git常用操作："><span class="nav-number">1.</span> <span class="nav-text">git常用操作：</span></a></li></ol><li class="nav-item nav-level-3"><a class="nav-link" href="#git-diff"><span class="nav-number"></span> <span class="nav-text">git diff</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#把一个自己的文件夹上传到github上的库内："><span class="nav-number">1.</span> <span class="nav-text">把一个自己的文件夹上传到github上的库内：</span></a></li></ol></li></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#git常用操作："><span class="nav-number">1.</span> <span class="nav-text">git常用操作：</span></a></li></ol><li class="nav-item nav-level-3"><a class="nav-link" href="#git-diff"><span class="nav-number"></span> <span class="nav-text">git diff</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Git分支管理"><span class="nav-number">1.</span> <span class="nav-text">Git分支管理:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Git远程仓库"><span class="nav-number">2.</span> <span class="nav-text">Git远程仓库:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#文件夹上传到github库："><span class="nav-number">3.</span> <span class="nav-text">文件夹上传到github库：</span></a></li></ol></li></div>
             
 
           </div>
@@ -1023,7 +1069,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="Insgesamt gezählte Symbole">31k</span>
+    <span title="Insgesamt gezählte Symbole">32k</span>
   
 
   
@@ -1032,7 +1078,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="Insgesamte Lesezeit">28 minuten.</span>
+    <span title="Insgesamte Lesezeit">29 minuten.</span>
   
 </div>
 
