@@ -110,15 +110,18 @@
 
 
 
-  <meta name="keywords" content="Linux">
+  <meta name="description" content="linux下权用户组/用户/权限管理命令groupadd:添加用户组groupadd命令格式: ​        groupadd [选项] 组名 选项: -g GID:指定组ID groupdel:删除用户组groupdel命令格式: ​        groupdel 组名 但这个组中要没有初始用户,因为不能让一个用户没有初始组 useradd:添加用户useradd命令格式: ​">
+<meta name="keywords" content="Linux">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux使用心得">
 <meta property="og:url" content="https://ChengqunYang.github.io/2019/04/27/Linux使用心得/index.html">
 <meta property="og:site_name" content="Talk is cheap.  Show me the code.">
+<meta property="og:description" content="linux下权用户组/用户/权限管理命令groupadd:添加用户组groupadd命令格式: ​        groupadd [选项] 组名 选项: -g GID:指定组ID groupdel:删除用户组groupdel命令格式: ​        groupdel 组名 但这个组中要没有初始用户,因为不能让一个用户没有初始组 useradd:添加用户useradd命令格式: ​">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-04-28T08:43:35.218Z">
+<meta property="og:updated_time" content="2019-05-28T14:15:56.484Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux使用心得">
+<meta name="twitter:description" content="linux下权用户组/用户/权限管理命令groupadd:添加用户组groupadd命令格式: ​        groupadd [选项] 组名 选项: -g GID:指定组ID groupdel:删除用户组groupdel命令格式: ​        groupdel 组名 但这个组中要没有初始用户,因为不能让一个用户没有初始组 useradd:添加用户useradd命令格式: ​">
 
 
 
@@ -500,7 +503,7 @@
                 
                   <span class="post-meta-item-text">Bearbeitet am</span>
                 
-                <time title="Geändert am: 2019-04-28 16:43:35" itemprop="dateModified" datetime="2019-04-28T16:43:35+08:00">2019-04-28</time>
+                <time title="Geändert am: 2019-05-28 22:15:56" itemprop="dateModified" datetime="2019-05-28T22:15:56+08:00">2019-05-28</time>
               
             
           </span>
@@ -546,7 +549,7 @@
                 
                   <span class="post-meta-item-text">Symbole im Artikel gezählt: </span>
                 
-                <span title="Symbole im Artikel gezählt">0</span>
+                <span title="Symbole im Artikel gezählt">1.2k</span>
               
 
               
@@ -580,7 +583,64 @@
       
 
       
-        
+        <h2 id="linux下权用户组-用户-权限管理命令"><a href="#linux下权用户组-用户-权限管理命令" class="headerlink" title="linux下权用户组/用户/权限管理命令"></a>linux下权用户组/用户/权限管理命令</h2><h3 id="groupadd-添加用户组"><a href="#groupadd-添加用户组" class="headerlink" title="groupadd:添加用户组"></a>groupadd:添加用户组</h3><p><strong>groupadd命令格式:</strong></p>
+<p>​        groupadd [选项] 组名</p>
+<p><strong>选项:</strong></p>
+<p>-g GID:指定组ID</p>
+<h3 id="groupdel-删除用户组"><a href="#groupdel-删除用户组" class="headerlink" title="groupdel:删除用户组"></a>groupdel:删除用户组</h3><p><strong>groupdel命令格式:</strong></p>
+<p>​        groupdel 组名</p>
+<p>但这个组中要没有初始用户,因为不能让一个用户没有初始组</p>
+<h3 id="useradd-添加用户"><a href="#useradd-添加用户" class="headerlink" title="useradd:添加用户"></a>useradd:添加用户</h3><p><strong>useradd命令格式:</strong></p>
+<p>​        useradd [选项] 用户名</p>
+<p><strong>选项:</strong></p>
+<p>-u UID:手工指定用户的UID号</p>
+<p>-d 家目录:手工指定用户的家目录</p>
+<p>-c 用户说明:手工指定用户的说明</p>
+<p>-g 组名:手工指定用户的初始组</p>
+<p>-G 组名:指定用户的附加组</p>
+<p>-s shell:手工指定用户的登录shell,默认是/bin/bash</p>
+<h3 id="usermod-修改用户信息"><a href="#usermod-修改用户信息" class="headerlink" title="usermod:修改用户信息"></a>usermod:修改用户信息</h3><p><strong>usermod命令格式:</strong></p>
+<p>​        usermod [选项] 用户名</p>
+<p><strong>选项:</strong></p>
+<p>-u UID:修改用户的UID号</p>
+<p>-c 用户说明:修改用户的说明信息</p>
+<p>-G 组名:修改用户的附加组</p>
+<p>-L:临时锁定用户(Lock)</p>
+<p>-U:解锁用户锁定(Unlock)</p>
+<h3 id="userdel-删除用户"><a href="#userdel-删除用户" class="headerlink" title="userdel:删除用户"></a>userdel:删除用户</h3><p><strong>userdel命令格式:</strong></p>
+<p>​        userdel [-r] 用户名</p>
+<p><strong>选项:</strong></p>
+<p>-r:删除用户的同时删除用户家目录</p>
+<h3 id="passwd-修改用户密码"><a href="#passwd-修改用户密码" class="headerlink" title="passwd:修改用户密码"></a>passwd:修改用户密码</h3><p><strong>passwd命令格式:</strong></p>
+<p>​         passwd [选项] 用户名</p>
+<p><strong>选项:</strong></p>
+<p>-s: 查询用户密码的密码状态.仅root用户可用</p>
+<p>-l:暂时锁定用户,仅root用户可用</p>
+<p>-u:解锁用户,仅root用户可用</p>
+<p>–stdin: 可以通过管道符输出的数据作为用户的密码</p>
+<p>如不加用户名,则默认修改当前用户</p>
+<h3 id="chage-修改用户密码状态"><a href="#chage-修改用户密码状态" class="headerlink" title="chage:修改用户密码状态"></a>chage:修改用户密码状态</h3><p><strong>chage命令格式:</strong></p>
+<p>​        chage [选项] 用户名</p>
+<p><strong>选项:</strong></p>
+<p>-l:列出用户的详细密码状态</p>
+<p>-d 日期:修改密码最后一次更改日期</p>
+<p>-m 天数:两次密码修改间隔</p>
+<p>-M 天数:密码有效期</p>
+<p>-W 天数:密码过期前警告天数</p>
+<p>-I 天数:密码过期后宽限天数</p>
+<p>-E 日期:账号失效时间</p>
+<h3 id="chown-改变文件或者目录的所有者"><a href="#chown-改变文件或者目录的所有者" class="headerlink" title="chown:改变文件或者目录的所有者"></a>chown:改变文件或者目录的所有者</h3><p>命令英文原意:change file ownership</p>
+<p>执行权限:所有用户</p>
+<p><strong>chown命令格式:</strong></p>
+<p>​        chown [用户] [文件或目录]</p>
+<h3 id="chmod-权限管理命令"><a href="#chmod-权限管理命令" class="headerlink" title="chmod:权限管理命令"></a>chmod:权限管理命令</h3><p>命令英文原意:change the permissions mode of a file</p>
+<p>执行权限:所有用户</p>
+<p><strong>chmod命令格式:</strong></p>
+<p>​        chmod [{ugoa} {+-=}{rwx}] [文件或目录]</p>
+<p>​        chmod [mode=421] [文件或目录]</p>
+<p><strong>选项:</strong></p>
+<p>​         -R 递归修改 </p>
+
       
     </div>
 
@@ -792,8 +852,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Inhaltsverzeichnis
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Übersicht
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -963,6 +1032,23 @@
       </div>
 
       
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#linux下权用户组-用户-权限管理命令"><span class="nav-number">1.</span> <span class="nav-text">linux下权用户组/用户/权限管理命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#groupadd-添加用户组"><span class="nav-number">1.1.</span> <span class="nav-text">groupadd:添加用户组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#groupdel-删除用户组"><span class="nav-number">1.2.</span> <span class="nav-text">groupdel:删除用户组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#useradd-添加用户"><span class="nav-number">1.3.</span> <span class="nav-text">useradd:添加用户</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#usermod-修改用户信息"><span class="nav-number">1.4.</span> <span class="nav-text">usermod:修改用户信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#userdel-删除用户"><span class="nav-number">1.5.</span> <span class="nav-text">userdel:删除用户</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#passwd-修改用户密码"><span class="nav-number">1.6.</span> <span class="nav-text">passwd:修改用户密码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#chage-修改用户密码状态"><span class="nav-number">1.7.</span> <span class="nav-text">chage:修改用户密码状态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#chown-改变文件或者目录的所有者"><span class="nav-number">1.8.</span> <span class="nav-text">chown:改变文件或者目录的所有者</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#chmod-权限管理命令"><span class="nav-number">1.9.</span> <span class="nav-text">chmod:权限管理命令</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
 
       
         <div class="back-to-top">
@@ -998,7 +1084,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="Insgesamt gezählte Symbole">32k</span>
+    <span title="Insgesamt gezählte Symbole">33k</span>
   
 
   
@@ -1007,7 +1093,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="Insgesamte Lesezeit">29 minuten.</span>
+    <span title="Insgesamte Lesezeit">30 minuten.</span>
   
 </div>
 
