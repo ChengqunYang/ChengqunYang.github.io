@@ -23,17 +23,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Linux使用心得]]></title>
-    <url>%2F2019%2F04%2F27%2FLinux%E4%BD%BF%E7%94%A8%E5%BF%83%E5%BE%97%2F</url>
-    <content type="text"><![CDATA[Linux中的常用命令Linux下权用户组/用户/权限管理命令groupadd:添加用户组groupadd命令格式: ​ groupadd [选项] 组名 选项: -g GID:指定组ID groupdel:删除用户组groupdel命令格式: ​ groupdel 组名 但这个组中要没有初始用户,因为不能让一个用户没有初始组 useradd:添加用户useradd命令格式: ​ useradd [选项] 用户名 选项: -u UID:手工指定用户的UID号 -d 家目录:手工指定用户的家目录 -c 用户说明:手工指定用户的说明 -g 组名:手工指定用户的初始组 -G 组名:指定用户的附加组 -s shell:手工指定用户的登录shell,默认是/bin/bash usermod:修改用户信息usermod命令格式: ​ usermod [选项] 用户名 选项: -u UID:修改用户的UID号 -c 用户说明:修改用户的说明信息 -G 组名:修改用户的附加组 -L:临时锁定用户(Lock) -U:解锁用户锁定(Unlock) userdel:删除用户userdel命令格式: ​ userdel [-r] 用户名 选项: -r:删除用户的同时删除用户家目录 passwd:修改用户密码passwd命令格式: ​ passwd [选项] 用户名 选项: -s: 查询用户密码的密码状态.仅root用户可用 -l:暂时锁定用户,仅root用户可用 -u:解锁用户,仅root用户可用 –stdin: 可以通过管道符输出的数据作为用户的密码 如不加用户名,则默认修改当前用户 chage:修改用户密码状态chage命令格式: ​ chage [选项] 用户名 选项: -l:列出用户的详细密码状态 -d 日期:修改密码最后一次更改日期 -m 天数:两次密码修改间隔 -M 天数:密码有效期 -W 天数:密码过期前警告天数 -I 天数:密码过期后宽限天数 -E 日期:账号失效时间 chown:改变文件或者目录的所有者命令英文原意:change file ownership 执行权限:所有用户 chown命令格式: ​ chown [用户] [文件或目录] chmod:权限管理命令命令英文原意:change the permissions mode of a file 执行权限:所有用户 chmod命令格式: ​ chmod [{ugoa} {+-=}{rwx}] [文件或目录] ​ chmod [mode=421] [文件或目录] 选项: ​ -R 递归修改]]></content>
-      <categories>
-        <category>Linux</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[设计模式]]></title>
     <url>%2F2019%2F04%2F25%2F%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%2F</url>
     <content type="text"><![CDATA[设计原则 找出应用中可能需要变化之处，把他们独立出来，不要和那些不需要变化的代码混在一起。 针对接口编程，而不是针对实现编程。 多用组合，少用继承。 为了交互对象之间的松耦合设计而努力。 类应该对扩展开放,对修改关闭。 设计模式策略模式 定义了算法族,分别封装起来,让他们之间可以互相替换,此模式让算法的变换独立于使用算法的客户。 观察者模式 定义了对象之间的一对多依赖，这样一来，当一个对象改变状态时，它的所有依赖者都会收到通知并自动更新。 装饰者模式​ 动态地将责任附加到对象上,若要扩展功能,装饰者提供了比继承更有弹性的替代方案。]]></content>
