@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Junit测试]]></title>
+    <url>%2F2019%2F07%2F07%2FJunit%E6%B5%8B%E8%AF%95%2F</url>
+    <content type="text"><![CDATA[Junit测试Junit单元测试: 测试分类: 黑盒测试:不需要写代码,给输入值,看程序是否能够输出预期的值 白盒测试:需要编写代码,关注程序具体的执行流程 Junit使用:白盒测试 步骤 定义一个测试类(测试用例) 建议: 测试类名:被测试的类名Test CalculatorTest 包名:xxx.xxx.xx.test cn.itcast.test 定义测试方法:可以独立运行 建议: 方法名:test测试的方法名 testAdd() 返回值:void 参数列表:空参 给方法加上@Test注解 导入Junit依赖环境 判定结果: 红色:失败 绿色:成功 一般我们会使用断言操作来处理结果 Assert.assertEquals(期望的结果,运算的结果); 补充: @Before: 修饰的方法会在测试方法之前被自动执行 @After: 修饰的方法会在测试方法执行之后被自动执行]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>测试</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[git命令]]></title>
     <url>%2F2019%2F05%2F14%2Fgit%E5%91%BD%E4%BB%A4%2F</url>
     <content type="text"><![CDATA[git常用操作：git init:使用 git init 在目录中创建新的 Git 仓库。 你可以在任何时候、任何目录中这么做，完全是本地化的。 git clone: 使用 git clone 拷贝一个 Git 仓库到本地，让自己能够查看该项目，或者进行修改。 git add:使用git add 命令可将该文件添加到缓存。新项目中，添加所有文件很普遍，我们可以使用 git add . 命令来添加当前项目的所有文件。 git status: 使用git status 命令用于查看项目的当前状态。 git diff: 执行 git diff 来查看执行 git status 的结果的详细信息。 git commit:使用 git add 命令将想要快照的内容写入缓存区， 而执行 git commit 将缓存区内容添加到仓库中 git reset HEDA:git reset HEAD 命令用于取消已缓存的内容。执行 git reset HEAD 以取消之前 git add 添加，但不希望包含在下一提交快照中的缓存。 git rm:如果只是简单地从工作目录中手工删除文件，运行 git status 时就会在 Changes not staged for commit 的提示。要从 Git 中移除某个文件，就必须要从已跟踪文件清单中移除，然后提交。git rm 如果删除之前修改过并且已经放到暂存区域的话，则必须要用强制删除选项 -f 即：git rm -f 如果把文件从暂存区域移除，但仍然希望保留在当前工作目录中，换句话说，仅是从跟踪清单中删除，使用 –cached 选项即可 即：git rm –cached git mv:git mv 命令用于移动或重命名一个文件、目录、软连接。 git diff执行 git diff 来查看执行 git status 的结果的详细信息。 git diff 命令显示已写入缓存与已修改但尚未写入缓存的改动的区别。git diff 有两个主要的应用场景。 尚未缓存的改动：git diff 查看已缓存的改动： git diff –cached 查看已缓存的与未缓存的所有改动：git diff HEAD 显示摘要而非整个 diff：git diff –stat Git分支管理:乎每一种版本控制系统都以某种形式支持分支。使用分支意味着你可以从开发主线上分离开来，然后在不影响主线的同时继续工作。 有人把 Git 的分支模型称为必杀技特性，而正是因为它，将 Git 从版本控制系统家族里区分出来。 创建分支命令: git branch (branchname) 切换分支命令:git checkout (branchname) 你切换分支的时候，Git 会用该分支的最后提交的快照替换你的工作目录的内容， 所以多个分支不需要多个目录。 我们也可以使用 git checkout -b (branchname) 命令来创建新分支并立即切换到该分支下，从而在该分支中操作。 合并分支命令: git merge 你可以多次合并到统一分支， 也可以选择在合并之后直接删除被并入的分支 列出分支命令:git branch 删除分支命令:git branch -d (branchname) 分支合并命令:git merge (branchname) 一旦某分支有了独立内容，你终究会希望将它合并回到你的主分支。 你可以使用git merge命令branchname分支合并到当前分支中去 Git远程仓库:git remote:添加远程仓库,git remote add [shortname] [url] 由于你的本地 Git 仓库和 GitHub 仓库之间的传输是通过SSH加密的，所以我们需要配置验证信息： 使用以下命令生成 SSH Key： ssh-keygen -t rsa -C “email@xx.XXX“ git remote:查看当前的远程库 执行时加上 -v 参数，你还可以看到每个别名的实际链接地址。 git fetch:提取远程仓库,从远程仓库下载分支与数据git fetch origin git merge:从远程仓库提取数据并尝试合并到当前分支git merge origin/master git push:推送你的新分支与数据到某个远端仓库命令:,git push [alias] [branch] git push &lt;远程主机名&gt; &lt;本地分支名&gt; &lt;远程分支名&gt; 如果远程分支被省略，则表示将本地分支推送到与之存在追踪关系的远程分支（通常两者同名），如果该远程分支不存在，则会被新建 如果省略本地分支名，则表示删除指定的远程分支，因为这等同于推送一个空的本地分支到远程分支，等同于 git push origin –delete master 如果当前分支与远程分支存在追踪关系，则本地分支和远程分支都可以省略，将当前分支推送到origin主机的对应分支 git push -u origin master 如果当前分支与多个主机存在追踪关系，则可以使用 -u 参数指定一个默认主机，这样后面就可以不加任何参数使用git push，不带任何参数的git push，默认只推送当前分支，这叫做simple方式 git remote rm [别名]:删除远程仓库 git pull 获取并合并其他的厂库，或者本地的其他分支。git pull &lt;远程主机&gt; &lt;远程分支&gt;:&lt;本地分支&gt; 文件夹上传到github库：git init //把这个目录变成Git可以管理的仓库 git add README.md //文件添加到仓库 git add . //不但可以跟单一文件，还可以跟通配符，更可以跟目录。一个点就把当前目录下所有未追踪的文件全部add了 git commit -m “first commit” //把文件提交到仓库 git remote add origin git@github.com:yourname/youremail.git //关联远程仓库 git pull –rebase origin master //代码合并 git push -u origin master //把本地库的所有内容推送到远程库上]]></content>
