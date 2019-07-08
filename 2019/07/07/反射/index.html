@@ -110,18 +110,18 @@
 
 
 
-  <meta name="description" content="Junit测试Junit单元测试: 测试分类: 黑盒测试:不需要写代码,给输入值,看程序是否能够输出预期的值 白盒测试:需要编写代码,关注程序具体的执行流程   Junit使用:白盒测试 步骤 定义一个测试类(测试用例) 建议: 测试类名:被测试的类名Test   CalculatorTest 包名:xxx.xxx.xx.test  cn.itcast.test     定义测试方法:可以独立运行">
-<meta name="keywords" content="Java,测试">
+  <meta name="description" content="Java反射反射:框架设计的灵魂 框架:半成品软件.可以在框架的基础上进行软件开发,简化编码 反射:将类的各个组成部分封装为其他对象,这就是反射机制  好处 可以在程序运行过程中,操作这些对象 可以解耦合,提过程序的可扩展性     获取Class对象的三种方式 Object ——&amp;gt; getClass();  任何数据类型（包括基本数据类型）都有一个“静态”的class属性  通过Class">
+<meta name="keywords" content="Java,反射">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Junit测试">
-<meta property="og:url" content="https://ChengqunYang.github.io/2019/07/07/Junit测试/index.html">
+<meta property="og:title" content="反射">
+<meta property="og:url" content="https://ChengqunYang.github.io/2019/07/07/反射/index.html">
 <meta property="og:site_name" content="Talk is cheap.  Show me the code.">
-<meta property="og:description" content="Junit测试Junit单元测试: 测试分类: 黑盒测试:不需要写代码,给输入值,看程序是否能够输出预期的值 白盒测试:需要编写代码,关注程序具体的执行流程   Junit使用:白盒测试 步骤 定义一个测试类(测试用例) 建议: 测试类名:被测试的类名Test   CalculatorTest 包名:xxx.xxx.xx.test  cn.itcast.test     定义测试方法:可以独立运行">
+<meta property="og:description" content="Java反射反射:框架设计的灵魂 框架:半成品软件.可以在框架的基础上进行软件开发,简化编码 反射:将类的各个组成部分封装为其他对象,这就是反射机制  好处 可以在程序运行过程中,操作这些对象 可以解耦合,提过程序的可扩展性     获取Class对象的三种方式 Object ——&amp;gt; getClass();  任何数据类型（包括基本数据类型）都有一个“静态”的class属性  通过Class">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-07-07T04:06:01.408Z">
+<meta property="og:updated_time" content="2019-07-08T07:21:41.340Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Junit测试">
-<meta name="twitter:description" content="Junit测试Junit单元测试: 测试分类: 黑盒测试:不需要写代码,给输入值,看程序是否能够输出预期的值 白盒测试:需要编写代码,关注程序具体的执行流程   Junit使用:白盒测试 步骤 定义一个测试类(测试用例) 建议: 测试类名:被测试的类名Test   CalculatorTest 包名:xxx.xxx.xx.test  cn.itcast.test     定义测试方法:可以独立运行">
+<meta name="twitter:title" content="反射">
+<meta name="twitter:description" content="Java反射反射:框架设计的灵魂 框架:半成品软件.可以在框架的基础上进行软件开发,简化编码 反射:将类的各个组成部分封装为其他对象,这就是反射机制  好处 可以在程序运行过程中,操作这些对象 可以解耦合,提过程序的可扩展性     获取Class对象的三种方式 Object ——&amp;gt; getClass();  任何数据类型（包括基本数据类型）都有一个“静态”的class属性  通过Class">
 
 
 
@@ -129,7 +129,7 @@
 
   
   
-  <link rel="canonical" href="https://ChengqunYang.github.io/2019/07/07/Junit测试/">
+  <link rel="canonical" href="https://ChengqunYang.github.io/2019/07/07/反射/">
 
 
 
@@ -139,7 +139,7 @@
   };
 </script>
 
-  <title>Junit测试 | Talk is cheap.  Show me the code.</title>
+  <title>反射 | Talk is cheap.  Show me the code.</title>
   
 
 
@@ -443,7 +443,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ChengqunYang.github.io/2019/07/07/Junit测试/">
+    <link itemprop="mainEntityOfPage" href="https://ChengqunYang.github.io/2019/07/07/反射/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="CQY">
@@ -460,7 +460,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Junit测试
+          <h2 class="post-title" itemprop="name headline">反射
 
               
             
@@ -486,12 +486,24 @@
                 
               
 
-              <time title="Erstellt: 2019-07-07 11:47:53 / Geändert am: 12:06:01" itemprop="dateCreated datePublished" datetime="2019-07-07T11:47:53+08:00">2019-07-07</time>
+              <time title="Erstellt: 2019-07-07 12:08:55" itemprop="dateCreated datePublished" datetime="2019-07-07T12:08:55+08:00">2019-07-07</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Bearbeitet am</span>
+                
+                <time title="Geändert am: 2019-07-08 15:21:41" itemprop="dateModified" datetime="2019-07-08T15:21:41+08:00">2019-07-08</time>
               
             
           </span>
@@ -537,7 +549,7 @@
                 
                   <span class="post-meta-item-text">Symbole im Artikel gezählt: </span>
                 
-                <span title="Symbole im Artikel gezählt">422</span>
+                <span title="Symbole im Artikel gezählt">1.2k</span>
               
 
               
@@ -571,53 +583,90 @@
       
 
       
-        <h1 id="Junit测试"><a href="#Junit测试" class="headerlink" title="Junit测试"></a>Junit测试</h1><h2 id="Junit单元测试"><a href="#Junit单元测试" class="headerlink" title="Junit单元测试:"></a>Junit单元测试:</h2><ul>
-<li>测试分类:<ol>
-<li>黑盒测试:不需要写代码,给输入值,看程序是否能够输出预期的值</li>
-<li>白盒测试:需要编写代码,关注程序具体的执行流程</li>
+        <h1 id="Java反射"><a href="#Java反射" class="headerlink" title="Java反射"></a>Java反射</h1><h2 id="反射-框架设计的灵魂"><a href="#反射-框架设计的灵魂" class="headerlink" title="反射:框架设计的灵魂"></a>反射:框架设计的灵魂</h2><ul>
+<li>框架:半成品软件.可以在框架的基础上进行软件开发,简化编码</li>
+<li><p>反射:将类的各个组成部分封装为其他对象,这就是反射机制</p>
+<ul>
+<li>好处<ol>
+<li>可以在程序运行过程中,操作这些对象</li>
+<li>可以解耦合,提过程序的可扩展性</li>
 </ol>
 </li>
-<li>Junit使用:白盒测试<ul>
-<li>步骤<ol>
-<li>定义一个测试类(测试用例)<ul>
-<li>建议:<ul>
-<li>测试类名:被测试的类名Test   CalculatorTest</li>
-<li>包名:xxx.xxx.xx.test  cn.itcast.test</li>
 </ul>
 </li>
+<li>获取Class对象的三种方式</li>
+<li>Object ——&gt; getClass(); <ul>
+<li>任何数据类型（包括基本数据类型）都有一个“静态”的class属性 </li>
+<li>通过Class类的静态方法：forName（String  className）(常用)</li>
 </ul>
 </li>
-<li>定义测试方法:可以独立运行<ul>
-<li>建议:<ul>
-<li>方法名:test测试的方法名  testAdd()</li>
-<li>返回值:void</li>
-<li>参数列表:空参</li>
+<li><p>class类对象功能:</p>
+<ul>
+<li>获取功能:<ol>
+<li>获取成员变量们<ul>
+<li>Fileld[] getFields()    :获取所有public修饰的成员变量的</li>
+<li>Fileld getField(String name)   :获取特定名称的public修饰成员变量</li>
+<li>Field[] getDeclaredFields()  :获取所有的成员变量</li>
+<li>Field getDeclaredField(String name):获取特定名称的成员变量 </li>
 </ul>
 </li>
+<li>获取构造方法们<ul>
+<li>Constructor&lt;?&gt;[] getConstructors()</li>
+<li>Constructor<t> getConstrucotr(Class&lt;?&gt;…parameterTypes)</t></li>
+<li>Constructor<t> getDeclaredConstructor(Class&lt;?&gt;… parameterTypes)</t></li>
+<li>Constructor&lt;?&gt;[] getDeclaredConstructors()</li>
 </ul>
 </li>
-<li>给方法加上@Test注解</li>
-<li>导入Junit依赖环境</li>
+<li>获取成员方法们:<ul>
+<li>Method[] getMethods()</li>
+<li>Method getMethod(String name,Class&lt;?&gt;…parameterTypes)</li>
+<li>Method[] getDeclaredMethods()</li>
+<li>Method getDeclaredMethod(String name,Class&lt;?&gt;… parameterTypes)</li>
+</ul>
+</li>
+<li>获取类名:<ul>
+<li>String getName()</li>
+</ul>
+</li>
 </ol>
 </li>
-<li>判定结果:<ul>
-<li>红色:失败</li>
-<li>绿色:成功</li>
-<li>一般我们会使用断言操作来处理结果<ul>
-<li>Assert.assertEquals(期望的结果,运算的结果);</li>
+</ul>
+</li>
+<li><p>Filed: 成员变量</p>
+<ul>
+<li>操作<ol>
+<li>设置值<ul>
+<li>void set(Object obj,Object value)</li>
+</ul>
+</li>
+<li>获取值<ul>
+<li>get(Object obj)</li>
+</ul>
+</li>
+<li>用于忽略访问权限修饰符的安全检查. <ul>
+<li>setAccsessible(true)  //暴力反射 </li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>Constructor:构造方法</p>
+<ul>
+<li>创建对象:<ul>
+<li>T newInstance(Object…initargs)</li>
+<li>如果使用空参构造方法创建对象,操作可以简化:Class对象的newInstance方法</li>
 </ul>
 </li>
 </ul>
 </li>
-<li>补充:<ul>
-<li>@Before:<ul>
-<li>修饰的方法会在测试方法之前被自动执行</li>
+<li>Method:方法对象<ul>
+<li>执行方法:<ul>
+<li>Object invoke(Object obj, Object… args)</li>
 </ul>
 </li>
-<li>@After:<ul>
-<li>修饰的方法会在测试方法执行之后被自动执行</li>
-</ul>
-</li>
+<li>获取方法名称:<ul>
+<li>String getName:获取方法名</li>
 </ul>
 </li>
 </ul>
@@ -690,7 +739,7 @@
   <li class="post-copyright-link">
     <strong>Beitragslink: </strong>
     
-    <a href="https://ChengqunYang.github.io/2019/07/07/Junit测试/" title="Junit测试">https://ChengqunYang.github.io/2019/07/07/Junit测试/</a>
+    <a href="https://ChengqunYang.github.io/2019/07/07/反射/" title="反射">https://ChengqunYang.github.io/2019/07/07/反射/</a>
   </li>
   <li class="post-copyright-license">
     <strong>Urheberrechtshinweis:  </strong>Alle Artikel in diesem Blog sind unter <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> lizenziert, außer es wird anders angegeben.</li>
@@ -705,7 +754,7 @@
           
             <a href="/tags/Java/" rel="tag"><i class="fa fa-tag"></i> Java</a>
           
-            <a href="/tags/测试/" rel="tag"><i class="fa fa-tag"></i> 测试</a>
+            <a href="/tags/反射/" rel="tag"><i class="fa fa-tag"></i> 反射</a>
           
         </div>
       
@@ -776,8 +825,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/05/14/git命令/" rel="next" title="git命令">
-                <i class="fa fa-chevron-left"></i> git命令
+              <a href="/2019/07/07/Junit测试/" rel="next" title="Junit测试">
+                <i class="fa fa-chevron-left"></i> Junit测试
               </a>
             
           </div>
@@ -785,10 +834,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/07/07/反射/" rel="prev" title="反射">
-                反射 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -1031,7 +1076,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Junit测试"><span class="nav-number">1.</span> <span class="nav-text">Junit测试</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Junit单元测试"><span class="nav-number">1.1.</span> <span class="nav-text">Junit单元测试:</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Java反射"><span class="nav-number">1.</span> <span class="nav-text">Java反射</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#反射-框架设计的灵魂"><span class="nav-number">1.1.</span> <span class="nav-text">反射:框架设计的灵魂</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -1219,7 +1264,7 @@
   
     <script>
   window.livereOptions = {
-    refer: '2019/07/07/Junit测试/'
+    refer: '2019/07/07/反射/'
   };
   (function(d, s) {
     var j, e = d.getElementsByTagName(s)[0];
