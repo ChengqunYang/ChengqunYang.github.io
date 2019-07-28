@@ -110,13 +110,18 @@
 
 
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Talk is cheap.  Show me the code.">
-<meta property="og:url" content="https://ChengqunYang.github.io/tags/DesignMode/index.html">
+  <meta name="description" content="会话技术 会话：一次会话中包含多次请求和响应 一次会话：浏览器第一次给服务器资源发送请求，会话建立，直到有一方断开为止 功能：在一次会话的范围内的多次请求间，共享数据 方式：  客户端会话技术(数据存在客户端):Cookie 服务器端会话技术(数据存在服务器端)：Session        Cookie 概念:客户端会话技术,将数据保存到客户端  快速入门:    创建Cookie对象,绑定数据">
+<meta name="keywords" content="JavaWeb,Java">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Cookie和Session">
+<meta property="og:url" content="https://ChengqunYang.github.io/2019/07/28/Cookie和Session/index.html">
 <meta property="og:site_name" content="Talk is cheap.  Show me the code.">
+<meta property="og:description" content="会话技术 会话：一次会话中包含多次请求和响应 一次会话：浏览器第一次给服务器资源发送请求，会话建立，直到有一方断开为止 功能：在一次会话的范围内的多次请求间，共享数据 方式：  客户端会话技术(数据存在客户端):Cookie 服务器端会话技术(数据存在服务器端)：Session        Cookie 概念:客户端会话技术,将数据保存到客户端  快速入门:    创建Cookie对象,绑定数据">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-07-28T14:08:03.853Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Talk is cheap.  Show me the code.">
+<meta name="twitter:title" content="Cookie和Session">
+<meta name="twitter:description" content="会话技术 会话：一次会话中包含多次请求和响应 一次会话：浏览器第一次给服务器资源发送请求，会话建立，直到有一方断开为止 功能：在一次会话的范围内的多次请求间，共享数据 方式：  客户端会话技术(数据存在客户端):Cookie 服务器端会话技术(数据存在服务器端)：Session        Cookie 概念:客户端会话技术,将数据保存到客户端  快速入门:    创建Cookie对象,绑定数据">
 
 
 
@@ -124,7 +129,7 @@
 
   
   
-  <link rel="canonical" href="https://ChengqunYang.github.io/tags/DesignMode/">
+  <link rel="canonical" href="https://ChengqunYang.github.io/2019/07/28/Cookie和Session/">
 
 
 
@@ -134,7 +139,7 @@
   };
 </script>
 
-  <title>Schlagwort: DesignMode | Talk is cheap.  Show me the code.</title>
+  <title>Cookie和Session | Talk is cheap.  Show me the code.</title>
   
 
 
@@ -182,7 +187,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -281,7 +286,7 @@
         
         
           
-          <li class="menu-item menu-item-tags menu-item-active">
+          <li class="menu-item menu-item-tags">
 
     
     
@@ -418,89 +423,382 @@
           
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
           
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h2>DesignMode<small>Schlagwort</small>
-        </h2>
-      </div>
+  
 
-      
-        
+  
+  
+  
+
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ChengqunYang.github.io/2019/07/28/Cookie和Session/">
 
-      <h3 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="CQY">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg#apple-touch-icon-next.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Talk is cheap.  Show me the code.">
+    </span>
+
+    
+      <header class="post-header">
+
         
-          <a class="post-title-link" href="/2019/04/25/设计模式/" itemprop="url">
-            
-              <span itemprop="name">设计模式</span>
-            
-          </a>
         
-      </h3>
+          <h2 class="post-title" itemprop="name headline">Cookie和Session
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-04-25T09:34:40+08:00" content="2019-04-25">
-          04-25
-        </time>
-      </div>
+              
+            
+          </h2>
+        
 
-    </header>
-  </article>
+        <div class="post-meta">
+          <span class="post-time">
 
+            
+            
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+
+              
+                
+              
+
+              <time title="Erstellt: 2019-07-28 12:39:13 / Geändert am: 22:08:03" itemprop="dateCreated datePublished" datetime="2019-07-28T12:39:13+08:00">2019-07-28</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">in</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Symbole im Artikel gezählt: </span>
+                
+                <span title="Symbole im Artikel gezählt">365</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Lesezeit &asymp;</span>
+                
+                <span title="Lesezeit">1 minuten.</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="会话技术"><a href="#会话技术" class="headerlink" title="会话技术"></a>会话技术</h2><ul>
+<li>会话：一次会话中包含多次请求和响应<ul>
+<li>一次会话：浏览器第一次给服务器资源发送请求，会话建立，直到有一方断开为止</li>
+<li>功能：在一次会话的范围内的多次请求间，共享数据</li>
+<li>方式：<ul>
+<li><ol>
+<li>客户端会话技术(数据存在客户端):Cookie</li>
+<li>服务器端会话技术(数据存在服务器端)：Session</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="Cookie"><a href="#Cookie" class="headerlink" title="Cookie"></a>Cookie</h3><ol>
+<li><p>概念:客户端会话技术,将数据保存到客户端</p>
+</li>
+<li><p>快速入门:  </p>
+<ol>
+<li>创建Cookie对象,绑定数据 <ul>
+<li>new Cookie(String name,String value)</li>
+</ul>
+</li>
+<li><p>服务器发送Cookie对象给浏览器</p>
+<ul>
+<li>response.addCookie(Cookie cookie)</li>
+</ul>
+</li>
+<li><p>服务器从request中获取Cookie,拿到数据</p>
+<ul>
+<li>Cookie[] request.getCookies()</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+<h3 id="Session"><a href="#Session" class="headerlink" title="Session"></a>Session</h3>
       
     </div>
 
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+      <div>
+        <div id="reward-container">
+  <div>Thanks!</div>
+  <button id="reward-button" disable="enable" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    Spenden
+  </button>
+  <div id="qr" style="display: none;">
+
+    
+      
+      
+        
+      
+      <div style="display: inline-block">
+        <img src="/images/wechatpay.png" alt="CQY WeChat Bezahlung">
+        <p>WeChat Bezahlung</p>
+      </div>
+    
+      
+      
+        
+      
+      <div style="display: inline-block">
+        <img src="/images/alipay.jpg" alt="CQY Alipay">
+        <p>Alipay</p>
+      </div>
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        
+
+
+
+
+  
+
+
+
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>Beitragsautor:  </strong>CQY</li>
+  <li class="post-copyright-link">
+    <strong>Beitragslink: </strong>
+    
+    <a href="https://ChengqunYang.github.io/2019/07/28/Cookie和Session/" title="Cookie和Session">https://ChengqunYang.github.io/2019/07/28/Cookie和Session/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Urheberrechtshinweis:  </strong>Alle Artikel in diesem Blog sind unter <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> lizenziert, außer es wird anders angegeben.</li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/JavaWeb/" rel="tag"><i class="fa fa-tag"></i> JavaWeb</a>
+          
+            <a href="/tags/Java/" rel="tag"><i class="fa fa-tag"></i> Java</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+          <div class="wp_rating">
+            <div id="wpac-rating"></div>
+          </div>
+        
+
+        
+
+        
+          
+            <span class="post-meta-divider">|</span>
+          
+          <div class="social_share">
+            
+              <div>
+                
+
+<script src="//cdn.jsdelivr.net/npm/ilyabirman-likely@2/release/likely.js"></script>
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/ilyabirman-likely@2/release/likely.css">
+
+
+  
+
+
+<div class="likely">
+	
+ 	 	<div class="twitter">Tweet</div>
+	
+ 	 	<div class="facebook">Share</div>
+	
+ 	 	<div class="linkedin">Link</div>
+	
+ 	 	<div class="gplus">Plus</div>
+	
+ 	 	<div class="vkontakte">Share</div>
+	
+ 	 	<div class="odnoklassniki">Class</div>
+	
+ 	 	<div class="telegram">Send</div>
+	
+ 	 	<div class="whatsapp">Send</div>
+	
+ 	 	<div class="pinterest">Pin</div>
+	
+</div>
+
+              </div>
+            
+            
+            
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/07/07/反射/" rel="next" title="反射">
+                <i class="fa fa-chevron-left"></i> 反射
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+  </div>
 
 
           </div>
           
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80MzcwNi8yMDI0Ng=="></div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -520,8 +818,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Inhaltsverzeichnis
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Übersicht
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -695,6 +1002,23 @@
       </div>
 
       
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#会话技术"><span class="nav-number">1.</span> <span class="nav-text">会话技术</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Cookie"><span class="nav-number">1.1.</span> <span class="nav-text">Cookie</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Session"><span class="nav-number">1.2.</span> <span class="nav-text">Session</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
 
       
         <div class="back-to-top">
@@ -850,6 +1174,10 @@
 
 
   
+  <script src="/js/scrollspy.js?v=7.1.0"></script>
+<script src="/js/post-details.js?v=7.1.0"></script>
+
+
 
   
 
@@ -868,6 +1196,23 @@
 
   
 
+
+  
+    <script>
+  window.livereOptions = {
+    refer: '2019/07/28/Cookie和Session/'
+  };
+  (function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+    if (typeof LivereTower === 'function') { return; }
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+    e.parentNode.insertBefore(j, e);
+  })(document, 'script');
+</script>
+
+  
 
 
   
@@ -1222,6 +1567,25 @@
   
 
   
+  <script>
+    wpac_init = window.wpac_init || [];
+    wpac_init.push({
+      widget: 'Rating',
+      id: 17993,
+      el: 'wpac-rating',
+      color: 'fc6423'
+    });
+    (function() {
+      if ('WIDGETPACK_LOADED' in window) return;
+      WIDGETPACK_LOADED = true;
+      var mc = document.createElement('script');
+      mc.type = 'text/javascript';
+      mc.async = true;
+      mc.src = '//embed.widgetpack.com/widget.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(mc, s.nextSibling);
+    })();
+  </script>
+
 
   
 

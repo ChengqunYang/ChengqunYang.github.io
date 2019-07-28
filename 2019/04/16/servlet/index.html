@@ -111,7 +111,7 @@
 
 
   <meta name="description" content="sevlet详细连接菜鸟教程  servlet相关概念 Servlet 为创建基于 web 的应用程序提供了基于组件、独立于平台的方法，可以不受 CGI 程序的性能限制。Servlet 有权限访问所有的 Java API，包括访问企业级数据库的 JDBC API.  Java Servlet 是运行在 Web 服务器或应用服务器上的程序，它是作为来自 Web 浏览器或其他 HTTP 客户端的请求和">
-<meta name="keywords" content="Java,JavaWeb">
+<meta name="keywords" content="JavaWeb,Java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="servlet学习笔记">
 <meta property="og:url" content="https://ChengqunYang.github.io/2019/04/16/servlet/index.html">
@@ -121,7 +121,7 @@
 <meta property="og:image" content="https://chengqunyang.github.io/2019/04/16/servlet/架构图.png">
 <meta property="og:image" content="https://chengqunyang.github.io/2019/04/16/servlet/架构图2.png">
 <meta property="og:image" content="https://chengqunyang.github.io/2019/04/16/servlet/代码位置.png">
-<meta property="og:updated_time" content="2019-07-27T14:40:14.956Z">
+<meta property="og:updated_time" content="2019-07-28T04:38:06.404Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="servlet学习笔记">
 <meta name="twitter:description" content="sevlet详细连接菜鸟教程  servlet相关概念 Servlet 为创建基于 web 的应用程序提供了基于组件、独立于平台的方法，可以不受 CGI 程序的性能限制。Servlet 有权限访问所有的 Java API，包括访问企业级数据库的 JDBC API.  Java Servlet 是运行在 Web 服务器或应用服务器上的程序，它是作为来自 Web 浏览器或其他 HTTP 客户端的请求和">
@@ -283,7 +283,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archiv<span class="badge">11</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archiv<span class="badge">12</span></a>
 
   </li>
         
@@ -507,7 +507,7 @@
                 
                   <span class="post-meta-item-text">Bearbeitet am</span>
                 
-                <time title="Geändert am: 2019-07-27 22:40:14" itemprop="dateModified" datetime="2019-07-27T22:40:14+08:00">2019-07-27</time>
+                <time title="Geändert am: 2019-07-28 12:38:06" itemprop="dateModified" datetime="2019-07-28T12:38:06+08:00">2019-07-28</time>
               
             
           </span>
@@ -553,7 +553,7 @@
                 
                   <span class="post-meta-item-text">Symbole im Artikel gezählt: </span>
                 
-                <span title="Symbole im Artikel gezählt">6k</span>
+                <span title="Symbole im Artikel gezählt">6.5k</span>
               
 
               
@@ -567,7 +567,7 @@
                 
                   <span class="post-meta-item-text">Lesezeit &asymp;</span>
                 
-                <span title="Lesezeit">5 minuten.</span>
+                <span title="Lesezeit">6 minuten.</span>
               
             </div>
           
@@ -729,7 +729,7 @@
 <li>Content-disposition:服务器告诉客户端以什么样的格式打开响应体数据<ul>
 <li>值:<ul>
 <li>in-line:默认值,在当前页面内打开</li>
-<li>attachment;filename-xxx:以附件形式打开响应体,文件下载</li>
+<li>attachment;filename=xxx:以附件形式打开响应体,文件下载</li>
 </ul>
 </li>
 </ul>
@@ -1007,7 +1007,51 @@
 
     * 本质:图片
     * 目的:防止恶意表单注册
-</code></pre>
+</code></pre><h2 id="ServletContext对象"><a href="#ServletContext对象" class="headerlink" title="ServletContext对象"></a>ServletContext对象</h2><ol>
+<li><p>概念:代表整个web应用,可以和程序的容器(服务器)来通信</p>
+</li>
+<li><p>获取:</p>
+<ol>
+<li>通过request对象获取<ul>
+<li>request.getServletContext();</li>
+</ul>
+</li>
+<li>通过HtpServlet获取<ul>
+<li>this.getServletContext();</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p>功能</p>
+<ol>
+<li><p>获取MIME类型:</p>
+<ul>
+<li>在互联网通信过程中定义的一种文件数据类型<ul>
+<li>格式:大类型/小类型 text/html  image/jpeg</li>
+<li>获取:String getMimeType(String file)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>域对象:共享数据</p>
+<ol>
+<li>setAttribute(String name,Object value)</li>
+<li>getAttribute(String name)</li>
+<li>removeAttribute(String name)</li>
+</ol>
+<ul>
+<li>ServletContext对象范围:所有用户所有请求的数据</li>
+</ul>
+</li>
+<li><p>获取文件的真实路径(服务器路径)</p>
+<ol>
+<li>方法:String getRealPath(String path)</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+
       
     </div>
 
@@ -1087,9 +1131,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Java/" rel="tag"><i class="fa fa-tag"></i> Java</a>
-          
             <a href="/tags/JavaWeb/" rel="tag"><i class="fa fa-tag"></i> JavaWeb</a>
+          
+            <a href="/tags/Java/" rel="tag"><i class="fa fa-tag"></i> Java</a>
           
         </div>
       
@@ -1249,7 +1293,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">11</span>
+                    <span class="site-state-item-count">12</span>
                     <span class="site-state-item-name">Artikel</span>
                   </a>
                 </div>
@@ -1415,7 +1459,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#sevlet"><span class="nav-number">1.</span> <span class="nav-text">sevlet</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#servlet相关概念"><span class="nav-number">1.1.</span> <span class="nav-text">servlet相关概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Servlet任务"><span class="nav-number">1.2.</span> <span class="nav-text">Servlet任务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#servlet执行原理"><span class="nav-number">1.3.</span> <span class="nav-text">servlet执行原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Servlet-生命周期"><span class="nav-number">1.4.</span> <span class="nav-text">Servlet 生命周期</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Servlet-表单数据"><span class="nav-number">1.5.</span> <span class="nav-text">Servlet 表单数据:</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#http协议"><span class="nav-number">1.5.1.</span> <span class="nav-text">http协议:</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#基本概念"><span class="nav-number">1.5.1.1.</span> <span class="nav-text">基本概念:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#请求消息数据格式"><span class="nav-number">1.5.1.2.</span> <span class="nav-text">请求消息数据格式:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#响应消息数据格式"><span class="nav-number">1.5.1.3.</span> <span class="nav-text">响应消息数据格式:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#GET方法"><span class="nav-number">1.5.1.4.</span> <span class="nav-text">GET方法:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#post方法"><span class="nav-number">1.5.1.5.</span> <span class="nav-text">post方法:</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#request"><span class="nav-number">1.6.</span> <span class="nav-text">request:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#response"><span class="nav-number">1.7.</span> <span class="nav-text">response:</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#sevlet"><span class="nav-number">1.</span> <span class="nav-text">sevlet</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#servlet相关概念"><span class="nav-number">1.1.</span> <span class="nav-text">servlet相关概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Servlet任务"><span class="nav-number">1.2.</span> <span class="nav-text">Servlet任务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#servlet执行原理"><span class="nav-number">1.3.</span> <span class="nav-text">servlet执行原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Servlet-生命周期"><span class="nav-number">1.4.</span> <span class="nav-text">Servlet 生命周期</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Servlet-表单数据"><span class="nav-number">1.5.</span> <span class="nav-text">Servlet 表单数据:</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#http协议"><span class="nav-number">1.5.1.</span> <span class="nav-text">http协议:</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#基本概念"><span class="nav-number">1.5.1.1.</span> <span class="nav-text">基本概念:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#请求消息数据格式"><span class="nav-number">1.5.1.2.</span> <span class="nav-text">请求消息数据格式:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#响应消息数据格式"><span class="nav-number">1.5.1.3.</span> <span class="nav-text">响应消息数据格式:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#GET方法"><span class="nav-number">1.5.1.4.</span> <span class="nav-text">GET方法:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#post方法"><span class="nav-number">1.5.1.5.</span> <span class="nav-text">post方法:</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#request"><span class="nav-number">1.6.</span> <span class="nav-text">request:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#response"><span class="nav-number">1.7.</span> <span class="nav-text">response:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ServletContext对象"><span class="nav-number">1.8.</span> <span class="nav-text">ServletContext对象</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -1457,7 +1501,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="Insgesamt gezählte Symbole">40k</span>
+    <span title="Insgesamt gezählte Symbole">41k</span>
   
 
   
@@ -1466,7 +1510,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="Insgesamte Lesezeit">36 minuten.</span>
+    <span title="Insgesamte Lesezeit">37 minuten.</span>
   
 </div>
 
