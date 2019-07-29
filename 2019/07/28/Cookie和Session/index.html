@@ -111,14 +111,14 @@
 
 
   <meta name="description" content="会话技术 会话：一次会话中包含多次请求和响应 一次会话：浏览器第一次给服务器资源发送请求，会话建立，直到有一方断开为止 功能：在一次会话的范围内的多次请求间，共享数据 方式：  客户端会话技术(数据存在客户端):Cookie 服务器端会话技术(数据存在服务器端)：Session        Cookie 概念:客户端会话技术,将数据保存到客户端  快速入门:    创建Cookie对象,绑定数据">
-<meta name="keywords" content="JavaWeb,Java">
+<meta name="keywords" content="Java,JavaWeb">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Cookie和Session">
 <meta property="og:url" content="https://ChengqunYang.github.io/2019/07/28/Cookie和Session/index.html">
 <meta property="og:site_name" content="Talk is cheap.  Show me the code.">
 <meta property="og:description" content="会话技术 会话：一次会话中包含多次请求和响应 一次会话：浏览器第一次给服务器资源发送请求，会话建立，直到有一方断开为止 功能：在一次会话的范围内的多次请求间，共享数据 方式：  客户端会话技术(数据存在客户端):Cookie 服务器端会话技术(数据存在服务器端)：Session        Cookie 概念:客户端会话技术,将数据保存到客户端  快速入门:    创建Cookie对象,绑定数据">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-07-28T15:29:08.040Z">
+<meta property="og:updated_time" content="2019-07-29T06:05:45.936Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Cookie和Session">
 <meta name="twitter:description" content="会话技术 会话：一次会话中包含多次请求和响应 一次会话：浏览器第一次给服务器资源发送请求，会话建立，直到有一方断开为止 功能：在一次会话的范围内的多次请求间，共享数据 方式：  客户端会话技术(数据存在客户端):Cookie 服务器端会话技术(数据存在服务器端)：Session        Cookie 概念:客户端会话技术,将数据保存到客户端  快速入门:    创建Cookie对象,绑定数据">
@@ -279,7 +279,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archiv<span class="badge">12</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archiv<span class="badge">13</span></a>
 
   </li>
         
@@ -486,12 +486,24 @@
                 
               
 
-              <time title="Erstellt: 2019-07-28 12:39:13 / Geändert am: 23:29:08" itemprop="dateCreated datePublished" datetime="2019-07-28T12:39:13+08:00">2019-07-28</time>
+              <time title="Erstellt: 2019-07-28 12:39:13" itemprop="dateCreated datePublished" datetime="2019-07-28T12:39:13+08:00">2019-07-28</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Bearbeitet am</span>
+                
+                <time title="Geändert am: 2019-07-29 14:05:45" itemprop="dateModified" datetime="2019-07-29T14:05:45+08:00">2019-07-29</time>
               
             
           </span>
@@ -537,7 +549,7 @@
                 
                   <span class="post-meta-item-text">Symbole im Artikel gezählt: </span>
                 
-                <span title="Symbole im Artikel gezählt">1.3k</span>
+                <span title="Symbole im Artikel gezählt">1.4k</span>
               
 
               
@@ -638,10 +650,10 @@
 <li><p>cookie能不能存中文?</p>
 <ul>
 <li>在tomcat 8 之前,Cookie不能直接存储中文数据<ul>
-<li>需要将中文数据转码</li>
+<li>需要将中文数据转码—-一般采用URL编码(%E3)</li>
 </ul>
 </li>
-<li>在tomcat 8 之后,Cookie支持中文数据</li>
+<li>在tomcat 8 之后,Cookie支持中文数据.特殊字符还是不支持,建议使用URL编码存储,URL解码解析</li>
 </ul>
 </li>
 <li><p>Cookie获取范围有多大?</p>
@@ -680,9 +692,13 @@
 </ul>
 </li>
 <li><p>案例:记住上一次访问时间</p>
-<ol>
-<li></li>
+<ul>
+<li>需求:<ol>
+<li>访问一个Servlet,如果是第一次访问,则提示:您好,欢迎您首次访问</li>
+<li>如果不是第一次访问,则提示:欢迎回来,您上次访问时间为:显示时间字符串</li>
 </ol>
+</li>
+</ul>
 </li>
 </ol>
 <h3 id="Session"><a href="#Session" class="headerlink" title="Session"></a>Session</h3>
@@ -765,9 +781,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/JavaWeb/" rel="tag"><i class="fa fa-tag"></i> JavaWeb</a>
-          
             <a href="/tags/Java/" rel="tag"><i class="fa fa-tag"></i> Java</a>
+          
+            <a href="/tags/JavaWeb/" rel="tag"><i class="fa fa-tag"></i> JavaWeb</a>
           
         </div>
       
@@ -848,6 +864,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2019/07/29/JSP/" rel="prev" title="JSP">
+                JSP <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -923,7 +943,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">12</span>
+                    <span class="site-state-item-count">13</span>
                     <span class="site-state-item-name">Artikel</span>
                   </a>
                 </div>
@@ -1131,7 +1151,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="Insgesamt gezählte Symbole">41k</span>
+    <span title="Insgesamt gezählte Symbole">42k</span>
   
 
   
