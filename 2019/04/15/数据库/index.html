@@ -110,13 +110,19 @@
 
 
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Talk is cheap.  Show me the code.">
-<meta property="og:url" content="https://ChengqunYang.github.io/categories/SQL/Mysql/index.html">
+  <meta name="description" content="事务练习代码 概念代码里面的事务主要是针对连接来的，是用来防止当出现异常时对数据库的增删改操作只完成了一般，另一半未做，造成数据的错误。关闭自动提交后，当出现异常时，已完成的一般也会被恢复。 设置方法 通过conn.setAutocommit (false)；来关闭自动提交的设置。 提交事务  conn.commit()。 回滚事务   conn.rollback();  在catch中写明当出现">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据库">
+<meta property="og:url" content="https://ChengqunYang.github.io/2019/04/15/数据库/index.html">
 <meta property="og:site_name" content="Talk is cheap.  Show me the code.">
+<meta property="og:description" content="事务练习代码 概念代码里面的事务主要是针对连接来的，是用来防止当出现异常时对数据库的增删改操作只完成了一般，另一半未做，造成数据的错误。关闭自动提交后，当出现异常时，已完成的一般也会被恢复。 设置方法 通过conn.setAutocommit (false)；来关闭自动提交的设置。 提交事务  conn.commit()。 回滚事务   conn.rollback();  在catch中写明当出现">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="https://chengqunyang.github.io/2019/04/15/数据库/thing.png">
+<meta property="og:updated_time" content="2019-08-06T16:35:05.535Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Talk is cheap.  Show me the code.">
+<meta name="twitter:title" content="数据库">
+<meta name="twitter:description" content="事务练习代码 概念代码里面的事务主要是针对连接来的，是用来防止当出现异常时对数据库的增删改操作只完成了一般，另一半未做，造成数据的错误。关闭自动提交后，当出现异常时，已完成的一般也会被恢复。 设置方法 通过conn.setAutocommit (false)；来关闭自动提交的设置。 提交事务  conn.commit()。 回滚事务   conn.rollback();  在catch中写明当出现">
+<meta name="twitter:image" content="https://chengqunyang.github.io/2019/04/15/数据库/thing.png">
 
 
 
@@ -124,7 +130,7 @@
 
   
   
-  <link rel="canonical" href="https://ChengqunYang.github.io/categories/SQL/Mysql/">
+  <link rel="canonical" href="https://ChengqunYang.github.io/2019/04/15/数据库/">
 
 
 
@@ -134,7 +140,7 @@
   };
 </script>
 
-  <title>Kategorie: Mysql | Talk is cheap.  Show me the code.</title>
+  <title>数据库 | Talk is cheap.  Show me the code.</title>
   
 
 
@@ -182,7 +188,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -300,7 +306,7 @@
         
         
           
-          <li class="menu-item menu-item-categories menu-item-active">
+          <li class="menu-item menu-item-categories">
 
     
     
@@ -312,7 +318,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>Kategorien<span class="badge">6</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>Kategorien<span class="badge">8</span></a>
 
   </li>
         
@@ -418,89 +424,409 @@
           
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
           
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block category">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h2>Mysql<small>Kategorie</small>
-        </h2>
-      </div>
+  
 
-      
-        
+  
+  
+  
+
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ChengqunYang.github.io/2019/04/15/数据库/">
 
-      <h3 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="CQY">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg#apple-touch-icon-next.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Talk is cheap.  Show me the code.">
+    </span>
+
+    
+      <header class="post-header">
+
         
-          <a class="post-title-link" href="/2019/04/15/mysql事务/" itemprop="url">
-            
-              <span itemprop="name">mysql事务</span>
-            
-          </a>
         
-      </h3>
+          <h2 class="post-title" itemprop="name headline">数据库
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-04-15T13:32:29+08:00" content="2019-04-15">
-          04-15
-        </time>
-      </div>
+              
+            
+          </h2>
+        
 
-    </header>
-  </article>
+        <div class="post-meta">
+          <span class="post-time">
 
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+
+              
+                
+              
+
+              <time title="Erstellt: 2019-04-15 13:32:29" itemprop="dateCreated datePublished" datetime="2019-04-15T13:32:29+08:00">2019-04-15</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Bearbeitet am</span>
+                
+                <time title="Geändert am: 2019-08-07 00:35:05" itemprop="dateModified" datetime="2019-08-07T00:35:05+08:00">2019-08-07</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">in</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/数据库/" itemprop="url" rel="index"><span itemprop="name">数据库</span></a></span>
+
+                
+                
+                  . 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/数据库/Mysql/" itemprop="url" rel="index"><span itemprop="name">Mysql</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Symbole im Artikel gezählt: </span>
+                
+                <span title="Symbole im Artikel gezählt">815</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Lesezeit &asymp;</span>
+                
+                <span title="Lesezeit">1 minuten.</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="事务"><a href="#事务" class="headerlink" title="事务"></a>事务</h1><h2 id="练习代码"><a href="#练习代码" class="headerlink" title="练习代码"></a>练习代码</h2><p><img src="/2019/04/15/数据库/thing.png" alt="事务demo"></p>
+<h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p>代码里面的事务主要是针对连接来的，是用来防止当出现异常时对数据库的增删改操作只完成了一般，另一半未做，造成数据的错误。关闭自动提交后，当出现异常时，已完成的一般也会被恢复。</p>
+<h2 id="设置方法"><a href="#设置方法" class="headerlink" title="设置方法"></a>设置方法</h2><ol>
+<li>通过conn.setAutocommit (false)；来关闭自动提交的设置。</li>
+<li>提交事务  conn.commit()。</li>
+<li>回滚事务   conn.rollback();  在catch中写明当出现问题时回滚。  </li>
+</ol>
+<h2 id="事务的特性"><a href="#事务的特性" class="headerlink" title="事务的特性"></a>事务的特性</h2><p>事务的特性：（ACID）</p>
+<ol>
+<li>原子性：<blockquote>
+<p>指的是事务中包含的逻辑不可分割。</p>
+</blockquote>
+</li>
+<li>一致性：<blockquote>
+<p>指的是事务执行前后，数据的完整性保持一致。</p>
+</blockquote>
+</li>
+<li>隔离性：<blockquote>
+<p>指的是事务在执行期间不应该受到其他事务的影响。</p>
+</blockquote>
+</li>
+<li>持久性：<blockquote>
+<p>指的是事务执行成功，那么数据应该持久保持在磁盘上。  </p>
+</blockquote>
+</li>
+</ol>
+<h2 id="事务的安全隐患"><a href="#事务的安全隐患" class="headerlink" title="事务的安全隐患"></a>事务的安全隐患</h2><p>不考虑隔离级别设置，那么会出现以下问题<br>  读：  </p>
+<ol>
+<li>脏读，不可重复读，幻读</li>
+</ol>
+<blockquote>
+<p>脏读：一个事务读到了另一个事物还未提交的数据。  隔离级别为：读未提交<br>不可重复读：一个事务可以读到另一个事务提交的数据（产生两次读出不一样的问题）。 隔离级别：读已提交<br>隔离级别：可重复读，即使一个事务已提交数据的更改，但在另一个事务里数据仍不会变化，这是为了让事务与事务之间不产生相对影响。</p>
+</blockquote>
+<ol start="2">
+<li>幻读：一个事务读到了另一个事务已提交的插入的数据，导致多次查询结果不一样。</li>
+</ol>
+<blockquote>
+<p>隔离级别：可串行化：最高达隔离级别.当一个事务要操作一个表时，必须得等之前的事务提交了数据或者回滚了才能执行，否则会等待。</p>
+</blockquote>
+<ol start="3">
+<li>丢失更新：<br> 如果a和b事务都对同一个表进行了操作，那么第二次对数据的更新可能会导致第一次更新丢失。  </li>
+</ol>
+<p>解决方法:  </p>
+<blockquote>
+<p>悲观锁：可以在查询的时候给查询语句后面加上 for update （数据库的锁机制： 排他锁）  </p>
+</blockquote>
+<blockquote>
+<p>乐观锁：需要程序员自己控制，自己写代码比对，先前的事务有没有对数据进行更新，如果更新了，要重新查询。</p>
+</blockquote>
 
       
     </div>
 
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+      <div>
+        <div id="reward-container">
+  <div>Thanks!</div>
+  <button id="reward-button" disable="enable" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    Spenden
+  </button>
+  <div id="qr" style="display: none;">
+
+    
+      
+      
+        
+      
+      <div style="display: inline-block">
+        <img src="/images/wechatpay.png" alt="CQY WeChat Bezahlung">
+        <p>WeChat Bezahlung</p>
+      </div>
+    
+      
+      
+        
+      
+      <div style="display: inline-block">
+        <img src="/images/alipay.jpg" alt="CQY Alipay">
+        <p>Alipay</p>
+      </div>
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        
+
+
+
+
+  
+
+
+
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>Beitragsautor:  </strong>CQY</li>
+  <li class="post-copyright-link">
+    <strong>Beitragslink: </strong>
+    
+    <a href="https://ChengqunYang.github.io/2019/04/15/数据库/" title="数据库">https://ChengqunYang.github.io/2019/04/15/数据库/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Urheberrechtshinweis:  </strong>Alle Artikel in diesem Blog sind unter <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> lizenziert, außer es wird anders angegeben.</li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+        <div class="post-widgets">
+        
+          <div class="wp_rating">
+            <div id="wpac-rating"></div>
+          </div>
+        
+
+        
+
+        
+          
+            <span class="post-meta-divider">|</span>
+          
+          <div class="social_share">
+            
+              <div>
+                
+
+<script src="//cdn.jsdelivr.net/npm/ilyabirman-likely@2/release/likely.js"></script>
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/ilyabirman-likely@2/release/likely.css">
+
+
+  
+
+
+<div class="likely">
+	
+ 	 	<div class="twitter">Tweet</div>
+	
+ 	 	<div class="facebook">Share</div>
+	
+ 	 	<div class="linkedin">Link</div>
+	
+ 	 	<div class="gplus">Plus</div>
+	
+ 	 	<div class="vkontakte">Share</div>
+	
+ 	 	<div class="odnoklassniki">Class</div>
+	
+ 	 	<div class="telegram">Send</div>
+	
+ 	 	<div class="whatsapp">Send</div>
+	
+ 	 	<div class="pinterest">Pin</div>
+	
+</div>
+
+              </div>
+            
+            
+            
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/04/13/Markdown/" rel="next" title="Markdown">
+                <i class="fa fa-chevron-left"></i> Markdown
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/04/16/servlet/" rel="prev" title="servlet学习笔记">
+                servlet学习笔记 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+  </div>
 
 
           </div>
           
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80MzcwNi8yMDI0Ng=="></div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -520,8 +846,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Inhaltsverzeichnis
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Übersicht
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -555,6 +890,10 @@
                     
                   
                     
+                    
+                      
+                    
+                      
                     
                       
                     
@@ -611,7 +950,7 @@
                     
                       
                     
-                    <span class="site-state-item-count">13</span>
+                    <span class="site-state-item-count">12</span>
                     <span class="site-state-item-name">schlagwörter</span>
                   </a>
                 </div>
@@ -694,6 +1033,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#事务"><span class="nav-number">1.</span> <span class="nav-text">事务</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#练习代码"><span class="nav-number">1.1.</span> <span class="nav-text">练习代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#概念"><span class="nav-number">1.2.</span> <span class="nav-text">概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置方法"><span class="nav-number">1.3.</span> <span class="nav-text">设置方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#事务的特性"><span class="nav-number">1.4.</span> <span class="nav-text">事务的特性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#事务的安全隐患"><span class="nav-number">1.5.</span> <span class="nav-text">事务的安全隐患</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
@@ -850,6 +1206,10 @@
 
 
   
+  <script src="/js/scrollspy.js?v=7.1.0"></script>
+<script src="/js/post-details.js?v=7.1.0"></script>
+
+
 
   
 
@@ -868,6 +1228,23 @@
 
   
 
+
+  
+    <script>
+  window.livereOptions = {
+    refer: '2019/04/15/数据库/'
+  };
+  (function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+    if (typeof LivereTower === 'function') { return; }
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+    e.parentNode.insertBefore(j, e);
+  })(document, 'script');
+</script>
+
+  
 
 
   
@@ -1222,6 +1599,25 @@
   
 
   
+  <script>
+    wpac_init = window.wpac_init || [];
+    wpac_init.push({
+      widget: 'Rating',
+      id: 17993,
+      el: 'wpac-rating',
+      color: 'fc6423'
+    });
+    (function() {
+      if ('WIDGETPACK_LOADED' in window) return;
+      WIDGETPACK_LOADED = true;
+      var mc = document.createElement('script');
+      mc.type = 'text/javascript';
+      mc.async = true;
+      mc.src = '//embed.widgetpack.com/widget.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(mc, s.nextSibling);
+    })();
+  </script>
+
 
   
 
