@@ -110,20 +110,21 @@
 
 
 
-  <meta name="description" content="事务练习代码 概念代码里面的事务主要是针对连接来的，是用来防止当出现异常时对数据库的增删改操作只完成了一般，另一半未做，造成数据的错误。关闭自动提交后，当出现异常时，已完成的一般也会被恢复。 设置方法 通过conn.setAutocommit (false)；来关闭自动提交的设置。 提交事务  conn.commit()。 回滚事务   conn.rollback();  在catch中写明当出现">
+  <meta name="description" content="数据库Mysql数据库 Mysql语句 SQL： Structure Query Language:结构化查询语言 DDL：数据定义语言：定义数据库，数据表他们的结构：create(创建) drop(删除) alert(修改) DML：数据操纵语言：主要用来操作数据 insert(插入) update(修改）delete（删除） DCL：数据控制语言：定义访问权限，取消访问权限，安全设置 gran">
 <meta name="keywords" content="Mysql">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数据库">
 <meta property="og:url" content="https://ChengqunYang.github.io/2019/04/15/数据库/index.html">
 <meta property="og:site_name" content="Talk is cheap.  Show me the code.">
-<meta property="og:description" content="事务练习代码 概念代码里面的事务主要是针对连接来的，是用来防止当出现异常时对数据库的增删改操作只完成了一般，另一半未做，造成数据的错误。关闭自动提交后，当出现异常时，已完成的一般也会被恢复。 设置方法 通过conn.setAutocommit (false)；来关闭自动提交的设置。 提交事务  conn.commit()。 回滚事务   conn.rollback();  在catch中写明当出现">
+<meta property="og:description" content="数据库Mysql数据库 Mysql语句 SQL： Structure Query Language:结构化查询语言 DDL：数据定义语言：定义数据库，数据表他们的结构：create(创建) drop(删除) alert(修改) DML：数据操纵语言：主要用来操作数据 insert(插入) update(修改）delete（删除） DCL：数据控制语言：定义访问权限，取消访问权限，安全设置 gran">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="https://chengqunyang.github.io/2019/04/15/数据库/D:/blog/source/_posts/数据库/整体图.png">
 <meta property="og:image" content="https://chengqunyang.github.io/2019/04/15/数据库/thing.png">
-<meta property="og:updated_time" content="2019-08-06T16:47:16.265Z">
+<meta property="og:updated_time" content="2019-08-07T16:09:32.004Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据库">
-<meta name="twitter:description" content="事务练习代码 概念代码里面的事务主要是针对连接来的，是用来防止当出现异常时对数据库的增删改操作只完成了一般，另一半未做，造成数据的错误。关闭自动提交后，当出现异常时，已完成的一般也会被恢复。 设置方法 通过conn.setAutocommit (false)；来关闭自动提交的设置。 提交事务  conn.commit()。 回滚事务   conn.rollback();  在catch中写明当出现">
-<meta name="twitter:image" content="https://chengqunyang.github.io/2019/04/15/数据库/thing.png">
+<meta name="twitter:description" content="数据库Mysql数据库 Mysql语句 SQL： Structure Query Language:结构化查询语言 DDL：数据定义语言：定义数据库，数据表他们的结构：create(创建) drop(删除) alert(修改) DML：数据操纵语言：主要用来操作数据 insert(插入) update(修改）delete（删除） DCL：数据控制语言：定义访问权限，取消访问权限，安全设置 gran">
+<meta name="twitter:image" content="https://chengqunyang.github.io/2019/04/15/数据库/D:/blog/source/_posts/数据库/整体图.png">
 
 
 
@@ -213,7 +214,7 @@
   </div>
 
   <div class="site-nav-toggle">
-    <button aria-label="Navigationsleiste an/ausschalten">
+    <button aria-label="Toggle navigation bar">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -243,7 +244,7 @@
       
     
 
-    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Startseite</a>
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Beranda</a>
 
   </li>
         
@@ -281,7 +282,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archiv<span class="badge">13</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Arsip<span class="badge">13</span></a>
 
   </li>
         
@@ -300,7 +301,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>Schlagwörter<span class="badge">14</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>Tags<span class="badge">14</span></a>
 
   </li>
         
@@ -319,7 +320,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>Kategorien<span class="badge">8</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>Kategori<span class="badge">8</span></a>
 
   </li>
         
@@ -338,7 +339,7 @@
       
     
 
-    <a href="/schedule/" rel="section"><i class="menu-item-icon fa fa-fw fa-calendar"></i> <br>Zeitplan</a>
+    <a href="/schedule/" rel="section"><i class="menu-item-icon fa fa-fw fa-calendar"></i> <br>Schedule</a>
 
   </li>
         
@@ -368,7 +369,7 @@
             <a href="javascript:;" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>Suche</a>
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>Pencarian</a>
         </li>
       
     </ul>
@@ -388,7 +389,7 @@
       <i class="fa fa-times-circle"></i>
     </span>
     <div class="local-search-input-wrapper">
-      <input autocomplete="off" placeholder="Suche..." spellcheck="false" type="text" id="local-search-input">
+      <input autocomplete="off" placeholder="Searching..." spellcheck="false" type="text" id="local-search-input">
     </div>
   </div>
   <div id="local-search-result"></div>
@@ -481,14 +482,14 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Diposting di</span>
               
 
               
                 
               
 
-              <time title="Erstellt: 2019-04-15 13:32:29" itemprop="dateCreated datePublished" datetime="2019-04-15T13:32:29+08:00">2019-04-15</time>
+              <time title="Post created: 2019-04-15 13:32:29" itemprop="dateCreated datePublished" datetime="2019-04-15T13:32:29+08:00">2019-04-15</time>
             
 
             
@@ -503,9 +504,9 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 
-                  <span class="post-meta-item-text">Bearbeitet am</span>
+                  <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Geändert am: 2019-08-07 00:47:16" itemprop="dateModified" datetime="2019-08-07T00:47:16+08:00">2019-08-07</time>
+                <time title="Updated at: 2019-08-08 00:09:32" itemprop="dateModified" datetime="2019-08-08T00:09:32+08:00">2019-08-08</time>
               
             
           </span>
@@ -519,17 +520,10 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">in</span>
+                <span class="post-meta-item-text">Di</span>
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/数据库/" itemprop="url" rel="index"><span itemprop="name">数据库</span></a></span>
-
-                
-                
-                  . 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/数据库/Mysql/" itemprop="url" rel="index"><span itemprop="name">Mysql</span></a></span>
 
                 
                 
@@ -556,9 +550,9 @@
                   <i class="fa fa-file-word-o"></i>
                 </span>
                 
-                  <span class="post-meta-item-text">Symbole im Artikel gezählt: </span>
+                  <span class="post-meta-item-text">Symbols count in article: </span>
                 
-                <span title="Symbole im Artikel gezählt">815</span>
+                <span title="Symbols count in article">8.7k</span>
               
 
               
@@ -570,9 +564,9 @@
                   <i class="fa fa-clock-o"></i>
                 </span>
                 
-                  <span class="post-meta-item-text">Lesezeit &asymp;</span>
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
                 
-                <span title="Lesezeit">1 minuten.</span>
+                <span title="Reading time">8 mins.</span>
               
             </div>
           
@@ -592,55 +586,540 @@
       
 
       
-        <h1 id="事务"><a href="#事务" class="headerlink" title="事务"></a>事务</h1><h2 id="练习代码"><a href="#练习代码" class="headerlink" title="练习代码"></a>练习代码</h2><p><img src="/2019/04/15/数据库/thing.png" alt="事务demo"></p>
-<h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p>代码里面的事务主要是针对连接来的，是用来防止当出现异常时对数据库的增删改操作只完成了一般，另一半未做，造成数据的错误。关闭自动提交后，当出现异常时，已完成的一般也会被恢复。</p>
-<h2 id="设置方法"><a href="#设置方法" class="headerlink" title="设置方法"></a>设置方法</h2><ol>
+        <h1 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h1><h2 id="Mysql数据库"><a href="#Mysql数据库" class="headerlink" title="Mysql数据库"></a>Mysql数据库</h2><p><img src="/2019/04/15/数据库/D:/blog\source\_posts\数据库\整体图.png" alt></p>
+<h3 id="Mysql语句"><a href="#Mysql语句" class="headerlink" title="Mysql语句"></a>Mysql语句</h3><ol>
+<li>SQL： Structure Query Language:结构化查询语言<ul>
+<li>DDL：数据定义语言：定义数据库，数据表他们的结构：create(创建) drop(删除) alert(修改)</li>
+<li>DML：数据操纵语言：主要用来操作数据 insert(插入) update(修改）delete（删除）</li>
+<li>DCL：数据控制语言：定义访问权限，取消访问权限，安全设置 grant</li>
+<li>DQL：数据查询语言：select（查询） from子句 where子句</li>
+</ul>
+</li>
+</ol>
+<h3 id="数据库的CRUD操作"><a href="#数据库的CRUD操作" class="headerlink" title="数据库的CRUD操作"></a>数据库的CRUD操作</h3><ul>
+<li><p>创建数据库</p>
+<ul>
+<li><p>create database 数据库的名字</p>
+</li>
+<li><p>create database character set 字符集</p>
+</li>
+<li><p>create database 数据库的名字 character set 字符集 collate 校对规则</p>
+<p><code>create database test character set utf8 collate utf8-bin</code></p>
+</li>
+</ul>
+</li>
+<li><p>查看数据库</p>
+<ul>
+<li>查看数据库定义的语句:<ul>
+<li>show create database 数据库的名字<ul>
+<li>查看所有的数据库:</li>
+<li>show databases</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>修改数据库的操作</p>
+<ul>
+<li><p>修改数据库的字符集</p>
+<ul>
+<li><p>alter database 数据库的名字 character set 字符集</p>
+<p><code>alter database test character set gbk</code></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>删除数据库</p>
+<ul>
+<li><p>drop database 数据库的名字</p>
+<p><code>drop database test</code></p>
+</li>
+</ul>
+</li>
+<li><p>其他的数据库操作命令</p>
+<ul>
+<li><p>选中数据库</p>
+<ul>
+<li><p>user 数据库的名字</p>
+<p><code>use test</code></p>
+</li>
+</ul>
+<ul>
+<li><p>查看当前正在使用的数据库</p>
+<p><code>select database()</code></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="表的CRUD操作"><a href="#表的CRUD操作" class="headerlink" title="表的CRUD操作"></a>表的CRUD操作</h3><ul>
+<li><p>创建表</p>
+<ul>
+<li><p>create table 表名{</p>
+<p>​    列名 列的类型 约束</p>
+<p>​    列名 列的类型 约束</p>
+<p>};</p>
+</li>
+<li><p>列的类型</p>
+<p>|    Java     |     Sql      |                         Explain                          |<br>| :———: | :———-: | :——————————————————: |<br>|     int     |     int      |                                                          |<br>| char/string | char/varchar | char:固定长度,char(3)代表了字符的个数 varchar:可变的长度 |<br>|   double    |    double    |                                                          |<br>|    float    |    float     |                                                          |<br>|   boolean   |   boolean    |                                                          |<br>|             |     data     |                        YYYY-MM-DD                        |<br>|             |     time     |                         HH:mm:ss                         |<br>|             |   datatime   |              YYYY-MM-DD HH:mm:ss (默认null)              |<br>|             |  timestamp   |  YYYY-MM-DD HH:mm:ss   (用于不同时区,默认使用当前时间)   |<br>|             |     text     |                     主要用来存放文本                     |<br>|             |     blob     |                      存放的是二进制                      |</p>
+</li>
+<li><p>列的约束</p>
+<p>主键约束:   poinary key</p>
+<p>唯一约束:   unique</p>
+<p>非空约束:   not null</p>
+</li>
+<li><p>例子</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">    <span class="keyword">create</span> <span class="keyword">table</span> student(</span><br><span class="line">    <span class="keyword">Sid</span> <span class="built_in">int</span> prinary <span class="keyword">key</span>,</span><br><span class="line">Sname <span class="built_in">varchar</span>(<span class="number">31</span>),</span><br><span class="line">    Sex <span class="built_in">int</span>,</span><br><span class="line">Age <span class="built_in">int</span></span><br><span class="line">    );</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>查看表</p>
+<ul>
+<li><p>查看所有的表</p>
+<p><code>show tables;</code></p>
+</li>
+<li><p>查看表的创建过程</p>
+<p><code>show create table student</code></p>
+</li>
+<li><p>查看表的结构</p>
+<p><code>desc student</code></p>
+</li>
+</ul>
+</li>
+<li><p>修改表</p>
+<ul>
+<li><p>添加列(add)</p>
+<ul>
+<li><p>alter table 表明 add 列名 列的类型 列的约束</p>
+<p><code>alter table student add chengji int not null;</code></p>
+</li>
+</ul>
+</li>
+<li><p>修改列(modify)</p>
+<ul>
+<li><code>alter table student modify sex varchar(2);</code></li>
+</ul>
+</li>
+<li><p>修改列名(change)</p>
+<ul>
+<li><code>alter table student change sex gender varchar(2);</code></li>
+</ul>
+</li>
+<li><p>删除列(drop)</p>
+<ul>
+<li><code>alter table student drop chengji1;</code></li>
+</ul>
+</li>
+<li><p>修改列名(rename)</p>
+<ul>
+<li><code>rename table student to newname;</code></li>
+</ul>
+</li>
+<li><p>修改表的字符集</p>
+<ul>
+<li><code>alter table student character set utf8;</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>删除表:</p>
+<ul>
+<li><code>Drop table student</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="表中数据的CRUD操作"><a href="#表中数据的CRUD操作" class="headerlink" title="表中数据的CRUD操作"></a>表中数据的CRUD操作</h3><ul>
+<li><p>插入数据</p>
+<ul>
+<li><p>insert into 表名(列名1,列名2,列名3) values(值1,值2,值3);</p>
+<p><code>insert into student (sid,sname,sex,age,chengji) values(&quot;1&quot;,&quot;zhangsan&quot;,1,23,80);</code></p>
+</li>
+<li><p>可以简写为:</p>
+<p><code>insert into student values(3,&quot;wangwu&quot;,1,24,81),(4,&quot;zhaoliu&quot;,1,25,82)</code></p>
+</li>
+<li><p>但是如果要设置某些项目为空的话,则必须写明列名</p>
+<p><code>insert into student (sid,sname,chengji) values(2,&quot;lisi&quot;,80);</code></p>
+</li>
+</ul>
+</li>
+<li><p>批量插入</p>
+<ul>
+<li><code>insert into student values(3,&quot;wangwu&quot;,1,24,81),(4,&quot;zhaoliu&quot;,1,25,82)</code></li>
+</ul>
+</li>
+<li><p>删除记录</p>
+<ul>
+<li><p>delete from 表名 [where 条件]</p>
+<p><code>delete from student where sid = 0</code></p>
+</li>
+<li><p>delete from student;如果没有指定条件,则会删除表中所有的数据</p>
+</li>
+<li><p>truncate:DDL语言,先删除表,再重新建立表,当表中数据量较大时,若想删除全部,则使用truncate效率很高</p>
+</li>
+</ul>
+</li>
+<li><p>更新记录:</p>
+<ul>
+<li><p>update 表名 set 列名1 = 列的值,列名2 = 列的值[where条件];</p>
+<ul>
+<li>将id = 1的sname改成zhangsan</li>
+<li>如果参数为字符串,日期,要加上单引号</li>
+<li>不加where条件,则会修改所有的表列</li>
+</ul>
+<p><code>update student set sname = &quot;zhangsan&quot; where sid = 1;</code></p>
+</li>
+</ul>
+</li>
+<li><p>查询记录:</p>
+<ul>
+<li><p><strong>Seletc [distinct] [*] [列名1，列名2] from 表名 [where  条件]group by  having  order by</strong></p>
+<p><strong>Distinct :去重复的数据</strong></p>
+<p><strong>Select: 选择显示哪些列的内容</strong></p>
+<p>查看表中的所有数据:</p>
+<p>​    <code>select * from student;</code></p>
+<p>​    <code>select cname,cdesc from category;</code></p>
+</li>
+<li><p>别名查询(as关键字可以省略)</p>
+<ul>
+<li><p>表别名:</p>
+<ul>
+<li><code>select p.pname,p.price from product;</code></li>
+<li><code>select p.pname,p.price from product as p</code></li>
+</ul>
+</li>
+<li><p>列别名:</p>
+<ul>
+<li><code>select pname as 商品名称,price as 商品价格 from product;</code></li>
+<li><code>select pname 商品名称,price 商品价格 from product</code></li>
+</ul>
+</li>
+<li><p>去掉重复的值:</p>
+<ul>
+<li><p>查询商品的价格</p>
+<p><code>select price form product</code></p>
+<p><code>select distinct price from product</code></p>
+</li>
+<li><p>查询运算,仅仅在查询结果上做了运算</p>
+<p><code>select * ,price*0.5 from product</code></p>
+<p><code>select *,price*0.5 as 折后价 from product</code></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>条件查询(where关键字)</p>
+<ul>
+<li><p>指定条件,确定要查询的记录</p>
+</li>
+<li><p><code>select * from product where price &gt; 60;</code></p>
+</li>
+<li><p>where后的条件写法:</p>
+<ul>
+<li><p>&lt;&gt;:不等于  ,标准的sql语法</p>
+</li>
+<li><p>!=:不等于  ,非标准的sql语法</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<pre><code>    <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Select</span> * <span class="keyword">from</span> product <span class="keyword">where</span> price &gt; <span class="number">10</span> <span class="keyword">and</span> price &lt; <span class="number">100</span>;</span><br><span class="line">              </span><br><span class="line">       <span class="keyword">Select</span> * <span class="keyword">from</span> product <span class="keyword">where</span> <span class="keyword">between</span> <span class="number">10</span> <span class="keyword">and</span> <span class="number">100</span>;</span><br><span class="line">              </span><br><span class="line">       <span class="keyword">Select</span> * <span class="keyword">from</span> product <span class="keyword">where</span> price &lt; <span class="number">10</span> <span class="keyword">or</span> price &gt; <span class="number">999</span>;</span><br></pre></td></tr></table></figure>
+
+
++ like 模糊查询
+
+  + %:代表的是多个字符
+
+    + `select * from product where name like &quot;%饼%&quot;; `             (查询名字中带饼字的所有商品)
+
+  + _:代表的是一个字符
+
+    + `select * from product where pname like &quot;_饼%;&quot;  `      (查询名字中第二个字是饼字的所有商品)
+
+
++ in:在某个范围内中获取值
+  + `select * from product where cno in (1,4,5);`      (查询出商品分类ID在1,4,5里面的所有商品)
+</code></pre><ul>
+<li><p>排序查询(order by)</p>
+<ul>
+<li><p>asc:ascend 升序(默认的排序方式)</p>
+</li>
+<li><p>desc:descend 降序</p>
+<ul>
+<li><p>查询所有商品,按照价格排序</p>
+<p><code>select * from product order by price;</code></p>
+</li>
+<li><p>查询所有商品,按照价格进行降序排列</p>
+<p><code>select * from product order by price desc;</code></p>
+</li>
+<li><p>查询所有名称里面带小的商品的按照价格升序排列</p>
+<p><code>select * from product where name like &quot;%小% order by price asc;&quot;</code></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>聚合函数:</p>
+<ul>
+<li><p>sum():求和</p>
+</li>
+<li><p>avg():求平均值</p>
+</li>
+<li><p>count():统计数量</p>
+</li>
+<li><p>max():最大值</p>
+</li>
+<li><p>min():最小值 </p>
+</li>
+<li><p>获得所有商品价格的总和</p>
+<p><code>select sum(price) from product;</code></p>
+</li>
+<li><p>获得所有商品的个数</p>
+<p><code>select count (*) from product;</code></p>
+</li>
+<li><p>查出商品价格大于平均价格的所有商品:</p>
+<p><code>select * from product where price &gt;(select avg(price) from product);</code></p>
+</li>
+</ul>
+</li>
+<li><p>分组查询(group by)</p>
+</li>
+<li><p>过滤筛选:having关键字:可以连接聚合函数,出现在分组之后,条件筛选(根据结果集做筛选)</p>
+<ul>
+<li><p>where关键字:不可以连接聚合函数,出现在分组之前</p>
+</li>
+<li><p>根据cno字段分组,分组后统计商品的个数</p>
+<p><code>select cno,count(*) from product group by cno;</code></p>
+</li>
+<li><p>根据cno分组,分组统计每组商品的平均价格并且商品的平均价格大于&gt;60</p>
+<p><code>select cno,avg(price) from product group by cno having(price)&gt;60;</code></p>
+</li>
+</ul>
+</li>
+<li><p>编写顺序:s…f…w…g…h…o(select from where group by having order by)</p>
+</li>
+<li><p>执行顺序:f…w…g…h…s…o(from where group by having select order by)</p>
+</li>
+</ul>
+<h3 id="表间操作"><a href="#表间操作" class="headerlink" title="表间操作"></a>表间操作</h3><ul>
+<li><p>添加外键约束:</p>
+<ul>
+<li><p>foreign key </p>
+</li>
+<li><p>Alter table product add foreign key(cno) references category(cid);</p>
+<p>删除的时候先删除与外键关联的所有数据，才能删除分类的数据</p>
+<p>建立数据库的原则：</p>
+<p>通常情况下，一个项目/应用建立一个数据库</p>
+</li>
+</ul>
+</li>
+<li><p>多表之间的建表原则：</p>
+<p>  一对多： 商品分类</p>
+<ul>
+<li><p>建表原则：在多的一方添加一个外键指向1的1方的主键。</p>
+<p>多对多：老师和学生，学生和课程</p>
+</li>
+</ul>
+<ul>
+<li><p>建表原则：建立一张中间表，将多对多的关系转化为一对多的关系。中间表至少要有两个外键，这两个主键分别指向原来的那两张表。</p>
+<p>一对一：公民和身份证；</p>
+</li>
+<li><p>建表原则：</p>
+</li>
+</ul>
+<ol>
+<li>将一对一的情况，当作是一对多的情况处理，在任意一张表中添加一个外键，并且这个外键要唯一指向另一张表。</li>
+<li>将两张表的合成一张表</li>
+<li>将两张表的主键建立起连接，让两张表里面的主键相等<ul>
+<li>实际用途：做拆表操作的时候</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p>主键约束：默认就是不能为空，表内内容还必须唯一。外键都是指向另一张表的主键。</p>
+</li>
+<li><p>唯一约束：列里面的内容必须唯一，不能出现重复的情况，但可以为空。可以有多个唯一约束。</p>
+</li>
+</ul>
+<h3 id="多表查询"><a href="#多表查询" class="headerlink" title="多表查询"></a>多表查询</h3><p>inner和outer可以省略</p>
+<ul>
+<li><p>交叉连接查询：</p>
+<ul>
+<li>select * from 表1 ，表二；</li>
+</ul>
+</li>
+<li><p>过滤出有意义的数据:</p>
+<ul>
+<li>select * from 表一,表二 where 条件;</li>
+</ul>
+</li>
+<li><p>内连接查询:查询两张表的笛卡尔积</p>
+<ul>
+<li>隐式内连接:<ul>
+<li>select * from 表1  别名1，表2 别名2  where 别名1.列名 = 别名2.列名；</li>
+</ul>
+</li>
+<li>显式内连接：<ul>
+<li>select * from 表1  别名1 <strong>inner join</strong> 表2 别名2  <strong>on</strong> 别名1.列名 = 别名2.列名；</li>
+</ul>
+</li>
+<li>隐式内连接:  在查询出的结果的基础上做where条件的过滤</li>
+<li>隐式内连接:直接带着条件去查询,执行效率高</li>
+</ul>
+</li>
+<li><p>左外连接:</p>
+<ul>
+<li>select * from 表1 别名1 left outer join 表2 别名2 on 别名1.列名=别名2.列名 ;</li>
+<li>左外连接会将左表中的数据都查询出来,如果右表中没有对应的数据,则用null代替</li>
+</ul>
+</li>
+<li><p>右外连接:</p>
+<ul>
+<li>select * from 表1 别名1 right outer join 表2 别名2 on 别名1.列名=别名2.列名</li>
+<li>右外连接会将右表数据全部查询出来,如果左表没有对应的数据,则用null代替</li>
+</ul>
+</li>
+<li><p>分页查询:</p>
+<ul>
+<li><p>将查询的结果分页,显示从几开始的几个数据</p>
+<p><code>select * from product limit 1,10;</code>     (从商品表中查询所有的数据,显示从索引0,开始的十条数据)</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="子查询"><a href="#子查询" class="headerlink" title="子查询"></a>子查询</h3><ul>
+<li><p>查询分类名称为手机数码的所有商品：</p>
+<p><code>select * from
+product where cno = (select cid from category where cname = &#39;手机数码&#39;)；</code></p>
+</li>
+<li><p>查询出（商品名称，商品分类名称）信息</p>
+<ul>
+<li><p>左连接</p>
+<p><code>select p.pname,c.cname from product p left
+outer join category c on p.cno = c.cid;</code></p>
+</li>
+<li><p>子查询</p>
+<p><code>select pname ,(select cname from category c where p.cno = c.cid)
+from product p;</code></p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="事务"><a href="#事务" class="headerlink" title="事务"></a>事务</h3><p><img src="/2019/04/15/数据库/thing.png" alt></p>
+<ul>
+<li><p>概念<br>代码里面的事务主要是针对连接来的，是用来防止当出现异常时对数据库的增删改操作只完成了一般，另一半未做，造成数据的错误。关闭自动提交后，当出现异常时，已完成的一般也会被恢复。</p>
+</li>
+<li><p>设置方法</p>
+<ol>
 <li>通过conn.setAutocommit (false)；来关闭自动提交的设置。</li>
 <li>提交事务  conn.commit()。</li>
 <li>回滚事务   conn.rollback();  在catch中写明当出现问题时回滚。  </li>
 </ol>
-<h2 id="事务的特性"><a href="#事务的特性" class="headerlink" title="事务的特性"></a>事务的特性</h2><p>事务的特性：（ACID）</p>
+</li>
+<li><p>事务的特性<br>事务的特性：（ACID）</p>
 <ol>
-<li>原子性：<blockquote>
+<li><p>原子性：</p>
+<blockquote>
 <p>指的是事务中包含的逻辑不可分割。</p>
 </blockquote>
 </li>
-<li>一致性：<blockquote>
+<li><p>一致性：</p>
+<blockquote>
 <p>指的是事务执行前后，数据的完整性保持一致。</p>
 </blockquote>
 </li>
-<li>隔离性：<blockquote>
+<li><p>隔离性：</p>
+<blockquote>
 <p>指的是事务在执行期间不应该受到其他事务的影响。</p>
 </blockquote>
 </li>
-<li>持久性：<blockquote>
+<li><p>持久性：</p>
+<blockquote>
 <p>指的是事务执行成功，那么数据应该持久保持在磁盘上。  </p>
 </blockquote>
 </li>
 </ol>
-<h2 id="事务的安全隐患"><a href="#事务的安全隐患" class="headerlink" title="事务的安全隐患"></a>事务的安全隐患</h2><p>不考虑隔离级别设置，那么会出现以下问题<br>  读：  </p>
+</li>
+<li><p>事务的安全隐患</p>
+<p>不考虑隔离级别设置，那么会出现以下问题<br>  读：  </p>
 <ol>
-<li>脏读，不可重复读，幻读</li>
-</ol>
+<li><p>脏读，不可重复读，幻读</p>
 <blockquote>
 <p>脏读：一个事务读到了另一个事物还未提交的数据。  隔离级别为：读未提交<br>不可重复读：一个事务可以读到另一个事务提交的数据（产生两次读出不一样的问题）。 隔离级别：读已提交<br>隔离级别：可重复读，即使一个事务已提交数据的更改，但在另一个事务里数据仍不会变化，这是为了让事务与事务之间不产生相对影响。</p>
 </blockquote>
-<ol start="2">
-<li>幻读：一个事务读到了另一个事务已提交的插入的数据，导致多次查询结果不一样。</li>
-</ol>
+</li>
+<li><p>幻读：一个事务读到了另一个事务已提交的插入的数据，导致多次查询结果不一样。</p>
 <blockquote>
 <p>隔离级别：可串行化：最高达隔离级别.当一个事务要操作一个表时，必须得等之前的事务提交了数据或者回滚了才能执行，否则会等待。</p>
 </blockquote>
-<ol start="3">
-<li>丢失更新：<br> 如果a和b事务都对同一个表进行了操作，那么第二次对数据的更新可能会导致第一次更新丢失。  </li>
+</li>
+<li><p>丢失更新：<br> 如果a和b事务都对同一个表进行了操作，那么第二次对数据的更新可能会导致第一次更新丢失。  </p>
+</li>
 </ol>
-<p>解决方法:  </p>
-<blockquote>
-<p>悲观锁：可以在查询的时候给查询语句后面加上 for update （数据库的锁机制： 排他锁）  </p>
-</blockquote>
-<blockquote>
-<p>乐观锁：需要程序员自己控制，自己写代码比对，先前的事务有没有对数据进行更新，如果更新了，要重新查询。</p>
-</blockquote>
+</li>
+</ul>
+<pre><code>解决方法:  
+
+&gt;悲观锁：可以在查询的时候给查询语句后面加上 for update （数据库的锁机制： 排他锁）  
+
+&gt;乐观锁：需要程序员自己控制，自己写代码比对，先前的事务有没有对数据进行更新，如果更新了，要重新查询。
+</code></pre><h3 id="数据库连接池"><a href="#数据库连接池" class="headerlink" title="数据库连接池"></a>数据库连接池</h3><ul>
+<li><p>数据库的连接对象创建工作比较耗费性能。</p>
+<p>一开始就在内存中开辟一块空间（集合），一开始先往池子里面放置多个连接对象，后面需要连接的话直接从池子里面去取，不要自己创建连接了，使用完毕，要记得归还连接，确保连接对象能够循环利用。</p>
+<ol>
+<li><p>DBCP:数据库连接池，通过数据库连接池，可以让程序自动管理数据库的释放和断开。</p>
+</li>
+<li><p>C3P0:数据库连接池，实现了数据源和JNDI绑定，目前大量使用。</p>
+</li>
+</ol>
+</li>
+<li><p>DBCP怎么使用：</p>
+<ol>
+<li><p>导入jar文件</p>
+</li>
+<li><p>使用属性配置文件（指定使用哪个类型的数据库，使用哪个数据库，用户名和密码分别是多少）。</p>
+</li>
+<li><p>其余操作和之前相同（创建conn对象，创建prepareStatement对象，写sql语句，执行操作，释放连接（DBCP包装后的close方法））</p>
+</li>
+</ol>
+</li>
+<li><p>C3P0怎么使用：</p>
+<ol>
+<li><p>导入jar文件</p>
+</li>
+<li><p>导入属性配置文件</p>
+</li>
+<li><p>直接创建conn对象，使用，不需要用文件流导入配置文件了。</p>
+</li>
+</ol>
+</li>
+<li><p>Commons  DbUtils ：是Apache组织提供的一个对JDBC进行简单封装的开源工具类库，使用它能够简化JDBC应用程序开发，同时也不会影响程序的性能。</p>
+<p>定义了通用的crud方法。</p>
+<ul>
+<li><p>queryRunner.update();</p>
+</li>
+<li><p>queryRunner.query();</p>
+</li>
+</ul>
+<p>查询时需要用到 ResultSetHandler  </p>
+<p>ResultSetHandler 常用的实现类：</p>
+<p>BeanHandler     查询到的数据封装成一个对象</p>
+<p>BeanListHandler    查询到的多个数据封装成一个List&lt;对象&gt; </p>
+<p>ArrayHandler,     查询到的单个数据封装成一个数组</p>
+<p>ArrayListHandler    查询到的多个数据封装成一个集合，集合里面是数组 </p>
+<p>MapHandler,查询到的单个数据封装成一个map</p>
+<p>MapListHandler 查询到的多个数据封装成一个集合，集合里面的元素是map</p>
+</li>
+</ul>
+<p>  ColumnListHandler，</p>
+<p>  KeyedHandler,</p>
+<p>  ScalarHandler</p>
 
       
     </div>
@@ -661,7 +1140,7 @@
         <div id="reward-container">
   <div>Thanks!</div>
   <button id="reward-button" disable="enable" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
-    Spenden
+    Donate
   </button>
   <div id="qr" style="display: none;">
 
@@ -671,8 +1150,8 @@
         
       
       <div style="display: inline-block">
-        <img src="/images/wechatpay.png" alt="CQY WeChat Bezahlung">
-        <p>WeChat Bezahlung</p>
+        <img src="/images/wechatpay.png" alt="CQY WeChat Pay">
+        <p>WeChat Pay</p>
       </div>
     
       
@@ -704,14 +1183,14 @@
 
 <ul class="post-copyright">
   <li class="post-copyright-author">
-    <strong>Beitragsautor:  </strong>CQY</li>
+    <strong>Post author:  </strong>CQY</li>
   <li class="post-copyright-link">
-    <strong>Beitragslink: </strong>
+    <strong>Post link: </strong>
     
     <a href="https://ChengqunYang.github.io/2019/04/15/数据库/" title="数据库">https://ChengqunYang.github.io/2019/04/15/数据库/</a>
   </li>
   <li class="post-copyright-license">
-    <strong>Urheberrechtshinweis:  </strong>Alle Artikel in diesem Blog sind unter <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> lizenziert, außer es wird anders angegeben.</li>
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.</li>
 </ul>
 
       </div>
@@ -855,10 +1334,10 @@
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Inhaltsverzeichnis
+            Daftar Isi
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Übersicht
+            Ikhtisar
           </li>
         </ul>
       
@@ -882,7 +1361,7 @@
                   <a href="/archives/">
                 
                     <span class="site-state-item-count">13</span>
-                    <span class="site-state-item-name">Artikel</span>
+                    <span class="site-state-item-name">posting</span>
                   </a>
                 </div>
               
@@ -914,8 +1393,8 @@
                     
                       
                     
-                    <span class="site-state-item-count">6</span>
-                    <span class="site-state-item-name">Kategorien</span>
+                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-name">kategori</span>
                   </a>
                 </div>
               
@@ -960,7 +1439,7 @@
                       
                     
                     <span class="site-state-item-count">13</span>
-                    <span class="site-state-item-name">schlagwörter</span>
+                    <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
               
@@ -1053,7 +1532,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#事务"><span class="nav-number">1.</span> <span class="nav-text">事务</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#练习代码"><span class="nav-number">1.1.</span> <span class="nav-text">练习代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#概念"><span class="nav-number">1.2.</span> <span class="nav-text">概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置方法"><span class="nav-number">1.3.</span> <span class="nav-text">设置方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#事务的特性"><span class="nav-number">1.4.</span> <span class="nav-text">事务的特性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#事务的安全隐患"><span class="nav-number">1.5.</span> <span class="nav-text">事务的安全隐患</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#数据库"><span class="nav-number">1.</span> <span class="nav-text">数据库</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Mysql数据库"><span class="nav-number">1.1.</span> <span class="nav-text">Mysql数据库</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Mysql语句"><span class="nav-number">1.1.1.</span> <span class="nav-text">Mysql语句</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据库的CRUD操作"><span class="nav-number">1.1.2.</span> <span class="nav-text">数据库的CRUD操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#表的CRUD操作"><span class="nav-number">1.1.3.</span> <span class="nav-text">表的CRUD操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#表中数据的CRUD操作"><span class="nav-number">1.1.4.</span> <span class="nav-text">表中数据的CRUD操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#表间操作"><span class="nav-number">1.1.5.</span> <span class="nav-text">表间操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多表查询"><span class="nav-number">1.1.6.</span> <span class="nav-text">多表查询</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#子查询"><span class="nav-number">1.1.7.</span> <span class="nav-text">子查询</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#事务"><span class="nav-number">1.1.8.</span> <span class="nav-text">事务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据库连接池"><span class="nav-number">1.1.9.</span> <span class="nav-text">数据库连接池</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -1095,7 +1574,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="Insgesamt gezählte Symbole">47k</span>
+    <span title="Symbols count total">54k</span>
   
 
   
@@ -1104,7 +1583,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="Insgesamte Lesezeit">42 minuten.</span>
+    <span title="Reading time total">50 mins.</span>
   
 </div>
 
@@ -1113,7 +1592,7 @@
 
 
 
-  <div class="theme-info">Design – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a></div>
+  <div class="theme-info">Tema – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a></div>
 
 
 
