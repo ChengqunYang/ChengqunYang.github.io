@@ -1,6 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[方法相关内容]]></title>
+    <url>%2F2019%2F09%2F13%2F%E6%96%B9%E6%B3%95%E7%9B%B8%E5%85%B3%E5%86%85%E5%AE%B9%2F</url>
+    <content type="text"><![CDATA[基础 方法其实就是若干语句的功能集合 定义方法的完整格式: 1234修饰符 返回值类型 方法名称(参数类型 参数名称,...)&#123; 方法体; return 返回值;&#125; 修饰符:public private protected static final abstract 返回值类型:也就是方法最终产生的数据结果是什么类型 方法名称:方法的名字,规则和变量名一样,小驼峰式 参数类型:进入方法的数据是什么类型 参数名称:进入方法的数据对应的变量名称 参数如果有多个,采用逗号分隔 方法体:方法需要做的事情,若干行代码 return:两个作用,停止当前方法 将后面的返回值还给调用处 返回值:方法执行完后最终产生的数据结果 类型必须和方法定义中的返回值类型相一致 方法调用的三种方式: 单独调用:方法名称(参数); 打印调用:system.out.println(方法名称(参数)); 赋值调用:数据类型 变量名称 = 方法名称(参数); 注意事项: 方法应该定义在类当中,但是不能在方法中再定义方法,不能嵌套 方法定义的前后顺序无所谓 方法定义之后,自己不会执行的,如果希望执行,一定要进行方法的调用 如果方法有返回值,那么必须写上”return 返回值” ,不能没有 return 后面的返回值数据,必须和方法的返回值类型,对应起来 对于一个void没有返回值的方法,不能写return后面的返回值,只能写return; 对于无返回值的方法,方法中最后一行的return可以省略不写 一个方法当中可以有多个return语句,但是必须保证同时只有一个会被执行到,两个return不能连写 重载 对于功能类似的方法来说,因为参数列表不一样,却需要记住那么多不同方法的名称,太麻烦,方法的重载就是为了解决这个问题 方法的重载(Overload),多个方法的名称一样,但是参数列表不一样,只需要记住一个方法的名称就可以实现类似的多个方法的名称 在调用输出语句的时候,println方法其实就是进行了多种数据类型的重载形式 方法重载和下列因素有关: 参数个数不同 参数类型不同 参数的多类型顺序不同 方法重载和下列因素无关 与参数的名称无关 与方法的返回值类型无关]]></content>
+      <categories>
+        <category>Java</category>
+        <category>方法</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>方法</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[数组相关内容]]></title>
+    <url>%2F2019%2F09%2F12%2F%E6%95%B0%E7%BB%84%E7%9B%B8%E5%85%B3%E5%86%85%E5%AE%B9%2F</url>
+    <content type="text"><![CDATA[数组简单使用 数组可以用来存储多个类型一致的元素。（任意类型） 引用类型和基本类型变量创建的不同 基本类型变量声明出来不管是否赋值，都已经分配了内存。 引用变量类型的创建分为两步：声明和初始化 声明只在栈内分配内存（存储引用，或者说存储地址） 初始化在堆或者方法区分配内存（存储实际的数据） new出来的东西放在堆里面 程序运行常量放在方法区里面 关于栈 所有局部变量都存放在栈里面（在方法里面创建的变量都是局部变量，因为只在这个方法内有效） 一维数组的声明初始化和使用 声明 数组元素类型[] 数组名； 数组元素类型 数组名 []; 初始化 初始化的时间 可以在声明的时候直接初始化 也可以先声明后初始化 初始化的方法（初始化的时候必须确定数组的长度） String[] arr = new String[3];(动态初始化,指定长度) int [] arr = new int [] {2,1,6,4};(静态初始化,指定内容) int [] arr = {3 ,4 ,68,23,12};静态初始化,指定内容) 数据类型的默认值 整数类型（byte,short,int,long）的基本类型变量的默认值为0 单精度浮点型（float)的基本数据类型变量的默认值为0.0f 双精度浮点型（double)的基本类型变量的默认值为0.0d 字符型（char）的基本类型变量的默认值为“\u0000” 布尔型（boolean）的基本类型变量的默认值为false 引用类型的变量是默认值为null 数组引用类型的变量的默认值为null,除关键数组变量的实例后，如果没有显式的为每个元素赋值，Java就会把该数组的所有元素初始化为其相应类型的默认值。 使用 通过索引访问数组里面的成员，索引是从0开始， 访问方式：数组名[索引] //可以访问值，也可以设置值 获取数组长度 数组名：length 这里的length是属性，不是方法，不需要加括号 注意事项 下标超出范围 空引用 填充数组 Arrays.fill(数组名，值)； //使用指定的值填充指定的数组 二维数组的声明，初始化和使用 声明 声明第一种方式：数据类型[] [] 数组名 声明第二种方式：数据类型 数组名 [] [] 初始化 初始化第一种方式：数组名 = new 数据类型 [m] [n] 初始化第二种方式： 1数组名 = &#123;&#123;234，54，75&#125;，&#123;43，34，23&#125;，&#123;2，3，5&#125;&#125;; 可以把二维数组当作多个以为数组组成的一维数组，不如这里的就是一个长度为m的一维数组，这个数组里面每一个元素都是长度为n的一维数组。 + 初始化第三种方式：`数据类型 [] [] 数组名 = new 数据类型[] [];` m表示里面有多少个一维数组，但是没有给出这个一维数组的长度，这里的每一个一维数组的长度是可以不一样的。 使用 格式：数组名 [索引] [索引]; 通过数组名 [索引] ;得到的是一维数组，完全可以当作一维数组来使用]]></content>
+      <categories>
+        <category>Java</category>
+        <category>数组</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>数组</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[String相关内容]]></title>
+    <url>%2F2019%2F09%2F10%2FString%E7%9B%B8%E5%85%B3%E5%86%85%E5%AE%B9%2F</url>
+    <content type="text"><![CDATA[字符串基础 字符串常量： ​ 需要使用“ ”双引号包裹起来 ​ “ 12435” “asdhskdfgb” &quot;我爱你，中国&quot; ​ 一个字符串不能放在多行，如果要过表示换行可以在字符串中间添加\n,来表示换行。 字符串变量： String str =“asdfa”; String str = new String(&quot;dfasdg&quot;) 字符串连接（+）： 多个字符串连接 和其他数据连接 通过+可以直接对字符串（或者其他数据类型）常量和变量做连接操作 字符串的特性： 字符串无法被修改 字符串的值无法被修改，但是字符串对象可以引用别的字符串。 字符串信息获取： 长度：s.length(); 查找子字符串的位置： s.indexOf(int c); s.indexOf(String str); s.lastIndexOf(String str); 获取指定位置的字符：s.charAt(int index); 获取子字符串：(如不给定beginIndex则默认从0开始，到endIndex的前一个字符) s.subString(int beginIndex); s.subString(int beginIndex,int endIndex); 字符串判断； 判断字符串的开始和结尾： s.startsWith(Stirng prefix); s.endsWith(String suffix); 判断字符串是否相等： == s.equals(String str); s.equalsIgnoreCase(String str); s.compareTo(String str); compareTo比较的不是字符串是否相等，这里比较的是字符串的大小，字符串的大小怎么比较呢？按各个字符比较相同的字符跳过，遇到不同的字符，返回字符的差(Ascll码值 )，如果两个字符串，前面的几个字符相等，长度不相等（“”siki”,”sikiedu”）返回两个字符串的长度差。（常用于排序） 判断是否包含某个字符串，包含返回true s.contains(String str); 判断字符串是否为空 s.isEmpty(); 空的两种状态： String s = &quot;&quot;;空字符串 String s = null;空对象 字符串转换操作： 字母大小写转换 s.toLowerCase(); s.toUpperCase(); 字符串分割(返回的是一个字符串数组,limit可以控制字符串数组中的元素个数) s.split(String str); s.split(String str,int limit); 去除空格（前面和后面的空格，不包括中间的空格） s.trim() 字符串替换 s.replace(char oldChar,char new Char); s.replace(String oldStr,String newStr); 字符串格式化(日期和时间的格式化) 在 Java中要将 String 类型转化为 int 类型时,需要使用 Integer 类中的 parseInt() 方法或者 valueOf() 方法进行转换 将一个字符串翻转： 通过String类的charAt()的方法来获取字符串中的每一个字符，然后将其拼接为一个新的字符串。 1234567public static String CharAtreverse(String s) &#123; int length = s.length(); String reverse = ""; for (int i=0; i&lt;length; i++) reverse = s.charAt(i) + reverse; return reverse; &#125; 2. 通过String的toCharArray()方法可以获得字符串中的每一个字符串并转换为字符数组，然后用一个空的字符串从后向前一个个的拼接成新的字符串。 123456789public static String reverseCharArray(String s) &#123; char[] array = s.toCharArray(); String reverse = ""; for (int i = array.length - 1; i &gt;= 0; i--) &#123; reverse += array[i]; &#125; return reverse; &#125; 3. 通过StringBuilder的reverse()方法，最快的方式 12345public static String reverseStringBuilder(String s) &#123; StringBuilder sb = new StringBuilder(s); String afterreverse = sb.reverse().toString()； return afterreverse; &#125;]]></content>
+      <categories>
+        <category>Java</category>
+        <category>String</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>String</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[SpringBoot的相关配置]]></title>
     <url>%2F2019%2F09%2F09%2FSpringBoot%E7%9A%84%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE%2F</url>
     <content type="text"><![CDATA[SpringBoot简介 SpringBoot是Spring家族中一个全新的框架,它用来简化Spring应用程序的创建和开发过程,也可以说SpringBoot能简化我们之前采用的SpringMVC+Spring+Mybatis应用程序的开发过程 在以往我们采用SpringMVC+Spring+MyBatis框架进行开发的时候,搭建和整合三大框架,我们需要做很多事情,比如配置web.xml,配置Spring,配置MyBaits,并将它们整合在一起,而SpringBoot框架对此过程进行了革命性的颠覆,抛弃了繁琐的xml配置过程,采用大量的默认配置简化我们的开发过程 所以采用SpringBoot可以非常容易和快速的创建基于Spring框架的应用程序,它可以让编码变简单了,配置变简单了,部署变简单了,监控变简单了 正因为SpringBoot它化繁为简,让开发变得极其简单和快速,所以在业界内备受关注 SpringBoot的特性 能够快速创建基于Spring的应用程序 能够直接使用java main方法启动内嵌的 tomcat,Jetty服务器运行SpringBoot程序,不需要部署war包文件, 提供约定的starterPOM来简化Maven配置,让Maven配置变得简单 根据项目的Maven依赖配置,SpringBoot自动配置Spring,SpringMVC等 提供了程序的健康检查功能; 基本可以完全不使用xml配置文件,采用注解配置 SpringBoot的四大核心 自动配置:针对很多Spring应用程序和常见的应用功能,SpringBoot能自动提供相关配置 起步依赖:告诉SpringBoot需要什么功能,他就能引入需要的依赖库 Actuator:让你能够深入运行中的SpringBoot应用程序,一探SpringBoot程序的内部信息 命令行界面:这是SpringBoot的可选特性,主要针对Groovy语言使用 第一个SpringBoot程序 创建一个SpringBoot项目 加入SpringBoot的入口main方法 创建一个SpringMVC的Controller 运行SpringBoot的入口main方法]]></content>
