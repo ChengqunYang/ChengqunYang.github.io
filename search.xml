@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[常用的API]]></title>
     <url>%2F2019%2F09%2F15%2F%E5%B8%B8%E7%94%A8%E7%9A%84API%2F</url>
-    <content type="text"><![CDATA[概述API(APPlication Programming Interface),应用程序编程接口,Java API 是一本程序员的字典,是JDK提供给我们使用的类的说明文档,这些类将底层的代码实现封装了其阿里,我们不需要关心这些类是如何实现的,只需要学习这些类如何使用即可,所以我们可以通过查询API的方式,来学习Java提供的类,并得知如何使用它们 使用步骤 1. 导包 import 包路径.类名称 如果需要使用的目标类,和当前类位于同于个包下,则可以省略导包语句不写,只有java.long包下的内容不需要导包,其他的包都需要import语句 2. 创建 类名称 对象名 = new 类名称(); 3. 使用 对象名.成员方法名(); Scanner类 一个可以辨析基本类型和字符串的简单文本扫描器 可以实现键盘输入数据,到程序中 System.in代表从键盘进行输入 常用方法: int mun = sc.nextInt(); String str = sc.next(); Random类 Random用来生成随机数字 常用方法: nextInt()返回下一个随机的int类型的数 nextlong()返回下一个随机的long类型的数 nextInt(int n)返回一个随机数范围在0-不包括n之间]]></content>
+    <content type="text"><![CDATA[概述API(APPlication Programming Interface),应用程序编程接口,Java API 是一本程序员的字典,是JDK提供给我们使用的类的说明文档,这些类将底层的代码实现封装了其阿里,我们不需要关心这些类是如何实现的,只需要学习这些类如何使用即可,所以我们可以通过查询API的方式,来学习Java提供的类,并得知如何使用它们 使用步骤 导包 import 包路径.类名称 如果需要使用的目标类,和当前类位于同于个包下,可以省略导包语句不写,只有java.long包下的内容不需要导包,其他的包都需要import语句 创建 类名称 对象名 = new 类名称(); 使用 对象名.成员方法名(); Scanner类 一个可以辨析基本类型和字符串的简单文本扫描器 可以实现键盘输入数据,到程序中 System.in代表从键盘进行输入 常用方法: int mun = sc.nextInt(); String str = sc.next(); Random类 Random用来生成随机数字 常用方法: nextInt()返回下一个随机的int类型的数 nextlong()返回下一个随机的long类型的数 nextInt(int n)返回一个随机数范围在0-不包括n之间]]></content>
       <categories>
         <category>Java</category>
         <category>API</category>
