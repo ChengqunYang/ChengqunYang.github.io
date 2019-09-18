@@ -110,13 +110,21 @@
 
 
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Talk is cheap.  Show me the code.">
-<meta property="og:url" content="https://ChengqunYang.github.io/tags/测试/index.html">
+  <meta name="description" content="数组和集合的比较数组不是面向对象的，存在明显的缺陷，集合弥补了数组的缺点，比数组更灵活更实用，而且不同的集合框架类可适用不同场合。如下:   数组能存放基本数据类型和对象，而集合类存放的都是对象的引用，而非对象本身！ 数组容易固定无法动态改变，集合类容量动态改变。  数组无法判断其中实际存有多少元素，length只告诉了数组的容量，而集合的size()可以确切知道元素的个数  集合有多种实现方式和">
+<meta name="keywords" content="Java,集合">
+<meta property="og:type" content="article">
+<meta property="og:title" content="集合相关内容">
+<meta property="og:url" content="https://ChengqunYang.github.io/2019/09/15/集合相关内容/index.html">
 <meta property="og:site_name" content="Talk is cheap.  Show me the code.">
+<meta property="og:description" content="数组和集合的比较数组不是面向对象的，存在明显的缺陷，集合弥补了数组的缺点，比数组更灵活更实用，而且不同的集合框架类可适用不同场合。如下:   数组能存放基本数据类型和对象，而集合类存放的都是对象的引用，而非对象本身！ 数组容易固定无法动态改变，集合类容量动态改变。  数组无法判断其中实际存有多少元素，length只告诉了数组的容量，而集合的size()可以确切知道元素的个数  集合有多种实现方式和">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="https://chengqunyang.github.io/2019/09/15/集合相关内容/整体框架图.jpg">
+<meta property="og:image" content="https://chengqunyang.github.io/2019/09/15/集合相关内容/集合详解.jpg">
+<meta property="og:updated_time" content="2019-09-18T10:06:36.430Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Talk is cheap.  Show me the code.">
+<meta name="twitter:title" content="集合相关内容">
+<meta name="twitter:description" content="数组和集合的比较数组不是面向对象的，存在明显的缺陷，集合弥补了数组的缺点，比数组更灵活更实用，而且不同的集合框架类可适用不同场合。如下:   数组能存放基本数据类型和对象，而集合类存放的都是对象的引用，而非对象本身！ 数组容易固定无法动态改变，集合类容量动态改变。  数组无法判断其中实际存有多少元素，length只告诉了数组的容量，而集合的size()可以确切知道元素的个数  集合有多种实现方式和">
+<meta name="twitter:image" content="https://chengqunyang.github.io/2019/09/15/集合相关内容/整体框架图.jpg">
 
 
 
@@ -124,7 +132,7 @@
 
   
   
-  <link rel="canonical" href="https://ChengqunYang.github.io/tags/测试/">
+  <link rel="canonical" href="https://ChengqunYang.github.io/2019/09/15/集合相关内容/">
 
 
 
@@ -134,7 +142,7 @@
   };
 </script>
 
-  <title>Schlagwort: 测试 | Talk is cheap.  Show me the code.</title>
+  <title>集合相关内容 | Talk is cheap.  Show me the code.</title>
   
 
 
@@ -182,7 +190,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -281,7 +289,7 @@
         
         
           
-          <li class="menu-item menu-item-tags menu-item-active">
+          <li class="menu-item menu-item-tags">
 
     
     
@@ -418,89 +426,544 @@
           
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
           
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h2>测试<small>Schlagwort</small>
-        </h2>
-      </div>
+  
 
-      
-        
+  
+  
+  
+
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ChengqunYang.github.io/2019/09/15/集合相关内容/">
 
-      <h3 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="CQY">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg#apple-touch-icon-next.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Talk is cheap.  Show me the code.">
+    </span>
+
+    
+      <header class="post-header">
+
         
-          <a class="post-title-link" href="/2019/07/07/Junit测试/" itemprop="url">
-            
-              <span itemprop="name">Junit测试</span>
-            
-          </a>
         
-      </h3>
+          <h2 class="post-title" itemprop="name headline">集合相关内容
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-07-07T11:47:53+08:00" content="2019-07-07">
-          07-07
-        </time>
-      </div>
+              
+            
+          </h2>
+        
 
-    </header>
-  </article>
+        <div class="post-meta">
+          <span class="post-time">
 
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+
+              
+                
+              
+
+              <time title="Erstellt: 2019-09-15 22:38:02" itemprop="dateCreated datePublished" datetime="2019-09-15T22:38:02+08:00">2019-09-15</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Bearbeitet am</span>
+                
+                <time title="Geändert am: 2019-09-18 18:06:36" itemprop="dateModified" datetime="2019-09-18T18:06:36+08:00">2019-09-18</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">in</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a></span>
+
+                
+                
+                  . 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Java/集合/" itemprop="url" rel="index"><span itemprop="name">集合</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Symbole im Artikel gezählt: </span>
+                
+                <span title="Symbole im Artikel gezählt">6.4k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Lesezeit &asymp;</span>
+                
+                <span title="Lesezeit">6 minuten.</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="数组和集合的比较"><a href="#数组和集合的比较" class="headerlink" title="数组和集合的比较"></a>数组和集合的比较</h3><p>数组不是面向对象的，存在明显的缺陷，集合弥补了数组的缺点，比数组更灵活更实用，而且不同的集合框架类可适用不同场合。如下: </p>
+<ol>
+<li>数组能存放基本数据类型和对象，而集合类存放的都是对象的引用，而非对象本身！</li>
+<li>数组容易固定无法动态改变，集合类容量动态改变。 </li>
+<li>数组无法判断其中实际存有多少元素，length只告诉了数组的容量，而集合的size()可以确切知道元素的个数 </li>
+<li>集合有多种实现方式和不同适用场合，不像数组仅采用顺序表方式 </li>
+<li>集合以类的形式存在，具有封装、继承、多态等类的特性，通过简单的方法和属性即可实现各种复杂操作，大大提高了软件的开发效率</li>
+</ol>
+<h3 id="Java集合整体图"><a href="#Java集合整体图" class="headerlink" title="Java集合整体图"></a>Java集合整体图</h3><p><img src="/2019/09/15/集合相关内容/整体框架图.jpg" alt></p>
+<p>Collection和Map是集合框架的根接口</p>
+<h3 id="Collection的子接口"><a href="#Collection的子接口" class="headerlink" title="Collection的子接口"></a>Collection的子接口</h3><p>Set接口—&gt;实现类：HashSet、LinkedHashSet</p>
+<p>​        Set的子接口SortedSet接口—&gt;实现类：TreeSet</p>
+<p>List接口—&gt;实现类：LinkedList、Vector、ArrayList</p>
+<h3 id="List集合"><a href="#List集合" class="headerlink" title="List集合"></a>List集合</h3><ol>
+<li><p>有序的集合，允许存放重复的元素，有索引，元素可以为null</p>
+</li>
+<li><p>实现类：</p>
+<ul>
+<li>ArrayList：数组实现，查询快，增删慢，轻量级（线程不安全的）</li>
+<li>LinkedList:双向循环列表实现，增删快，查询慢（线程不安全）</li>
+<li>Vector:数组实现，重量级（线程安全，不经常使用）</li>
+</ul>
+</li>
+<li><p>List常用方法：</p>
+<ul>
+<li>void add (int index,Object element):添加对象element到位置index上</li>
+<li>boolean addAll(int index,Collection collection):在index位置后添加容器collection中所有的元素</li>
+<li>Object get (int index):取出下标为index的位置的元素</li>
+<li>int indexOf(Object element):查找对象element在List中第一次出现的位置</li>
+<li>int lastIndexOf(Object element):查找对象element在List中最后出现的位置</li>
+<li>Object remove(int index):删除index位置上的元素</li>
+<li>ListIterator listIterator(int startIndex):返回一个ListIterator迭代器，开始位置为startIndex</li>
+<li>List subList(int fromIndex,int toIndex):返回一个子列表，元素存放为fromIndex到toIndex之前的所有元素</li>
+</ul>
+</li>
+<li><p>利用LinkedList实现栈（stack)、队列（queue）、双向队列（double-ended queue)。LinkedList具有addFirst()、addLast()、getFirst()、getLast()、removeFirst()、removeLast()等方法。</p>
+</li>
+<li><p>用LinkedList实现队列：</p>
+<p>队列是限定所有的插入只能在表的一端进行，而所有的删除都在表的另一端进行的线性表。表中允许插入的一端称为队尾，允许删除的一端称为对头，队列的操作是按照先进先出的原则进行的，队列的物理存储可以用顺序存储结构也可以用链式存储结构</p>
+</li>
+<li><p>用LinkedList实现栈：</p>
+<p>栈也是一种特殊的线性表，是一种先进后出的结构，栈是限定在表尾进行插入和删除运算的线性表，表尾称为栈顶，表头称为栈底，栈的物理存储可以用顺序结构，也可以使用链式存储结构</p>
+</li>
+</ol>
+<h3 id="Set集合"><a href="#Set集合" class="headerlink" title="Set集合"></a>Set集合</h3><ol>
+<li><p>不允许存放重复的元素，没有索引，允许使用null元素，但是不能重复，所以只能有一个空元素</p>
+</li>
+<li><p>实现类:</p>
+<ul>
+<li>HashSet:不仅不能保证元素插入的顺序，而且元素在以后的顺序中也可能发生变化（这是由于HashSet按照Hash’Code存储对象单元决定的，对象变化可能也会导致HashCode变化），HashSet是线程非安全的。HashSet的后台有一个HashMap；初始化后台容量，只不过生成一个HashSet的话，系统只提供key的访问，如果有两个key相同，那么会覆盖之前                  的。</li>
+<li>LinkedHashSet:此实现与HashSet的不同之处在于它维护这一个运行于所有条目的双重连接列表，存储的数据是有序的</li>
+<li>TreeSet:TreeSet实现了SortedSet接口，顾名思义，这是一种排序的Set集合，查看jdk源码发现底层是用TreeMap实现的，本质上是一个红黑树原理。正因为他是排了序的，所以相对HashSet来说，TreeSet提供了一些额外的按照排序位置访问元素的方法，例如first()、last()、lower()、higher()、subSet()、headSet()、tailSet()。TreeSet的排序分为两种，一种是自然排序，一种是定制排序。</li>
+</ul>
+</li>
+<li><p>HashSet常用的方法：</p>
+<ul>
+<li>public boolean contaions(Object o):如果Set包含指定的元素，返回True</li>
+<li>public Iterator iterator()：返回Set集合中元素的迭代器</li>
+<li>public Object[] toArray():返回包含Set中所有元素的数组</li>
+<li>public Object[] toArray(Object[] a):返回包含Set中所有元素的数组，返回数组的运行时类型是指定数组的运行时类型。</li>
+<li>public boolean add(Object o):如果set中不存在指定元素，则向set中添加</li>
+<li>public boolean remove(Object o):如果set中存在指定的元素，则从set中删除</li>
+<li>public boolean removeAll(Collection c):如果set中包含指定的集合，则从set中删除指定集合的所有元素</li>
+<li>public boolean containsAll(Collection c):如果set包含指定集合的所有元素，返回true，如果指定的集合也是一个set，只有是当前set的子集时，返回true</li>
+</ul>
+</li>
+<li><p>HastSet的equals和HashCode</p>
+<p>前面说过Set集合是不允许重复元素的，否则将会引发各种各样的问题，那么HashSet如何判断元素重复呢？</p>
+<ul>
+<li>HashSet集合通过equals和HashCode连个方法来判断两个元素是否相等，具体规则是：<ul>
+<li>调用元素HashCode方法获得哈希码，判断哈希码是否相等，不相等则录入</li>
+<li>相等的话，再判断equals方法是否返回true，如果为true则不录入，如果为false则录入</li>
+</ul>
+</li>
+<li>所以如果要将自定义的类装入Set集合中，需要重写HashCode和equals方法，这样才能保证装入Set中的元素具有独一性</li>
+</ul>
+</li>
+<li><p>LinkedHashSet的特性：</p>
+<p>LinkedHashSet是HashSet的一个子类，LinkedHashSet也根据HashCode的值来决定元素的存储位置，但同时它还用一个链表来维护元素的插入顺序，插入的时候既要计算HashCode的值，又要维护链表，而遍历的时候只需要按照链表来访问元素，查看LinkedHashSet的源码发现它是一样的。由此可知，LinkedHashSet本质上也是从LinkedHashMap而来，LinkedHashSet的所有方法都继承自HashSet,他能维持元素的插入顺序的性质则继承自LinkedHashMap</p>
+</li>
+<li><p>TreeSet的特性：</p>
+<p>TreeSet会调用compareTo方法比较两个元素的大小，然后按照升序排序，所以自然排序中的元素对象，都必须 实现了CompareTo接口，否则会抛出异常，对于TreeSet判断元素是否重复的标准，也是调用元素从Comparable接口继承而来的compareTo方法，如果放回0，则是重复元素。Java中常见的类都已经实现了Comparable接口。并且TreeSet中只允许存入同一类的元素。</p>
+</li>
+<li><p>TreeSet是依靠TreeMap实现的，TreeSet集合中元素将按照升序排列，缺省是按照自然顺序进行排列，以为着TreeSet中元素要实现Comparable接口，我们可以在构造TreeSet对象时，传递实现了Comparator接口的比较器对象。</p>
+</li>
+<li><p>几种Set的比较：</p>
+<ol>
+<li>HashSet外部无序的遍历成员。成员可为任意Object类型的子类的对象，但如果覆盖了equals方法，同时注意修改hashCode方法。</li>
+<li>TreeSet外部有序的遍历成员。附加实现了SortedSet，支持子集等要求顺序的操作</li>
+<li>成员要求实现Comparable接口，或者使用Comparator构造TreeSet。成员一般都为同一类型。</li>
+<li>LinkedHashSet外部按成员的插入顺序遍历成员。成员和HashSet成员类似</li>
+<li>HashSet是基于Hash算法实现的，其性能通常都优于TreeSet。我们通常都应该使用HashSet，在我们需要排序的功能的时候，我们才使用TreeSet</li>
+<li>HashSet的元素存放顺序和我们添加进去的顺序没有任何关系，而LinkedHashSet则保持元素的添加顺序。TreeSet则是对我们的Set中的元素进行排序存放。</li>
+</ol>
+</li>
+<li><p>几种Set集合性能分析</p>
+<ol>
+<li>HashSet和TreeSet是Set集合中用的最多的集合。HashSet总是比TreeSet集合性能更好，因为HashSet不需要额外维护元素的顺序。</li>
+<li>LinkedHashSet需要用额外的链表维护元素的插入顺序，因此在插入时性能比HashSet低，但在迭代访问是想能更高，因为插入的时候既要计算ha’sh’Code又要维护链表，而访问的时候只需要按照链表来访问元素。</li>
+<li>EnumSet元素是所有Set元素中性能最好的，但是它只能保存Enum类型的元素。</li>
+</ol>
+</li>
+</ol>
+<h3 id="Map的子接口"><a href="#Map的子接口" class="headerlink" title="Map的子接口"></a>Map的子接口</h3><p>Map接口—&gt;实现类：HashMap、TreeMap、LinkedHashMap、Hashtable等</p>
+<p>它提供了一组键值的映射。其中存储的每个对象都有一个相应的关键字（key)，关键字决定了对象在Map集合中的存储位置。</p>
+<p>关键字应该是唯一的，每一个key只能映射一个value。</p>
+<h3 id="Map集合"><a href="#Map集合" class="headerlink" title="Map集合"></a>Map集合</h3><ol>
+<li><p>实现类：</p>
+<ol>
+<li>HashMap：键值对，key不能重复，但是value可以重复，key的实现就是HashSet；value对应着放；允许null的键或者值。</li>
+<li>HashTable：线程安全的，不允许null的键或者值。</li>
+<li>Properties：key和value都是String类型，用来读配置文件。</li>
+<li>TreeMap：对key排好序的Map，key就是TreeSet，value对应每一个key，key要实现Comparable接口或者TreeMap有自己的构造器。</li>
+<li>LinkedHashMap：此实现与HashMap的不同之处在于，后者维护着一个运行于所有条目的双重链接列表。存储的数据是有顺序的。</li>
+</ol>
+</li>
+<li><p>HashMap：</p>
+<ol>
+<li>Map主要存储键值对，根据键得到值，因此键不允许重复，但允许值重复。</li>
+<li>HashMap是一个最常用的Map，它根据键的HashCode值存储数据，根据键可以直接获取它的值，具有很快的访问速度。</li>
+<li>HashMap：最多只允许一条记录的键为null。允许多条记录的值为null。</li>
+<li>HashMap：不支持线程的同步，即任一时刻可以有多个线程同时写HashMap；可能会导致数据的不一致，如果需要同步，可以用Collections的synchronizedMap方法使HashMap具有同步的能力。</li>
+</ol>
+</li>
+<li><p>HashMap实现原理:</p>
+<p>Hash哈希算法的意义在于提供了一种快速存储数据的方法，它用一种算法建立键值与真实值之间的对应关系。散列表又称为哈希表。散列表算法的基本思想是：以结点的关键字为变量，通过一定的函数关系（散列函数）计算出对应的函数值，以这个值作为该结点存储在散列表中的地址。</p>
+<p>当散列表中的元素存放太满，就必须进行再散列，将产生一个新的散列表，所有元素存放到新的散列表中，原先的散列表将被删除，在Java语言中通过负载因子来决定何时对散列表进行再散列。</p>
+</li>
+<li><p>Map集合比较：</p>
+<ol>
+<li>HashMap的存入顺序和输出顺序无关。</li>
+<li>LinkedHashMap则保留了键值对的存入顺序。</li>
+<li>TreeMap则是对Map中的元素进行了排序</li>
+<li>因为HashMap和LinkedHashMap存储数据的速度比直接使用TreeMap要快，存取效率要高。当我们完成了所有的元素的存放之后，我们再对整个的Map集合进行排序，这样可以提高整个程序的运行的效率，缩短执行时间。</li>
+</ol>
+</li>
+<li><p>HashMap与TreeMap联系与区别</p>
+<ol>
+<li>HashMap通过hashcode对其内容进行快速查找，而TreeMap中所有的元素都保持着某种固定的顺序，如果你需要得到一个有序的结果你就应该使用TreeMap（HashMap中元素的排列顺序是不固定的）。</li>
+<li>在Map 中插入、删除和定位元素，HashMap是最好的选择。但如果您要按自然顺序或自定义顺序遍历键，那么TreeMap会更好。使用HashMap要求添加的键类明确定义了hashCode()和 equals()的实现。<br>两个map中的元素一样，但顺序不一样，导致hashCode()不一样。</li>
+</ol>
+</li>
+<li><p>Map常用的方法：</p>
+<ol>
+<li>Object put(Object key,Object value):用来存放一个键值对到Map中</li>
+<li>Object remove(Object key):根据key(键),移除键值对,并将值返回</li>
+<li>void clear():清空当前Map中的元素</li>
+<li>Object get(Object key):根据key取得对应的值</li>
+<li>boolean containsKey(Object key):判断Map中是否存在某键(key)</li>
+<li>boolean containsValue(Object value):判断Map中是否存在某值</li>
+<li>public Set keySet():返回所有的键,并使用Set容器存放</li>
+<li>public Collection values():返回所有的值,并使用Collection存放</li>
+<li>public Set entrySet():返回一个实现Map.Entry接口的元素Set</li>
+</ol>
+</li>
+</ol>
+<h3 id="集合的遍历"><a href="#集合的遍历" class="headerlink" title="集合的遍历"></a>集合的遍历</h3><ol>
+<li><p>List集合的遍历:</p>
+<ol>
+<li><p>使用普通for循环,每次调用get()方法获取每一个索引的值的方式遍历整个集合</p>
+</li>
+<li><p>增强for循环遍历整个集合(本质上还是调用的Iterator迭代器)</p>
+</li>
+<li><p>迭代器的方式<code>Iterator&lt;String&gt; it = list.iterator();while(it.hasNext()){it.next();}</code></p>
+</li>
+<li>转数组进行遍历<code>list.toArray();for();</code></li>
+</ol>
+</li>
+<li>Set集合的遍历:<ol>
+<li>三种方式:因为Set集合是无序的所以比List集合少了第一种通过普通for循环方式遍历的方法</li>
+</ol>
+</li>
+<li>Map集合的遍历:<ol>
+<li>通过获取所有的Key的Set集合,按照key来遍历:<code>map.keySet();</code>然后遍历整个Set集合,通过get方法获取value</li>
+<li>直接遍历所有的value,但不能遍历key:<code>map.values()</code></li>
+<li><code>Set&lt;Map.Entry&lt;K,V&gt;&gt; entrySet()</code>返回此映射中包含的映射关系的 Set 视图,然后遍历整个Set集合,得到每一个entrySet对象,通过每一个entrySet对象的getKey()和getValue()方法获取对应的值</li>
+</ol>
+</li>
+</ol>
+<h3 id="集合简记"><a href="#集合简记" class="headerlink" title="集合简记"></a>集合简记</h3><p><img src="/2019/09/15/集合相关内容/集合详解.jpg" alt></p>
 
       
     </div>
 
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+      <div>
+        <div id="reward-container">
+  <div>Thanks!</div>
+  <button id="reward-button" disable="enable" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    Spenden
+  </button>
+  <div id="qr" style="display: none;">
+
+    
+      
+      
+        
+      
+      <div style="display: inline-block">
+        <img src="/images/wechatpay.png" alt="CQY WeChat Bezahlung">
+        <p>WeChat Bezahlung</p>
+      </div>
+    
+      
+      
+        
+      
+      <div style="display: inline-block">
+        <img src="/images/alipay.jpg" alt="CQY Alipay">
+        <p>Alipay</p>
+      </div>
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        
+
+
+
+
+  
+
+
+
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>Beitragsautor:  </strong>CQY</li>
+  <li class="post-copyright-link">
+    <strong>Beitragslink: </strong>
+    
+    <a href="https://ChengqunYang.github.io/2019/09/15/集合相关内容/" title="集合相关内容">https://ChengqunYang.github.io/2019/09/15/集合相关内容/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Urheberrechtshinweis:  </strong>Alle Artikel in diesem Blog sind unter <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> lizenziert, außer es wird anders angegeben.</li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Java/" rel="tag"><i class="fa fa-tag"></i> Java</a>
+          
+            <a href="/tags/集合/" rel="tag"><i class="fa fa-tag"></i> 集合</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+          <div class="wp_rating">
+            <div id="wpac-rating"></div>
+          </div>
+        
+
+        
+
+        
+          
+            <span class="post-meta-divider">|</span>
+          
+          <div class="social_share">
+            
+              <div>
+                
+
+<script src="//cdn.jsdelivr.net/npm/ilyabirman-likely@2/release/likely.js"></script>
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/ilyabirman-likely@2/release/likely.css">
+
+
+  
+
+
+<div class="likely">
+	
+ 	 	<div class="twitter">Tweet</div>
+	
+ 	 	<div class="facebook">Share</div>
+	
+ 	 	<div class="linkedin">Link</div>
+	
+ 	 	<div class="gplus">Plus</div>
+	
+ 	 	<div class="vkontakte">Share</div>
+	
+ 	 	<div class="odnoklassniki">Class</div>
+	
+ 	 	<div class="telegram">Send</div>
+	
+ 	 	<div class="whatsapp">Send</div>
+	
+ 	 	<div class="pinterest">Pin</div>
+	
+</div>
+
+              </div>
+            
+            
+            
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/09/15/常用的API/" rel="next" title="常用的API">
+                <i class="fa fa-chevron-left"></i> 常用的API
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+  </div>
 
 
           </div>
           
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80MzcwNi8yMDI0Ng=="></div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -520,8 +983,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Inhaltsverzeichnis
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Übersicht
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -727,6 +1199,23 @@
       </div>
 
       
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#数组和集合的比较"><span class="nav-number">1.</span> <span class="nav-text">数组和集合的比较</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Java集合整体图"><span class="nav-number">2.</span> <span class="nav-text">Java集合整体图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Collection的子接口"><span class="nav-number">3.</span> <span class="nav-text">Collection的子接口</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#List集合"><span class="nav-number">4.</span> <span class="nav-text">List集合</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Set集合"><span class="nav-number">5.</span> <span class="nav-text">Set集合</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Map的子接口"><span class="nav-number">6.</span> <span class="nav-text">Map的子接口</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Map集合"><span class="nav-number">7.</span> <span class="nav-text">Map集合</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#集合的遍历"><span class="nav-number">8.</span> <span class="nav-text">集合的遍历</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#集合简记"><span class="nav-number">9.</span> <span class="nav-text">集合简记</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
 
       
         <div class="back-to-top">
@@ -882,6 +1371,10 @@
 
 
   
+  <script src="/js/scrollspy.js?v=7.1.0"></script>
+<script src="/js/post-details.js?v=7.1.0"></script>
+
+
 
   
 
@@ -900,6 +1393,23 @@
 
   
 
+
+  
+    <script>
+  window.livereOptions = {
+    refer: '2019/09/15/集合相关内容/'
+  };
+  (function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+    if (typeof LivereTower === 'function') { return; }
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+    e.parentNode.insertBefore(j, e);
+  })(document, 'script');
+</script>
+
+  
 
 
   
@@ -1254,6 +1764,25 @@
   
 
   
+  <script>
+    wpac_init = window.wpac_init || [];
+    wpac_init.push({
+      widget: 'Rating',
+      id: 17993,
+      el: 'wpac-rating',
+      color: 'fc6423'
+    });
+    (function() {
+      if ('WIDGETPACK_LOADED' in window) return;
+      WIDGETPACK_LOADED = true;
+      var mc = document.createElement('script');
+      mc.type = 'text/javascript';
+      mc.async = true;
+      mc.src = '//embed.widgetpack.com/widget.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(mc, s.nextSibling);
+    })();
+  </script>
+
 
   
 
