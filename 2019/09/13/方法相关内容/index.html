@@ -118,7 +118,7 @@
 <meta property="og:site_name" content="Talk is cheap.  Show me the code.">
 <meta property="og:description" content="基础 方法其实就是若干语句的功能集合  定义方法的完整格式: 1234修饰符 返回值类型 方法名称(参数类型 参数名称,...)&amp;#123;	方法体;	return 返回值;&amp;#125;  修饰符:public private protected static final abstract 返回值类型:也就是方法最终产生的数据结果是什么类型 方法名称:方法的名字,规则和变量名一样,小驼峰式 参数类">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-09-15T11:01:11.797Z">
+<meta property="og:updated_time" content="2019-09-22T08:44:53.509Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="方法相关内容">
 <meta name="twitter:description" content="基础 方法其实就是若干语句的功能集合  定义方法的完整格式: 1234修饰符 返回值类型 方法名称(参数类型 参数名称,...)&amp;#123;	方法体;	return 返回值;&amp;#125;  修饰符:public private protected static final abstract 返回值类型:也就是方法最终产生的数据结果是什么类型 方法名称:方法的名字,规则和变量名一样,小驼峰式 参数类">
@@ -503,7 +503,7 @@
                 
                   <span class="post-meta-item-text">Bearbeitet am</span>
                 
-                <time title="Geändert am: 2019-09-15 19:01:11" itemprop="dateModified" datetime="2019-09-15T19:01:11+08:00">2019-09-15</time>
+                <time title="Geändert am: 2019-09-22 16:44:53" itemprop="dateModified" datetime="2019-09-22T16:44:53+08:00">2019-09-22</time>
               
             
           </span>
@@ -556,7 +556,7 @@
                 
                   <span class="post-meta-item-text">Symbole im Artikel gezählt: </span>
                 
-                <span title="Symbole im Artikel gezählt">1.4k</span>
+                <span title="Symbole im Artikel gezählt">1.8k</span>
               
 
               
@@ -570,7 +570,7 @@
                 
                   <span class="post-meta-item-text">Lesezeit &asymp;</span>
                 
-                <span title="Lesezeit">1 minuten.</span>
+                <span title="Lesezeit">2 minuten.</span>
               
             </div>
           
@@ -660,7 +660,23 @@
 <li>构造方法也可以重载(方法名相同,参数列表不同)</li>
 </ol>
 </li>
-<li></li>
+<li><p>在继承关系中,父子类构造方法的访问特点:(子类必须调用父类构造,不写则赠送super(),写了则用写的指定的super调用,super只能有一个,还必须是第一个)</p>
+<ol>
+<li>子类构造方法当中有一个默认隐含的”super()”调用,所以一定是先调用父类构造,后执行子类构造</li>
+<li>子类构造可以通过super关键字来调用父类重载构造</li>
+<li>super的父类构造调用,必须是子类构造方法的第一个语句,不能一个子类构造调用多次super构造</li>
+</ol>
+</li>
+</ol>
+<h3 id="重写"><a href="#重写" class="headerlink" title="重写"></a>重写</h3><ol>
+<li>在继承关系中,方法的名称一样,参数列表也一样</li>
+<li>创建的是子类对象,则优先使用子类方法</li>
+<li>注意事项:<ol>
+<li>必须保证父子类之间方法的名称相同,参数列表也相同</li>
+<li>@Override:写在方法的前面,用来检测该方法是不是一个正确的重写方法,但是不写该注解,并不影响重写</li>
+<li>子类方法的返回值必须小于等于父类方法的返回值范围</li>
+</ol>
+</li>
 </ol>
 
       
@@ -1102,7 +1118,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#基础"><span class="nav-number">1.</span> <span class="nav-text">基础</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#重载"><span class="nav-number">2.</span> <span class="nav-text">重载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#构造方法"><span class="nav-number">3.</span> <span class="nav-text">构造方法</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#基础"><span class="nav-number">1.</span> <span class="nav-text">基础</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#重载"><span class="nav-number">2.</span> <span class="nav-text">重载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#构造方法"><span class="nav-number">3.</span> <span class="nav-text">构造方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#重写"><span class="nav-number">4.</span> <span class="nav-text">重写</span></a></li></ol></div>
             
 
           </div>
@@ -1144,7 +1160,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="Insgesamt gezählte Symbole">84k</span>
+    <span title="Insgesamt gezählte Symbole">85k</span>
   
 
   
@@ -1153,7 +1169,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="Insgesamte Lesezeit">1:16</span>
+    <span title="Insgesamte Lesezeit">1:17</span>
   
 </div>
 

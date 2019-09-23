@@ -110,18 +110,18 @@
 
 
 
-  <meta name="description" content="字符串基础 字符串常量：  ​    需要使用“ ”双引号包裹起来 ​    “ 12435”  “asdhskdfgb”   &amp;quot;我爱你，中国&amp;quot; ​    一个字符串不能放在多行，如果要过表示换行可以在字符串中间添加\n,来表示换行。  字符串变量：  String str =“asdfa”; String str = new String(&amp;quot;dfasdg&amp;quot;">
+  <meta name="description" content="字符串基础 字符串常量：  ​    需要使用“ ”双引号包裹起来 ​    “ 12435”  “asdhskdfgb”   &amp;quot;我爱你，中国&amp;quot; ​    一个字符串不能放在多行，如果要过表示换行可以在字符串中间添加\n,来表示换行  字符串变量：  String str =“asdfa”; String str = new String(&amp;quot;dfasdg&amp;quot;)">
 <meta name="keywords" content="Java,String">
 <meta property="og:type" content="article">
 <meta property="og:title" content="String相关内容">
 <meta property="og:url" content="https://ChengqunYang.github.io/2019/09/10/String相关内容/index.html">
 <meta property="og:site_name" content="Talk is cheap.  Show me the code.">
-<meta property="og:description" content="字符串基础 字符串常量：  ​    需要使用“ ”双引号包裹起来 ​    “ 12435”  “asdhskdfgb”   &amp;quot;我爱你，中国&amp;quot; ​    一个字符串不能放在多行，如果要过表示换行可以在字符串中间添加\n,来表示换行。  字符串变量：  String str =“asdfa”; String str = new String(&amp;quot;dfasdg&amp;quot;">
+<meta property="og:description" content="字符串基础 字符串常量：  ​    需要使用“ ”双引号包裹起来 ​    “ 12435”  “asdhskdfgb”   &amp;quot;我爱你，中国&amp;quot; ​    一个字符串不能放在多行，如果要过表示换行可以在字符串中间添加\n,来表示换行  字符串变量：  String str =“asdfa”; String str = new String(&amp;quot;dfasdg&amp;quot;)">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-09-14T11:24:06.114Z">
+<meta property="og:updated_time" content="2019-09-22T01:56:25.816Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="String相关内容">
-<meta name="twitter:description" content="字符串基础 字符串常量：  ​    需要使用“ ”双引号包裹起来 ​    “ 12435”  “asdhskdfgb”   &amp;quot;我爱你，中国&amp;quot; ​    一个字符串不能放在多行，如果要过表示换行可以在字符串中间添加\n,来表示换行。  字符串变量：  String str =“asdfa”; String str = new String(&amp;quot;dfasdg&amp;quot;">
+<meta name="twitter:description" content="字符串基础 字符串常量：  ​    需要使用“ ”双引号包裹起来 ​    “ 12435”  “asdhskdfgb”   &amp;quot;我爱你，中国&amp;quot; ​    一个字符串不能放在多行，如果要过表示换行可以在字符串中间添加\n,来表示换行  字符串变量：  String str =“asdfa”; String str = new String(&amp;quot;dfasdg&amp;quot;)">
 
 
 
@@ -503,7 +503,7 @@
                 
                   <span class="post-meta-item-text">Bearbeitet am</span>
                 
-                <time title="Geändert am: 2019-09-14 19:24:06" itemprop="dateModified" datetime="2019-09-14T19:24:06+08:00">2019-09-14</time>
+                <time title="Geändert am: 2019-09-22 09:56:25" itemprop="dateModified" datetime="2019-09-22T09:56:25+08:00">2019-09-22</time>
               
             
           </span>
@@ -556,7 +556,7 @@
                 
                   <span class="post-meta-item-text">Symbole im Artikel gezählt: </span>
                 
-                <span title="Symbole im Artikel gezählt">2.3k</span>
+                <span title="Symbole im Artikel gezählt">2.6k</span>
               
 
               
@@ -595,23 +595,38 @@
 </ol>
 <p>​    需要使用“ ”双引号包裹起来</p>
 <p>​    <code>“ 12435”  “asdhskdfgb”   &quot;我爱你，中国&quot;</code></p>
-<p>​    一个字符串不能放在多行，如果要过表示换行可以在字符串中间添加\n,来表示换行。</p>
+<p>​    一个字符串不能放在多行，如果要过表示换行可以在字符串中间添加\n,来表示换行</p>
 <ol start="2">
 <li><p>字符串变量：</p>
 <ul>
 <li><code>String str =“asdfa”;</code></li>
-<li><code>String str = new String(&quot;dfasdg&quot;)</code></li>
+<li><code>String str = new String(&quot;dfasdg&quot;);</code></li>
+<li><code>String str = new String(byteArray);</code></li>
+<li><code>String str = new String(charArray);</code></li>
 </ul>
 </li>
-<li>字符串连接（+）：<ul>
-<li>多个字符串连接</li>
+<li><p>字符串的特点:</p>
+<ol>
+<li>字符串的内容永不可变,所以字符串是可以共享使用的</li>
+<li>正因为字符串不可以改变,所以字符串是可以共享使用的</li>
+<li>字符串效果上相当于是一个char[]字符数组,但是底层原理是byte[]字节数组</li>
+<li>new出来的字符串直接在堆当中,直接赋值的字符串在堆中的字符串常量池中</li>
+</ol>
+</li>
+<li><p>字符串连接（+）：</p>
+<ul>
+<li>多个字符串连接<ul>
+<li><code>public String concat(String str)</code>将当前字符串和参数字符串拼接为一个新的字符串并返回</li>
+</ul>
+</li>
 <li>和其他数据连接<ul>
 <li>通过+可以直接对字符串（或者其他数据类型）常量和变量做连接操作</li>
 </ul>
 </li>
 </ul>
 </li>
-<li>字符串的特性：<ul>
+<li><p>字符串的特性：</p>
+<ul>
 <li>字符串无法被修改</li>
 <li>字符串的值无法被修改，但是字符串对象可以引用别的字符串。</li>
 </ul>
@@ -656,7 +671,7 @@
 <li><code>s.contains(String str);</code></li>
 </ol>
 </li>
-<li>判断字符串是否为空<ol>
+<li>判断字符串是否为空 <ol>
 <li><code>s.isEmpty();</code></li>
 <li>空的两种状态：<ol>
 <li><code>String s = &quot;&quot;;</code>空字符串</li>
@@ -697,20 +712,18 @@
 <li><p>通过String类的charAt()的方法来获取字符串中的每一个字符，然后将其拼接为一个新的字符串。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">CharAtreverse</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">      <span class="keyword">int</span> length = s.length();</span><br><span class="line">      String reverse = <span class="string">""</span>;</span><br><span class="line">      <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;length; i++)</span><br><span class="line">          reverse = s.charAt(i) + reverse;</span><br><span class="line">      <span class="keyword">return</span> reverse;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
 </li>
-</ol>
+<li><p>通过String的toCharArray()方法可以获得字符串中的每一个字符串并转换为字符数组，然后用一个空的字符串从后向前一个个的拼接成新的字符串。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">reverseCharArray</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">	      <span class="keyword">char</span>[] array = s.toCharArray();</span><br><span class="line">	      String reverse = <span class="string">""</span>;</span><br><span class="line">	      <span class="keyword">for</span> (<span class="keyword">int</span> i = array.length - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">	          reverse += array[i];</span><br><span class="line">	      &#125;</span><br><span class="line">	      <span class="keyword">return</span> reverse;</span><br><span class="line">	  &#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>通过StringBuilder的reverse()方法，最快的方式</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">reverseStringBuilder</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">				  StringBuilder sb = <span class="keyword">new</span> StringBuilder(s);	                  </span><br><span class="line">				  String afterreverse = sb.reverse().toString()；</span><br><span class="line">	 <span class="keyword">return</span> afterreverse;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 </li>
 </ol>
-<pre><code>2.  通过String的toCharArray()方法可以获得字符串中的每一个字符串并转换为字符数组，然后用一个空的字符串从后向前一个个的拼接成新的字符串。
+</li>
+</ol>
 
-   <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">reverseCharArray</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">	      <span class="keyword">char</span>[] array = s.toCharArray();</span><br><span class="line">	      String reverse = <span class="string">""</span>;</span><br><span class="line">	      <span class="keyword">for</span> (<span class="keyword">int</span> i = array.length - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">	          reverse += array[i];</span><br><span class="line">	      &#125;</span><br><span class="line">	      <span class="keyword">return</span> reverse;</span><br><span class="line">	  &#125;</span><br></pre></td></tr></table></figure>
-
-
-3. 通过StringBuilder的reverse()方法，最快的方式
-
-   <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">reverseStringBuilder</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">				  StringBuilder sb = <span class="keyword">new</span> StringBuilder(s);	                  </span><br><span class="line">				  String afterreverse = sb.reverse().toString()；</span><br><span class="line">	 <span class="keyword">return</span> afterreverse;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
-</code></pre>
       
     </div>
 
@@ -1192,7 +1205,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="Insgesamt gezählte Symbole">84k</span>
+    <span title="Insgesamt gezählte Symbole">85k</span>
   
 
   
@@ -1201,7 +1214,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="Insgesamte Lesezeit">1:16</span>
+    <span title="Insgesamte Lesezeit">1:17</span>
   
 </div>
 
