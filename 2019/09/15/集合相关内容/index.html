@@ -120,7 +120,7 @@
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://chengqunyang.github.io/2019/09/15/集合相关内容/整体框架图.jpg">
 <meta property="og:image" content="https://chengqunyang.github.io/2019/09/15/集合相关内容/集合详解.jpg">
-<meta property="og:updated_time" content="2019-09-20T14:35:31.002Z">
+<meta property="og:updated_time" content="2019-09-27T11:32:53.152Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="集合相关内容">
 <meta name="twitter:description" content="数组和集合的比较数组不是面向对象的，存在明显的缺陷，集合弥补了数组的缺点，比数组更灵活更实用，而且不同的集合框架类可适用不同场合。如下:   数组能存放基本数据类型和对象，而集合类存放的都是对象的引用，而非对象本身！ 数组容易固定无法动态改变，集合类容量动态改变。  数组无法判断其中实际存有多少元素，length只告诉了数组的容量，而集合的size()可以确切知道元素的个数  集合有多种实现方式和">
@@ -282,7 +282,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archiv<span class="badge">23</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archiv<span class="badge">24</span></a>
 
   </li>
         
@@ -301,7 +301,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>Schlagwörter<span class="badge">25</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>Schlagwörter<span class="badge">26</span></a>
 
   </li>
         
@@ -320,7 +320,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>Kategorien<span class="badge">14</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>Kategorien<span class="badge">15</span></a>
 
   </li>
         
@@ -506,7 +506,7 @@
                 
                   <span class="post-meta-item-text">Bearbeitet am</span>
                 
-                <time title="Geändert am: 2019-09-20 22:35:31" itemprop="dateModified" datetime="2019-09-20T22:35:31+08:00">2019-09-20</time>
+                <time title="Geändert am: 2019-09-27 19:32:53" itemprop="dateModified" datetime="2019-09-27T19:32:53+08:00">2019-09-27</time>
               
             
           </span>
@@ -642,7 +642,7 @@
 </li>
 <li><p>实现类:</p>
 <ul>
-<li>HashSet:不仅不能保证元素插入的顺序，而且元素在以后的顺序中也可能发生变化（这是由于HashSet按照Hash’Code存储对象单元决定的，对象变化可能也会导致HashCode变化），HashSet是线程非安全的。HashSet的后台有一个HashMap；初始化后台容量，只不过生成一个HashSet的话，系统只提供key的访问，如果有两个key相同，那么会覆盖之前                  的。</li>
+<li>HashSet:不仅不能保证元素插入的顺序，而且元素在以后的顺序中也可能发生变化（这是由于HashSet按照Hash’Code存储对象单元决定的，对象变化可能也会导致HashCode变化），HashSet是线程非安全的。HashSet的后台有一个HashMap初始化后台容量，而HashMap的底层是哈希表(数组+单向链表+红黑树(链表的长度超过8)),只不过生成一个HashSet的话，系统只提供key的访问，如果有两个key相同，那么会覆盖之前                  的。</li>
 <li>LinkedHashSet:此实现与HashSet的不同之处在于它维护这一个运行于所有条目的双重连接列表，存储的数据是有序的</li>
 <li>TreeSet:TreeSet实现了SortedSet接口，顾名思义，这是一种排序的Set集合，查看jdk源码发现底层是用TreeMap实现的，本质上是一个红黑树原理。正因为他是排了序的，所以相对HashSet来说，TreeSet提供了一些额外的按照排序位置访问元素的方法，例如first()、last()、lower()、higher()、subSet()、headSet()、tailSet()。TreeSet的排序分为两种，一种是自然排序，一种是定制排序。</li>
 </ul>
@@ -1025,7 +1025,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">23</span>
+                    <span class="site-state-item-count">24</span>
                     <span class="site-state-item-name">Artikel</span>
                   </a>
                 </div>
@@ -1070,7 +1070,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">14</span>
+                      
+                    
+                    <span class="site-state-item-count">15</span>
                     <span class="site-state-item-name">Kategorien</span>
                   </a>
                 </div>
@@ -1137,7 +1139,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">25</span>
+                      
+                    
+                    <span class="site-state-item-count">26</span>
                     <span class="site-state-item-name">schlagwörter</span>
                   </a>
                 </div>
@@ -1273,7 +1277,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="Insgesamt gezählte Symbole">92k</span>
+    <span title="Insgesamt gezählte Symbole">95k</span>
   
 
   
@@ -1282,7 +1286,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="Insgesamte Lesezeit">1:23</span>
+    <span title="Insgesamte Lesezeit">1:26</span>
   
 </div>
 

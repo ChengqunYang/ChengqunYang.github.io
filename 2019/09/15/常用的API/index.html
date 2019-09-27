@@ -118,7 +118,7 @@
 <meta property="og:site_name" content="Talk is cheap.  Show me the code.">
 <meta property="og:description" content="概述API(APPlication Programming Interface),应用程序编程接口,Java API 是一本程序员的字典,是JDK提供给我们使用的类的说明文档,这些类将底层的代码实现封装了其阿里,我们不需要关心这些类是如何实现的,只需要学习这些类如何使用即可,所以我们可以通过查询API的方式,来学习Java提供的类,并得知如何使用它们 使用步骤  导包  import 包路径.类名">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-09-22T04:36:02.461Z">
+<meta property="og:updated_time" content="2019-09-27T11:28:30.843Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="常用的API">
 <meta name="twitter:description" content="概述API(APPlication Programming Interface),应用程序编程接口,Java API 是一本程序员的字典,是JDK提供给我们使用的类的说明文档,这些类将底层的代码实现封装了其阿里,我们不需要关心这些类是如何实现的,只需要学习这些类如何使用即可,所以我们可以通过查询API的方式,来学习Java提供的类,并得知如何使用它们 使用步骤  导包  import 包路径.类名">
@@ -279,7 +279,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archiv<span class="badge">23</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archiv<span class="badge">24</span></a>
 
   </li>
         
@@ -298,7 +298,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>Schlagwörter<span class="badge">25</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>Schlagwörter<span class="badge">26</span></a>
 
   </li>
         
@@ -317,7 +317,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>Kategorien<span class="badge">14</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>Kategorien<span class="badge">15</span></a>
 
   </li>
         
@@ -503,7 +503,7 @@
                 
                   <span class="post-meta-item-text">Bearbeitet am</span>
                 
-                <time title="Geändert am: 2019-09-22 12:36:02" itemprop="dateModified" datetime="2019-09-22T12:36:02+08:00">2019-09-22</time>
+                <time title="Geändert am: 2019-09-27 19:28:30" itemprop="dateModified" datetime="2019-09-27T19:28:30+08:00">2019-09-27</time>
               
             
           </span>
@@ -556,7 +556,7 @@
                 
                   <span class="post-meta-item-text">Symbole im Artikel gezählt: </span>
                 
-                <span title="Symbole im Artikel gezählt">1.7k</span>
+                <span title="Symbole im Artikel gezählt">4.8k</span>
               
 
               
@@ -570,7 +570,7 @@
                 
                   <span class="post-meta-item-text">Lesezeit &asymp;</span>
                 
-                <span title="Lesezeit">2 minuten.</span>
+                <span title="Lesezeit">4 minuten.</span>
               
             </div>
           
@@ -643,6 +643,86 @@
 <li>public static double sqrt(double a): 返回正确舍入的 double 值的正平方根</li>
 </ol>
 <p>Math.PI:代表近似的圆周率常量(double)</p>
+<h3 id="Object类"><a href="#Object类" class="headerlink" title="Object类"></a>Object类</h3><p>java.long.Object类是类层次结构的父(根)类，每个类都使用Object类作为超类（父类），所有对象都实现这个类的方法</p>
+<ol>
+<li>public String toString()：返回该对象的字符串表示形式，如果没有重写，那么返回的是该对象的地址值</li>
+<li>public boolean equals(object obj): 指示其他对象是否与此对象“相等”，如果没有重写，那么比较的是两个对象的地址值</li>
+</ol>
+<h3 id="Objcets类"><a href="#Objcets类" class="headerlink" title="Objcets类"></a>Objcets类</h3><p>java.util.Object类,中提供了一些方法来操作对象,它由一些静态的方法组成,这些方法是空指针安全的,用于计算对象的hashcode,返回对象的字符串表示形式,比较两个对象</p>
+<h3 id="Date类"><a href="#Date类" class="headerlink" title="Date类"></a>Date类</h3><p>java.util.Date表示日期和事件的类,类date表示特定的瞬间,精确到毫秒值,可以对日期和时间进行计算,计算完再转化为日期</p>
+<p>把日期转化为毫秒:</p>
+<p>当前的日期:System.currentTimeMillis();</p>
+<p>时间原点:19701月1日00:00:00,中国为东八区所以为1970年1月1日08:00:00 </p>
+<p>1天 = 24*60*60=86400秒 = 86400*1000毫秒</p>
+<p>Date类的空参构造方法</p>
+<ol>
+<li>Date()获取当前系统的日期和事件</li>
+<li>Date(long date):传递的是毫秒值,把毫秒值转化为Date日期</li>
+</ol>
+<p>Date类的普通方法</p>
+<ol>
+<li>Long getTime():把日期转化为毫秒值</li>
+</ol>
+<h3 id="DateFormat类"><a href="#DateFormat类" class="headerlink" title="DateFormat类"></a>DateFormat类</h3><p>java.text.DateFormat类是日期/时间格式化子类的抽象类,我们通过这个类可以帮我们实现日期和文本之间的转化,也就是可以在Date对象和String对象之间相互转化</p>
+<p>DateFormat类是一个抽象类,无法直接创建对象使用,可以使用DateFormat类的子类</p>
+<p>java.text.simpleDateFormat extends DateFormat</p>
+<p>构造方法:</p>
+<p>SimpleDateFormat(String pattern):用给定的模式和默认语言环境的日期格式符号,构造SimpleDateFormat</p>
+<p>参数:String pattern:传递指定的模式</p>
+<p>模式:区分大小写的    Y:年   M:月  d:日  H:时  m:分  s:秒</p>
+<p>写对应的模式,会将模式替换为对应的日期和时间</p>
+<ol>
+<li>格式化:按照指定的格式,从Date对象转化为String对象</li>
+<li>解析:按照指定的格式,从String对象转化为Date对象</li>
+</ol>
+<p>成员方法:</p>
+<ol>
+<li>String fromat(Date date):按照指定的格式,把日期格式化为符合模式的字符串</li>
+<li>Date parse(String str):把符合构造方法中模式的字符串转化为Date日期,parse声明了一个解析异常,如果我们的字符串和构造方法的模式不一样,那么程序就会抛出此异常</li>
+</ol>
+<h3 id="Calendar类"><a href="#Calendar类" class="headerlink" title="Calendar类"></a>Calendar类</h3><p>java.util.Calendar类:日历类</p>
+<p>Calendar类是一个抽象类,里边提供了很多操作日历字段的方法(YEAR,MONTH,DAY_OF_MONTH,HOUR),无法直接创建对象使用,但是Calendar类当中有一个静态方法getInstance()使用默认时区和语言环境获取一个日历<code>Calendar c  = Calendar getInstance();</code></p>
+<p>常用方法:</p>
+<ol>
+<li>publilc int get(int field):返回给定日历字段的值</li>
+<li>public void set(int field,int value):将给定的日历字段设置为给定值</li>
+<li>public abstract void add(int field,int amount):根据日历的规则,为给定的日历字段添加或者减去指定的时间量</li>
+<li>public Date getTime():返回一个表示此Calendar时间值的Date对象</li>
+</ol>
+<p>int field:日历类的字段,可以使用calendar类的静态成员变量获取 calendar.YEAR,</p>
+<p>calendar.MONTH,calendar.DATE,calendar.DAY_OF_MONTH,calendar.HOUR,calendar.MINUTE,calendar.SECOND</p>
+<h3 id="System类"><a href="#System类" class="headerlink" title="System类"></a>System类</h3><p>java.lang.System类中提供了大量的静态方法,可以获取与当前系统有关的信息或系统级操作,在System类中常用的方法有:</p>
+<ol>
+<li>public static long currentTimeMillis():返回当前系统的时间毫秒值</li>
+<li>public static void arraycopy(Object src,int srcPos,Object dest,int destPos,int length):将数组中指定的数据拷贝到另一个数组中<ul>
+<li>src:源数组 secPos:源数组中的起始位置dest:目标索引destPos:目标数据中的起始位置length:要复制的数组元素的数量</li>
+</ul>
+</li>
+</ol>
+<h3 id="StringBuilder类"><a href="#StringBuilder类" class="headerlink" title="StringBuilder类"></a>StringBuilder类</h3><p>String类:字符串是常量,他们的值在创建后不能改变,字符串的底层是一个被final修饰的字符数组,不能改变,是一个常量</p>
+<p>进行字符串的相加,内存中就会有多个字符串,占用空间多,效率低下</p>
+<p>java.lang.StringBuilder类,字符串缓冲区,可以提高字符串的操作效率(看成一个长度可以变化的字符串),底层也是一个字符数组,但是没有被final修饰,可以改变长度,初始长度为16,当长度不够时,可以自动扩容</p>
+<p>构造方法:</p>
+<ol>
+<li>public StringBuilder();构造一个不带任何字符的字符串缓冲区,其初始容量为16个字符</li>
+<li>public StringBuilder(String str):构造一个字符串缓冲区,它初始化为指定的字符串</li>
+</ol>
+<p>普通方法:</p>
+<ol>
+<li>public StringBuilder append(…): 添加任意类型数据的字符串形式,并返回当前对象本身</li>
+<li>public String toString(): 将当前对象StringBuilder对象转换位String对象</li>
+</ol>
+<h3 id="包装类"><a href="#包装类" class="headerlink" title="包装类:"></a>包装类:</h3><p>java.long.Integer,基本数据类型,使用起来非常方便,但是没有对应的方法来操作这些基本类型的数据,可以使用一个类,把基本类型的数据包装起来,在类中定义一些方法,这个类就称为包装类,我们可以使用这个类中的方法来操作这些基本类型的数据</p>
+<p>int:Integer  char:Character</p>
+<h3 id="Collections类"><a href="#Collections类" class="headerlink" title="Collections类:"></a>Collections类:</h3><p>java.utils.Collections是集合工具类,用来对集合进行操作,常用方法如下:</p>
+<ol>
+<li>public static\&lt;T> boolean addAll(Collection\&lt;T> c,T…elements):往集合中添加一些元素</li>
+<li>public static void shuffle(List \&lt;?> list) : 打乱集合顺序</li>
+<li>public static void sort(List\&lt;T> list) :  将集合中元素按照<strong>默认规则</strong>排序</li>
+<li>public static void sort(List\&lt;T> list,Comparator\&lt;? super T>):将集合中元素按照<strong>指定规则</strong>排序</li>
+</ol>
+<p>自定义比较的规则:</p>
+<p>升序就是我减它(前减后 ),降序就是他减我</p>
 
       
     </div>
@@ -885,7 +965,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">23</span>
+                    <span class="site-state-item-count">24</span>
                     <span class="site-state-item-name">Artikel</span>
                   </a>
                 </div>
@@ -930,7 +1010,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">14</span>
+                      
+                    
+                    <span class="site-state-item-count">15</span>
                     <span class="site-state-item-name">Kategorien</span>
                   </a>
                 </div>
@@ -997,7 +1079,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">25</span>
+                      
+                    
+                    <span class="site-state-item-count">26</span>
                     <span class="site-state-item-name">schlagwörter</span>
                   </a>
                 </div>
@@ -1091,7 +1175,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#概述"><span class="nav-number">1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Scanner类"><span class="nav-number">2.</span> <span class="nav-text">Scanner类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Random类"><span class="nav-number">3.</span> <span class="nav-text">Random类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Arrays类"><span class="nav-number">4.</span> <span class="nav-text">Arrays类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Math类"><span class="nav-number">5.</span> <span class="nav-text">Math类</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#概述"><span class="nav-number">1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Scanner类"><span class="nav-number">2.</span> <span class="nav-text">Scanner类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Random类"><span class="nav-number">3.</span> <span class="nav-text">Random类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Arrays类"><span class="nav-number">4.</span> <span class="nav-text">Arrays类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Math类"><span class="nav-number">5.</span> <span class="nav-text">Math类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Object类"><span class="nav-number">6.</span> <span class="nav-text">Object类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Objcets类"><span class="nav-number">7.</span> <span class="nav-text">Objcets类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Date类"><span class="nav-number">8.</span> <span class="nav-text">Date类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DateFormat类"><span class="nav-number">9.</span> <span class="nav-text">DateFormat类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Calendar类"><span class="nav-number">10.</span> <span class="nav-text">Calendar类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#System类"><span class="nav-number">11.</span> <span class="nav-text">System类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#StringBuilder类"><span class="nav-number">12.</span> <span class="nav-text">StringBuilder类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#包装类"><span class="nav-number">13.</span> <span class="nav-text">包装类:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Collections类"><span class="nav-number">14.</span> <span class="nav-text">Collections类:</span></a></li></ol></div>
             
 
           </div>
@@ -1133,7 +1217,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="Insgesamt gezählte Symbole">92k</span>
+    <span title="Insgesamt gezählte Symbole">95k</span>
   
 
   
@@ -1142,7 +1226,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="Insgesamte Lesezeit">1:23</span>
+    <span title="Insgesamte Lesezeit">1:26</span>
   
 </div>
 
