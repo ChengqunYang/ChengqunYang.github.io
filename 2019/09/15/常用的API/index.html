@@ -118,7 +118,7 @@
 <meta property="og:site_name" content="Talk is cheap.  Show me the code.">
 <meta property="og:description" content="概述API(APPlication Programming Interface),应用程序编程接口,Java API 是一本程序员的字典,是JDK提供给我们使用的类的说明文档,这些类将底层的代码实现封装了其阿里,我们不需要关心这些类是如何实现的,只需要学习这些类如何使用即可,所以我们可以通过查询API的方式,来学习Java提供的类,并得知如何使用它们 使用步骤  导包  import 包路径.类名">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-09-27T11:28:30.843Z">
+<meta property="og:updated_time" content="2019-09-27T16:09:37.044Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="常用的API">
 <meta name="twitter:description" content="概述API(APPlication Programming Interface),应用程序编程接口,Java API 是一本程序员的字典,是JDK提供给我们使用的类的说明文档,这些类将底层的代码实现封装了其阿里,我们不需要关心这些类是如何实现的,只需要学习这些类如何使用即可,所以我们可以通过查询API的方式,来学习Java提供的类,并得知如何使用它们 使用步骤  导包  import 包路径.类名">
@@ -279,7 +279,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archiv<span class="badge">24</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archiv<span class="badge">25</span></a>
 
   </li>
         
@@ -298,7 +298,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>Schlagwörter<span class="badge">26</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>Schlagwörter<span class="badge">27</span></a>
 
   </li>
         
@@ -317,7 +317,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>Kategorien<span class="badge">15</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>Kategorien<span class="badge">16</span></a>
 
   </li>
         
@@ -503,7 +503,7 @@
                 
                   <span class="post-meta-item-text">Bearbeitet am</span>
                 
-                <time title="Geändert am: 2019-09-27 19:28:30" itemprop="dateModified" datetime="2019-09-27T19:28:30+08:00">2019-09-27</time>
+                <time title="Geändert am: 2019-09-28 00:09:37" itemprop="dateModified" datetime="2019-09-28T00:09:37+08:00">2019-09-28</time>
               
             
           </span>
@@ -556,7 +556,7 @@
                 
                   <span class="post-meta-item-text">Symbole im Artikel gezählt: </span>
                 
-                <span title="Symbole im Artikel gezählt">4.8k</span>
+                <span title="Symbole im Artikel gezählt">5.1k</span>
               
 
               
@@ -570,7 +570,7 @@
                 
                   <span class="post-meta-item-text">Lesezeit &asymp;</span>
                 
-                <span title="Lesezeit">4 minuten.</span>
+                <span title="Lesezeit">5 minuten.</span>
               
             </div>
           
@@ -648,7 +648,10 @@
 <li>public String toString()：返回该对象的字符串表示形式，如果没有重写，那么返回的是该对象的地址值</li>
 <li>public boolean equals(object obj): 指示其他对象是否与此对象“相等”，如果没有重写，那么比较的是两个对象的地址值</li>
 </ol>
-<h3 id="Objcets类"><a href="#Objcets类" class="headerlink" title="Objcets类"></a>Objcets类</h3><p>java.util.Object类,中提供了一些方法来操作对象,它由一些静态的方法组成,这些方法是空指针安全的,用于计算对象的hashcode,返回对象的字符串表示形式,比较两个对象</p>
+<h3 id="Objcets类"><a href="#Objcets类" class="headerlink" title="Objcets类"></a>Objcets类</h3><p>java.util.Object类,java1,7后java加入,该类中提供了一些方法来操作对象,它由一些静态的方法组成,这些方法是空指针安全的,用于计算对象的hashcode(),返回对象的字符串表示形式toString(),比较两个对象equals()</p>
+<p>在它的源码中,对对象为null的值进行了弹出异常操作</p>
+<p>public static \&lt;T> requireNonNull(T obj):查看指定引用对象不是null,源码如下:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> &lt;T&gt; <span class="function">T <span class="title">requireNonNull</span><span class="params">(T obj)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(obj == <span class="keyword">null</span>)</span><br><span class="line">		<span class="keyword">throw</span> <span class="keyword">new</span> NullPointerException();</span><br><span class="line">	<span class="keyword">return</span> obj;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="Date类"><a href="#Date类" class="headerlink" title="Date类"></a>Date类</h3><p>java.util.Date表示日期和事件的类,类date表示特定的瞬间,精确到毫秒值,可以对日期和时间进行计算,计算完再转化为日期</p>
 <p>把日期转化为毫秒:</p>
 <p>当前的日期:System.currentTimeMillis();</p>
@@ -965,7 +968,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">24</span>
+                    <span class="site-state-item-count">25</span>
                     <span class="site-state-item-name">Artikel</span>
                   </a>
                 </div>
@@ -1012,7 +1015,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">15</span>
+                      
+                    
+                    <span class="site-state-item-count">16</span>
                     <span class="site-state-item-name">Kategorien</span>
                   </a>
                 </div>
@@ -1081,7 +1086,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">26</span>
+                      
+                    
+                    <span class="site-state-item-count">27</span>
                     <span class="site-state-item-name">schlagwörter</span>
                   </a>
                 </div>
@@ -1217,7 +1224,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="Insgesamt gezählte Symbole">95k</span>
+    <span title="Insgesamt gezählte Symbole">98k</span>
   
 
   
@@ -1226,7 +1233,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="Insgesamte Lesezeit">1:26</span>
+    <span title="Insgesamte Lesezeit">1:29</span>
   
 </div>
 
