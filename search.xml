@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[多线程相关内容]]></title>
+    <url>%2F2019%2F09%2F28%2F%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%9B%B8%E5%85%B3%E5%86%85%E5%AE%B9%2F</url>
+    <content type="text"><![CDATA[多线程我们在之前，学习的程序在没有跳转语句的前提下，都是由上至下依次执行，那现在想要设计一个程序，边打游戏边听歌，怎么设计？ 要解决上述问题,咱们得使用多进程或者多线程来解决. 1 并发与并行 并发：指两个或多个事件在同一个时间段内发生。 并行：指两个或多个事件在同一时刻发生（同时发生）。 在操作系统中，安装了多个程序，并发指的是在一段时间内宏观上有多个程序同时运行，这在单 CPU 系统中，每一时刻只能有一道程序执行，即微观上这些程序是分时的交替运行，只不过是给人的感觉是同时运行，那是因为分时交替运行的时间是非常短的。 而在多个 CPU 系统中，则这些可以并发执行的程序便可以分配到多个处理器上（CPU），实现多任务并行执行，即利用每个处理器来处理一个可以并发执行的程序，这样多个程序便可以同时执行。目前电脑市场上说的多核 CPU，便是多核处理器，核 越多，并行处理的程序越多，能大大的提高电脑运行的效率。 注意：单核处理器的计算机肯定是不能并行的处理多个任务的，只能是多个任务在单个CPU上并发运行。同理,线程也是一样的，从宏观角度上理解线程是并行运行的，但是从微观角度上分析却是串行运行的，即一个线程一个线程的去运行，当系统只有一个CPU时，线程会以某种顺序执行多个线程，我们把这种情况称之为线程调度。 2 线程与进程 进程：是指一个内存中运行的应用程序，每个进程都有一个独立的内存空间，一个应用程序可以同时运行多个进程；进程也是程序的一次执行过程，是系统运行程序的基本单位；系统运行一个程序即是一个进程从创建、运行到消亡的过程。 线程：线程是进程中的一个执行单元，负责当前进程中程序的执行，一个进程中至少有一个线程。一个进程中是可以有多个线程的，这个应用程序也可以称之为多线程程序。 简而言之：一个程序运行后至少有一个进程，一个进程中可以包含多个线程 我们可以再电脑底部任务栏，右键—–&gt;打开任务管理器,可以查看当前任务的进程： 进程 线程 线程调度: 分时调度 所有线程轮流使用 CPU 的使用权，平均分配每个线程占用 CPU 的时间。 抢占式调度 优先让优先级高的线程使用 CPU，如果线程的优先级相同，那么会随机选择一个(线程随机性)，Java使用的为抢占式调度。 设置线程的优先级 抢占式调度详解 大部分操作系统都支持多进程并发运行，现在的操作系统几乎都支持同时运行多个程序。比如：现在我们上课一边使用编辑器，一边使用录屏软件，同时还开着画图板，dos窗口等软件。此时，这些程序是在同时运行，”感觉这些软件好像在同一时刻运行着“。 实际上，CPU(中央处理器)使用抢占式调度模式在多个线程间进行着高速的切换。对于CPU的一个核而言，某个时刻，只能执行一个线程，而 CPU的在多个线程间切换速度相对我们的感觉要快，看上去就是在同一时刻运行。其实，多线程程序并不能提高程序的运行速度，但能够提高程序运行效率，让CPU的使用率更高。 3 创建线程类Java使用java.lang.Thread类代表线程，所有的线程对象都必须是Thread类或其子类的实例。每个线程的作用是完成一定的任务，实际上就是执行一段程序流即一段顺序执行的代码。Java使用线程执行体来代表这段程序流。Java中通过继承Thread类来创建并启动多线程的步骤如下： 定义Thread类的子类，并重写该类的run()方法，该run()方法的方法体就代表了线程需要完成的任务,因此把run()方法称为线程执行体。 创建Thread子类的实例，即创建了线程对象 调用线程对象的start()方法来启动该线程 代码如下： 测试类： 123456789101112public class Demo01 &#123; public static void main(String[] args) &#123; //创建自定义线程对象 MyThread mt = new MyThread("新的线程！"); //开启新线程 mt.start(); //在主方法中执行for循环 for (int i = 0; i &lt; 10; i++) &#123; System.out.println("main线程！"+i); &#125; &#125;&#125; 自定义线程类： 12345678910111213141516public class MyThread extends Thread &#123; //定义指定线程名称的构造方法 public MyThread(String name) &#123; //调用父类的String参数的构造方法，指定线程的名称 super(name); &#125; /** * 重写run方法，完成该线程执行的逻辑 */ @Override public void run() &#123; for (int i = 0; i &lt; 10; i++) &#123; System.out.println(getName()+"：正在执行！"+i); &#125; &#125;&#125; 线程在java中，每次程序运行至少启动2个线程。一个是main线程，一个是垃圾收集线程。因为每当使用 java命令执行一个类的时候，实际上都会启动一个JVM，每一个JVM其实在就是在操作系统中启动了一个进 程。 1 多线程原理自定义线程类： 1234567891011121314151617181920public class MyThread extends Thread&#123; /* * 利用继承中的特点 * 将线程名称传递 进行设置 */ public MyThread(String name)&#123; super(name); &#125; /* * 重写run方法 * 定义线程要执行的代码 */ public void run()&#123; for (int i = 0; i &lt; 20; i++) &#123; //getName()方法 来自父亲 System.out.println(getName()+i); &#125; &#125;&#125; 测试类： 12345678910public class Demo &#123; public static void main(String[] args) &#123; System.out.println("这里是main线程"); MyThread mt = new MyThread("小强"); mt.start();//开启了一个新的线程 for (int i = 0; i &lt; 20; i++) &#123; System.out.println("旺财:"+i); &#125; &#125; &#125; 流程图： 程序启动运行main时候，java虚拟机启动一个进程，主线程main在main()调用时候被创建。随着调用mt的对象的 start方法，另外一个新的线程也启动了，这样，整个应用就在多线程下运行。 通过这张图我们可以很清晰的看到多线程的执行流程，那么为什么可以完成并发执行呢？我们再来讲一讲原理。 多线程执行时，到底在内存中是如何运行的呢？以上个程序为例，进行图解说明： 多线程执行时，在栈内存中，其实每一个执行线程都有一片自己所属的栈内存空间。进行方法的压栈和弹栈。 当执行线程的任务结束了，线程自动在栈内存中释放了。但是当所有的执行线程都结束了，那么进程就结束了。 2 Thread类获取线程的名称： 使用Thread类中的方法getName() String getName(); 返回该线程的名称 可以先获取到当前正在执行的线程，使用线程中的方法getName获取线程的名称 static Thread currentThread(); 返回当前正在执行的线程对象的引用 Thread.currentThread().getName(); 设置线程的名称： 使用Thread类中的setName方法： void setName(String name);改变线程名称，使之与参数name相同 创建一个带参数的构造方法，参数传递线程的名称，调用父类的构造方法，把线程名称传递给父类，让父类（Thread）给线程起一个名字 让当前正在执行的线程暂停（暂时停止执行）： public static void sleep(long millis):使当前正在执行的线程以指定的毫秒数暂停 3 创建多线程的方式 继承Thread类，重写run方法（其实Thread类本身也实现了Runnable接口） 每次创建一个新的线程，都要新建一个Thread子类的对象 启动线程，new Thread子类（）.start（） 创建线程实际调用的是父类Thread空参的构造器 实现Runnable接口，重写run方法 不论创建多少个线程，只需要创建一个Runnable接口实现类的对象 启动线程，new Thread（Runnable接口实现类的对象）.start() 创建线程调用的是Thread类Runable类型参数的构造器 实现Runable接口创建多线程程序的好处： 避免了单继承的局限性 一个类只能继承一个类，类继承了Thread类就不能再继承别的类了 增强了程序的扩展性，降低了程序的耦合性（解耦） 实现Runnable接口的方式，把设置线程任务和开启线程进行了分离（解耦） 设置线程任务的是Runnable接口的实现类，开启线程的是Thread类对象 线程池只能放入实现Runnable或者Callable类线程，不能直接放入继承Thread的类 实现Callable接口，重写call方法（有返回值） 自定义类实现Callable接口时，必须指定泛型，该泛型即返回值的类型 每次创建一个新的线程，都要创建一个新的Callable接口的实现类、 如何启动线程？ 1. 创建一个Callable接口的实现类的对象 2. 创建一个FutureTask对象，传入Callable类型的参数 public FutureTask(Callable&lt;V&gt; callable){……} 3. 调用Thread类重载的参数为Runnable的构造器创建Thread对象 将FutureTask作为参数传递 public class FutureTask&lt;V&gt; implements RunnableFuture&lt;V&gt; public interface RunnableFuture&lt;V&gt; extends Runnable, Future&lt;V&gt; 如何获取返回值？ 调用FutureTask类的get()方法 使用线程池（有返回值） 线程安全1 线程安全如果有多个线程在同时运行，而这些线程可能会同时运行这段代码。程序每次运行结果和单线程运行的结果是一样 的，而且其他的变量的值也和预期的是一样的，就是线程安全的。 原因： 线程安全问题都是由全局变量及静态变量引起的。若每个线程中对全局变量、静态变量只有读操作，而无写 操作，一般来说，这个全局变量是线程安全的；若有多个线程同时执行写操作，一般都需要考虑线程同步， 否则的话就可能影响线程安全。 2 线程同步当我们使用多个线程访问同一资源的时候，且多个线程中对资源有写的操作，就容易出现线程安全问题。要解决上述多线程并发访问一个资源的安全性问题:也就是解决重复票与不存在票问题，Java中提供了同步机制 (synchronized)来解决。 解决方案： 同步代码块。 synchronized 关键字可以用于方法中的某个区块中，表示只对这个区块的资源实行互斥访问。 123synchronized(同步锁)&#123; 需要同步操作的代码&#125; 同步方法。 同步方法:使用synchronized修饰的方法,就叫做同步方法,保证A线程执行该方法的时候,其他线程只能在方法外 等着。 123public synchronized void method()&#123; 可能产生线程安全问题的代码&#125; 锁机制。 java.util.concurrent.locks.Lock 机制提供了比synchronized代码块和synchronized方法更广泛的锁定操作, 同步代码块/同步方法具有的功能Lock都有,除此之外更强大,更体现面向对象。 Lock锁也称同步锁，加锁与释放锁方法化了，如下： public void lock() :加同步锁 public void unlock() :释放同步锁。 线程状态1 线程状态概述当线程被创建并启动以后，它既不是一启动就进入了执行状态，也不是一直处于执行状态。在线程的生命周期中， 有几种状态呢？在API中 java.lang.Thread.State 这个枚举中给出了六种线程状态： 线程状态 导致状态发生的条件 NEW(新建) 线程刚被创建，但是并未启动，还没调用start方法 Runnable(可运行的) 线程可以在java虚拟机中运行的状态，可能正在运行自己的代码，也可能没有，这取决与操作系统处理器 Blocked(锁阻塞) 当一个线程在等待另一个线程执行一个（唤醒）动作时，该线程进入Blocked状态，当该线程持有锁时，该线程变成Runnable状态 Waiting(无限等待) 一个线程在等待另一个线程执行一个（唤醒)动作的时,该线程进入Waiting状态，进入这个状态后是不能自动唤醒的，必须等待另一个线程调用notify()或者notifyAll()方法才能够唤醒 Timed Waiting(计时等待) 同waiting状态，有几个方法有超时参数，调用他们将进入Timed Waiting状态，这一状态将一直保持到超时期满或者接收到唤醒通知，带有超时参数的常用方法有Thread.sleep、Object.Wait Teminated(被终止) 因为run方法正常退出而死亡，或者因为没有捕获的异常终止了run方法而死亡]]></content>
+      <categories>
+        <category>Java</category>
+        <category>多线程</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>多线程</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[异常相关内容]]></title>
     <url>%2F2019%2F09%2F27%2F%E5%BC%82%E5%B8%B8%E7%9B%B8%E5%85%B3%E5%86%85%E5%AE%B9%2F</url>
     <content type="text"><![CDATA[异常java.lang.Throwable:类是Java语言中所有异常和错误的超类 ​ Exception:编译期异常,进行编译(写代码)java程序出现的异常 ​ RuntimeException:运行期异常,java程序运行过程中出现问题 ​ 异常就相当于程序得了一个小毛病,把异常处理掉,程序就可以继续执行了 ​ Error:错误​​ 错误相当于程序得了一个无法治愈的毛病,必须要修改源代码,程序才能继续执行 Throw:throw是语句抛出一个异常，一般是在代码块的内部，当程序出现某种逻辑错误时由程序员主动抛出某种特定类型的异常 ​ 作用:可以使用Throw关键字在指定的方法中抛出指定的异常 ​ 使用格式:throw new xxxException(“异常产生的原因”); ​ 注意: throw关键字必须写在方法的内部 throw关键字后面new的对象必须是Exception或者Exception的子类对象 throw关键字输出指定的异常对象,我们就必须处理这个异常对象 throw关键字后面创建的是RuntimeException或者是RuntimeException的子类对象,我们可以不处理,默认交给JVM处理(打印异常对象,中断程序) throw关键字后面创建的是编译异常(写代码的时候出现的异常),我们就必须要处理这个异常,要么throws要么try…catch Throws:throws是方法可能抛出异常的声明。是异常处理的第一种方式 (用在声明方法时，表示该方法可能要抛出异常)向调用该类的位置抛出异常，不在该类解决 ​ 作用: ​ 当方法内部抛出异常对象的时候,我们就必须处理这个异常对象 ​ 可以使用throws关键字处理异常对象,会把异常对象声明抛出给方法的调用者处理(自己不处理,给别人处理),最终交给JVM处理(中断处理) ​ 使用格式: 1234修饰符 返回值类型 方法名 (参数列表) throws aaaException,bbbException...&#123; throw new aaaException; throw new bbbException;&#125; 格式: throws关键字必须写在方法声明处 throws关键字后面声明的异常,那么throws后面必须也声明多个异常 方法内部如果抛出了多个异常对象,那么throws后面必须声明多个异常 如果抛出的多个异常之间有字符类关系,则只需要声明父类即可 调用一个声明了抛出异常的方法,我们就必须处理声明的异常 要么直接使用throws声明抛出,交给方法的调用者处理,最终交给JVM 要么try…catch自己,处理异常 try…catch:异常处理的第二种方式,自己处理异常 格式: 12345678910try&#123; 可能出现异常的代码&#125;catch (定义一个异常的变量,用来接收try中抛出的异常对象)&#123; 异常的处理逻辑,出现异常对象之后,怎么处理异常对象 一般在工作中,会把异常的信息记录到一个日志中&#125;...catch (异常类名 变量名) &#123; 异常的处理逻辑&#125; 注意: try中可能会抛出多个异常对象,那么就可以使用多个catch来处理异常对象,此时如果catch里面定义的异常变量有子父类关系,那么子类的异常变量必须写在上面,否则就会出错 如果try中产生了异常,那么就会执行catch中的异常处理逻辑,执行完毕catch中的处理逻辑,继续执行try…catch之后的代码 如果try中没有出现异常,那么就不会执行catch中异常的处理逻辑,执行完try中的代码,继续执行try…catch之后的代码 finally finally代码块中的代码无论是否出现异常都会执行 finally不能单独使用,必须和try一起使用 finally一般用于资源释放,无论程序是否出现异常最后都要释放资源 异常处理的方式 运行时异常可以不处理,即不捕获也不声明抛出 如果父类抛出了多个异常,子类覆盖父类方法时,只能抛出相同的异常或者是其他的子类 父类方法没有抛出异常,子类覆盖父类方法时也不可抛出异常,此时子类产生该异常,只能捕获异常,不能声明抛出 finally有return语句,永远返回finally中的结果,要避免这种情况出现 获取异常信息的方法Throwable类中定义了一些查看方法: public String getMessage():获取异常的描述信息,原因(提示用户的时候,就提示错误原因)信息最简略 public String toString():获取异常的类型和异常描述信息(不用) public void printStackTrace():打印异常的跟踪栈信息并输出到控制台(包含了异常的类型,异常的原因,还包括异常出现的位置,在开发和调试阶段都得用printStackTrace),JVM打印异常对象,默认此方法,打印的异常信息是最全面的 自定义异常自定义一个类继承Exception或者RuntimeException,添加两个构造方法, 一个空参数的构造方法(调用父类的空参构造方法),一个带异常信息的构造方法(调用父类的带异常信息的构造方法,让父类来处理这个异常信息) 如果继承的是Exception:那么定义的异常类就是一个编译时异常,如果方法内部抛出了编译期异常,就必须处理这个异常,要么throws要么try…catch 如果继承的是RuntimeException:那么定义的异常就是一个运行时异常,无需处理,交给虚拟机处理(中断处理)]]></content>
@@ -161,8 +174,8 @@
         <category>Java</category>
       </categories>
       <tags>
-        <tag>Java</tag>
         <tag>JavaWeb</tag>
+        <tag>Java</tag>
       </tags>
   </entry>
   <entry>
@@ -173,8 +186,8 @@
         <category>Java</category>
       </categories>
       <tags>
-        <tag>Java</tag>
         <tag>JavaWeb</tag>
+        <tag>Java</tag>
       </tags>
   </entry>
   <entry>
@@ -265,9 +278,9 @@
         <category>Java</category>
       </categories>
       <tags>
-        <tag>Java</tag>
-        <tag>JavaWeb</tag>
         <tag>JavaScript</tag>
+        <tag>JavaWeb</tag>
+        <tag>Java</tag>
       </tags>
   </entry>
   <entry>
@@ -278,8 +291,8 @@
         <category>Java</category>
       </categories>
       <tags>
-        <tag>Java</tag>
         <tag>JavaWeb</tag>
+        <tag>Java</tag>
       </tags>
   </entry>
   <entry>
