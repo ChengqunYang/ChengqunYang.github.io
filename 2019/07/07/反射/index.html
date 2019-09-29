@@ -110,18 +110,18 @@
 
 
 
-  <meta name="description" content="Java反射反射:框架设计的灵魂 框架:半成品软件.可以在框架的基础上进行软件开发,简化编码  反射:将类的各个组成部分封装为其他对象,这就是反射机制  好处  可以在程序运行过程中,操作这些对象  可以解耦合,提过程序的可扩展性       获取Class对象的三种方式 Object ——&amp;gt; getClass();  多用于对象的获取字节码的方式   任何数据类型（包括基本数据类型）都有一">
+  <meta name="description" content="Java反射反射:框架设计的灵魂 框架:半成品软件.可以在框架的基础上进行软件开发,简化编码 反射:将类的各个组成部分封装为其他对象,这就是反射机制，JAVA语言编译之后会生成一个.class文件，反射就是通过字节码文件找到某一个类、类中的方法以及属性等。 好处  可以在程序运行过程中,操作这些对象  可以解耦合,提过程序的可扩展性     获取Class对象的三种方式 Object ——&amp;gt;">
 <meta name="keywords" content="Java,反射">
 <meta property="og:type" content="article">
 <meta property="og:title" content="反射相关内容">
 <meta property="og:url" content="https://ChengqunYang.github.io/2019/07/07/反射/index.html">
 <meta property="og:site_name" content="Talk is cheap.  Show me the code.">
-<meta property="og:description" content="Java反射反射:框架设计的灵魂 框架:半成品软件.可以在框架的基础上进行软件开发,简化编码  反射:将类的各个组成部分封装为其他对象,这就是反射机制  好处  可以在程序运行过程中,操作这些对象  可以解耦合,提过程序的可扩展性       获取Class对象的三种方式 Object ——&amp;gt; getClass();  多用于对象的获取字节码的方式   任何数据类型（包括基本数据类型）都有一">
+<meta property="og:description" content="Java反射反射:框架设计的灵魂 框架:半成品软件.可以在框架的基础上进行软件开发,简化编码 反射:将类的各个组成部分封装为其他对象,这就是反射机制，JAVA语言编译之后会生成一个.class文件，反射就是通过字节码文件找到某一个类、类中的方法以及属性等。 好处  可以在程序运行过程中,操作这些对象  可以解耦合,提过程序的可扩展性     获取Class对象的三种方式 Object ——&amp;gt;">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-09-15T11:04:39.202Z">
+<meta property="og:updated_time" content="2019-09-29T08:08:19.492Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="反射相关内容">
-<meta name="twitter:description" content="Java反射反射:框架设计的灵魂 框架:半成品软件.可以在框架的基础上进行软件开发,简化编码  反射:将类的各个组成部分封装为其他对象,这就是反射机制  好处  可以在程序运行过程中,操作这些对象  可以解耦合,提过程序的可扩展性       获取Class对象的三种方式 Object ——&amp;gt; getClass();  多用于对象的获取字节码的方式   任何数据类型（包括基本数据类型）都有一">
+<meta name="twitter:description" content="Java反射反射:框架设计的灵魂 框架:半成品软件.可以在框架的基础上进行软件开发,简化编码 反射:将类的各个组成部分封装为其他对象,这就是反射机制，JAVA语言编译之后会生成一个.class文件，反射就是通过字节码文件找到某一个类、类中的方法以及属性等。 好处  可以在程序运行过程中,操作这些对象  可以解耦合,提过程序的可扩展性     获取Class对象的三种方式 Object ——&amp;gt;">
 
 
 
@@ -279,7 +279,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archiv<span class="badge">26</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archiv<span class="badge">27</span></a>
 
   </li>
         
@@ -298,7 +298,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>Schlagwörter<span class="badge">28</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>Schlagwörter<span class="badge">29</span></a>
 
   </li>
         
@@ -317,7 +317,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>Kategorien<span class="badge">17</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>Kategorien<span class="badge">18</span></a>
 
   </li>
         
@@ -503,7 +503,7 @@
                 
                   <span class="post-meta-item-text">Bearbeitet am</span>
                 
-                <time title="Geändert am: 2019-09-15 19:04:39" itemprop="dateModified" datetime="2019-09-15T19:04:39+08:00">2019-09-15</time>
+                <time title="Geändert am: 2019-09-29 16:08:19" itemprop="dateModified" datetime="2019-09-29T16:08:19+08:00">2019-09-29</time>
               
             
           </span>
@@ -584,10 +584,8 @@
 
       
         <h1 id="Java反射"><a href="#Java反射" class="headerlink" title="Java反射"></a>Java反射</h1><h2 id="反射-框架设计的灵魂"><a href="#反射-框架设计的灵魂" class="headerlink" title="反射:框架设计的灵魂"></a>反射:框架设计的灵魂</h2><ul>
-<li><p>框架:半成品软件.可以在框架的基础上进行软件开发,简化编码</p>
-</li>
-<li><p>反射:将类的各个组成部分封装为其他对象,这就是反射机制</p>
-<ul>
+<li>框架:半成品软件.可以在框架的基础上进行软件开发,简化编码</li>
+<li>反射:将类的各个组成部分封装为其他对象,这就是反射机制，JAVA语言编译之后会生成一个.class文件，反射就是通过字节码文件找到某一个类、类中的方法以及属性等。</li>
 <li><p>好处</p>
 <ol>
 <li><p>可以在程序运行过程中,操作这些对象</p>
@@ -595,8 +593,6 @@
 <li><p>可以解耦合,提过程序的可扩展性</p>
 </li>
 </ol>
-</li>
-</ul>
 </li>
 </ul>
 <h2 id="获取Class对象的三种方式"><a href="#获取Class对象的三种方式" class="headerlink" title="获取Class对象的三种方式"></a>获取Class对象的三种方式</h2><ul>
@@ -933,7 +929,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">26</span>
+                    <span class="site-state-item-count">27</span>
                     <span class="site-state-item-name">Artikel</span>
                   </a>
                 </div>
@@ -984,7 +980,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">17</span>
+                      
+                    
+                    <span class="site-state-item-count">18</span>
                     <span class="site-state-item-name">Kategorien</span>
                   </a>
                 </div>
@@ -1057,7 +1055,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">28</span>
+                      
+                    
+                    <span class="site-state-item-count">29</span>
                     <span class="site-state-item-name">schlagwörter</span>
                   </a>
                 </div>
@@ -1193,7 +1193,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="Insgesamt gezählte Symbole">108k</span>
+    <span title="Insgesamt gezählte Symbole">113k</span>
   
 
   
@@ -1202,7 +1202,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="Insgesamte Lesezeit">1:38</span>
+    <span title="Insgesamte Lesezeit">1:43</span>
   
 </div>
 

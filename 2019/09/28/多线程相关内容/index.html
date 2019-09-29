@@ -126,7 +126,7 @@
 <meta property="og:image" content="https://chengqunyang.github.io/2019/09/28/多线程相关内容/原理图.png">
 <meta property="og:image" content="https://chengqunyang.github.io/2019/09/28/多线程相关内容/分析图.png">
 <meta property="og:image" content="https://chengqunyang.github.io/2019/09/28/多线程相关内容/6种状态转换图.jpg">
-<meta property="og:updated_time" content="2019-09-29T01:10:51.409Z">
+<meta property="og:updated_time" content="2019-09-29T10:06:38.662Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="多线程相关内容">
 <meta name="twitter:description" content="多线程我们在之前，学习的程序在没有跳转语句的前提下，都是由上至下依次执行，那现在想要设计一个程序，边打游戏边听歌，怎么设计？ 要解决上述问题,咱们得使用多进程或者多线程来解决. 1 并发与并行 并发：指两个或多个事件在同一个时间段内发生。 并行：指两个或多个事件在同一时刻发生（同时发生）。   在操作系统中，安装了多个程序，并发指的是在一段时间内宏观上有多个程序同时运行，这在单 CPU 系统中，每">
@@ -288,7 +288,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archiv<span class="badge">26</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archiv<span class="badge">27</span></a>
 
   </li>
         
@@ -307,7 +307,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>Schlagwörter<span class="badge">28</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>Schlagwörter<span class="badge">29</span></a>
 
   </li>
         
@@ -326,7 +326,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>Kategorien<span class="badge">17</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>Kategorien<span class="badge">18</span></a>
 
   </li>
         
@@ -512,7 +512,7 @@
                 
                   <span class="post-meta-item-text">Bearbeitet am</span>
                 
-                <time title="Geändert am: 2019-09-29 09:10:51" itemprop="dateModified" datetime="2019-09-29T09:10:51+08:00">2019-09-29</time>
+                <time title="Geändert am: 2019-09-29 18:06:38" itemprop="dateModified" datetime="2019-09-29T18:06:38+08:00">2019-09-29</time>
               
             
           </span>
@@ -565,7 +565,7 @@
                 
                   <span class="post-meta-item-text">Symbole im Artikel gezählt: </span>
                 
-                <span title="Symbole im Artikel gezählt">9.7k</span>
+                <span title="Symbole im Artikel gezählt">10k</span>
               
 
               
@@ -741,12 +741,19 @@
 <li><p>同步方法。 同步方法:使用synchronized修饰的方法,就叫做同步方法,保证A线程执行该方法的时候,其他线程只能在方法外 等着。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">synchronized</span> <span class="keyword">void</span> <span class="title">method</span><span class="params">()</span></span>&#123;</span><br><span class="line">	可能产生线程安全问题的代码</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>锁机制。 java.util.concurrent.locks.Lock 机制提供了比synchronized代码块和synchronized方法更广泛的锁定操作, 同步代码块/同步方法具有的功能Lock都有,除此之外更强大,更体现面向对象。 </p>
+<li><p>锁机制。 java.util.concurrent.locks.Lock 接口提供了比synchronized代码块和synchronized方法更广泛的锁定操作, 同步代码块/同步方法具有的功能Lock都有,除此之外更强大,更体现面向对象。 </p>
 <p>Lock锁也称同步锁，加锁与释放锁方法化了，如下：</p>
-<p>public void lock() :加同步锁</p>
+<p>public void lock() :加同步锁  </p>
 <p>public void unlock() :释放同步锁。</p>
+<p>因为Lock是接口，所以我们在使用里面的方法是时候首先要创建他的一个实现类如ReentrantLock类的对象，通过这个对象来调用它里面的方法</p>
 </li>
 </ol>
+<h2 id="3-volatile实现线程间可见"><a href="#3-volatile实现线程间可见" class="headerlink" title="3 volatile实现线程间可见"></a>3 volatile实现线程间可见</h2><p>给变量加上volatile关键字后，可以保证该变量在线程之间可见，具有可见性，但是并不保证原子性</p>
+<p>可见性:当全局变量的值在一线程内被修改后（修改的是栈当中的方法区中的变量的副本），可以马上将这个值刷新到主内存（更新方法区中的原本），这个刷新的动作本来会自动执行，但是如果有延迟，有等待的话，就不会马上刷新，此时就必须使用volatile来马上刷新，来保证该变量在多个线程之间的值是相同的（可见性）</p>
+<p>原子性：AtomicInteger 保证计数的原子性，在1.5之后的并发包中</p>
+<p><code>public AtomicInteger count = new AtomicInteger(0);</code></p>
+<p><code>count.inctementAndGet();</code></p>
+<p><code>count.get();</code></p>
 <h1 id="线程状态"><a href="#线程状态" class="headerlink" title="线程状态"></a>线程状态</h1><h2 id="1-线程状态概述"><a href="#1-线程状态概述" class="headerlink" title="1 线程状态概述"></a>1 线程状态概述</h2><p>当线程被创建并启动以后，它既不是一启动就进入了执行状态，也不是一直处于执行状态。在线程的生命周期中， 有几种状态呢？在API中 java.lang.Thread.State 这个枚举中给出了六种线程状态：</p>
 <table>
 <thead>
@@ -834,7 +841,7 @@
 <h2 id="4-yield-和join-方法"><a href="#4-yield-和join-方法" class="headerlink" title="4 yield()和join()方法"></a>4 yield()和join()方法</h2><p>yield方法  </p>
 <p>暂停当前正在执行的线程对象。  </p>
 <p>yield()方法是停止当前线程，让同等优先权的线程或更高优先级的线程有执行的机会。如果没有的话，那么yield()方法将不会起作用，并且由可执行状态后马上又被执行。</p>
-<p>join方法是用于在某一个线程的执行过程中调用另一个线程执行，等到被调用的线程执行结束后，再继续执行当前线程。如：t.join();//主要用于等待t线程运行结束，若无此句，main则会执行完毕，导致结果不可预测。 </p>
+<p>join方法是用于在某一个线程的执行过程中调用另一个线程执行，等到被调用的线程执行结束后，再继续执行当前线程。如：t.join();主要用于等待t线程运行结束，若无此句，main则会执行完毕，导致结果不可预测。 </p>
 <h1 id="线程池"><a href="#线程池" class="headerlink" title="线程池"></a>线程池</h1><h2 id="1-线程池的概念"><a href="#1-线程池的概念" class="headerlink" title="1 线程池的概念"></a>1 线程池的概念</h2><p>线程池:jdk1.5之后提供的</p>
 <p>线程池其实就是一个容纳多个线程的容器，其中的线程可以反复使用，省去了频繁创建线程对象的操作，无需反复创建线程而消耗过多的资源</p>
 <p>合理使用线程池的好处：</p>
@@ -1009,6 +1016,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2019/09/29/网络相关内容/" rel="prev" title="网络相关内容">
+                网络相关内容 <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -1084,7 +1095,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">26</span>
+                    <span class="site-state-item-count">27</span>
                     <span class="site-state-item-name">Artikel</span>
                   </a>
                 </div>
@@ -1135,7 +1146,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">17</span>
+                      
+                    
+                    <span class="site-state-item-count">18</span>
                     <span class="site-state-item-name">Kategorien</span>
                   </a>
                 </div>
@@ -1208,7 +1221,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">28</span>
+                      
+                    
+                    <span class="site-state-item-count">29</span>
                     <span class="site-state-item-name">schlagwörter</span>
                   </a>
                 </div>
@@ -1302,7 +1317,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#多线程"><span class="nav-number">1.</span> <span class="nav-text">多线程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-并发与并行"><span class="nav-number">1.1.</span> <span class="nav-text">1 并发与并行</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-线程与进程"><span class="nav-number">1.2.</span> <span class="nav-text">2 线程与进程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-创建线程类"><span class="nav-number">1.3.</span> <span class="nav-text">3 创建线程类</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#线程"><span class="nav-number">2.</span> <span class="nav-text">线程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-多线程原理"><span class="nav-number">2.1.</span> <span class="nav-text">1 多线程原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Thread类"><span class="nav-number">2.2.</span> <span class="nav-text">2 Thread类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-创建多线程的方式"><span class="nav-number">2.3.</span> <span class="nav-text">3 创建多线程的方式</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#线程安全"><span class="nav-number">3.</span> <span class="nav-text">线程安全</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-线程安全"><span class="nav-number">3.1.</span> <span class="nav-text">1 线程安全</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-线程同步"><span class="nav-number">3.2.</span> <span class="nav-text">2 线程同步</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#线程状态"><span class="nav-number">4.</span> <span class="nav-text">线程状态</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-线程状态概述"><span class="nav-number">4.1.</span> <span class="nav-text">1 线程状态概述</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#等待唤醒机制"><span class="nav-number">5.</span> <span class="nav-text">等待唤醒机制</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-线程间通信"><span class="nav-number">5.1.</span> <span class="nav-text">1 线程间通信</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-等待唤醒机制"><span class="nav-number">5.2.</span> <span class="nav-text">2 等待唤醒机制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-wait和sleep方法的区别"><span class="nav-number">5.3.</span> <span class="nav-text">3 wait和sleep方法的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-yield-和join-方法"><span class="nav-number">5.4.</span> <span class="nav-text">4 yield()和join()方法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#线程池"><span class="nav-number">6.</span> <span class="nav-text">线程池</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-线程池的概念"><span class="nav-number">6.1.</span> <span class="nav-text">1 线程池的概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-线程池的使用"><span class="nav-number">6.2.</span> <span class="nav-text">2 线程池的使用</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#多线程"><span class="nav-number">1.</span> <span class="nav-text">多线程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-并发与并行"><span class="nav-number">1.1.</span> <span class="nav-text">1 并发与并行</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-线程与进程"><span class="nav-number">1.2.</span> <span class="nav-text">2 线程与进程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-创建线程类"><span class="nav-number">1.3.</span> <span class="nav-text">3 创建线程类</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#线程"><span class="nav-number">2.</span> <span class="nav-text">线程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-多线程原理"><span class="nav-number">2.1.</span> <span class="nav-text">1 多线程原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Thread类"><span class="nav-number">2.2.</span> <span class="nav-text">2 Thread类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-创建多线程的方式"><span class="nav-number">2.3.</span> <span class="nav-text">3 创建多线程的方式</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#线程安全"><span class="nav-number">3.</span> <span class="nav-text">线程安全</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-线程安全"><span class="nav-number">3.1.</span> <span class="nav-text">1 线程安全</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-线程同步"><span class="nav-number">3.2.</span> <span class="nav-text">2 线程同步</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-volatile实现线程间可见"><span class="nav-number">3.3.</span> <span class="nav-text">3 volatile实现线程间可见</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#线程状态"><span class="nav-number">4.</span> <span class="nav-text">线程状态</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-线程状态概述"><span class="nav-number">4.1.</span> <span class="nav-text">1 线程状态概述</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#等待唤醒机制"><span class="nav-number">5.</span> <span class="nav-text">等待唤醒机制</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-线程间通信"><span class="nav-number">5.1.</span> <span class="nav-text">1 线程间通信</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-等待唤醒机制"><span class="nav-number">5.2.</span> <span class="nav-text">2 等待唤醒机制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-wait和sleep方法的区别"><span class="nav-number">5.3.</span> <span class="nav-text">3 wait和sleep方法的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-yield-和join-方法"><span class="nav-number">5.4.</span> <span class="nav-text">4 yield()和join()方法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#线程池"><span class="nav-number">6.</span> <span class="nav-text">线程池</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-线程池的概念"><span class="nav-number">6.1.</span> <span class="nav-text">1 线程池的概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-线程池的使用"><span class="nav-number">6.2.</span> <span class="nav-text">2 线程池的使用</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -1344,7 +1359,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="Insgesamt gezählte Symbole">108k</span>
+    <span title="Insgesamt gezählte Symbole">113k</span>
   
 
   
@@ -1353,7 +1368,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="Insgesamte Lesezeit">1:38</span>
+    <span title="Insgesamte Lesezeit">1:43</span>
   
 </div>
 
