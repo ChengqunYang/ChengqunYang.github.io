@@ -120,7 +120,7 @@
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://chengqunyang.github.io/2019/04/15/数据库/整体图.png">
 <meta property="og:image" content="https://chengqunyang.github.io/2019/04/15/数据库/thing.png">
-<meta property="og:updated_time" content="2019-09-29T10:06:16.656Z">
+<meta property="og:updated_time" content="2019-09-29T15:02:32.902Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据库">
 <meta name="twitter:description" content="数据库Mysql数据库 Mysql语句 SQL： Structure Query Language:结构化查询语言 DDL：数据定义语言：定义数据库，数据表他们的结构：create(创建) drop(删除) alert(修改) DML：数据操纵语言：主要用来操作数据 insert(插入) update(修改）delete（删除） DCL：数据控制语言：定义访问权限，取消访问权限，安全设置 gran">
@@ -506,7 +506,7 @@
                 
                   <span class="post-meta-item-text">Bearbeitet am</span>
                 
-                <time title="Geändert am: 2019-09-29 18:06:16" itemprop="dateModified" datetime="2019-09-29T18:06:16+08:00">2019-09-29</time>
+                <time title="Geändert am: 2019-09-29 23:02:32" itemprop="dateModified" datetime="2019-09-29T23:02:32+08:00">2019-09-29</time>
               
             
           </span>
@@ -552,7 +552,7 @@
                 
                   <span class="post-meta-item-text">Symbole im Artikel gezählt: </span>
                 
-                <span title="Symbole im Artikel gezählt">19k</span>
+                <span title="Symbole im Artikel gezählt">20k</span>
               
 
               
@@ -1050,16 +1050,17 @@ from product p;</code></p>
 <ol>
 <li><p>脏读，不可重复读，幻读</p>
 <blockquote>
-<p>脏读：一个事务读到了另一个事物还未提交的数据。  隔离级别为：读未提交<br>不可重复读：一个事务可以读到另一个事务提交的数据（产生两次读出不一样的问题）。 隔离级别：读已提交<br>隔离级别：可重复读，即使一个事务已提交数据的更改，但在另一个事务里数据仍不会变化，这是为了让事务与事务之间不产生相对影响。</p>
-</blockquote>
-</li>
-<li><p>幻读：一个事务读到了另一个事务已提交的插入的数据，导致多次查询结果不一样。</p>
-<blockquote>
+<p>脏读：一个事务读到了另一个事物还未提交的数据。  隔离级别为：读未提交</p>
+<p>不可重复读：一个事务可以读到另一个事务提交的数据（产生两次读出不一样的问题）。 幻读：一个事务读到了另一个事务已提交的插入的数据，导致多次查询结果不一样。隔离级别：读已提交</p>
+<p>隔离级别：可重复读，即使一个事务已提交数据的更改，但在另一个事务里数据仍不会变化，这是为了让事务与事务之间不产生相对影响。但是还是会产生幻读问题</p>
 <p>隔离级别：可串行化：最高达隔离级别.当一个事务要操作一个表时，必须得等之前的事务提交了数据或者回滚了才能执行，否则会等待。</p>
 </blockquote>
 </li>
-<li><p>丢失更新：<br> 如果a和b事务都对同一个表进行了操作，那么第二次对数据的更新可能会导致第一次更新丢失。  </p>
-</li>
+</ol>
+<p>重复读是为了保证在一个事务中，相同查询条件下读取的数据值不发生改变，但是不能保证下次同样条件查询，结果记录数不会增加。</p>
+<p>可串行化就是为了解决这个问题而存在的，他将这个查询范围都加锁了，所以就不能再往这个范围内插入数据，这就是SERIALIZABLE 隔离级别做的事情。</p>
+<ol start="2">
+<li>丢失更新：<br>如果a和b事务都对同一个表进行了操作，那么第二次对数据的更新可能会导致第一次更新丢失。  </li>
 </ol>
 </li>
 </ul>
