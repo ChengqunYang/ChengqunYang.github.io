@@ -110,18 +110,18 @@
 
 
 
-  <meta name="description" content="Java中的IOIO解决的问题字节流输入字节流输出字节流字符流输入字符流输出字符流转换流">
+  <meta name="description" content="Java中的IOIO解决的问题解决设备与设备之间的数据传输问题，比如 硬盘—-&amp;gt;内存 内存—–&amp;gt;硬盘 字节流什么情况使用字节流：读取到数据不需要经过编码或者解码的情况下这时候使用字节流，比如：图片数据 输入字节流InputStream 所有输入字节流的基类，抽象类 FileInputStream 读取文件的输入字节流 BufferedInputStream 缓冲输入字节流，该类内部其实">
 <meta name="keywords" content="Java,I&#x2F;O">
 <meta property="og:type" content="article">
 <meta property="og:title" content="I&#x2F;O相关内容">
 <meta property="og:url" content="https://ChengqunYang.github.io/2019/09/26/IO相关内容/index.html">
 <meta property="og:site_name" content="Talk is cheap.  Show me the code.">
-<meta property="og:description" content="Java中的IOIO解决的问题字节流输入字节流输出字节流字符流输入字符流输出字符流转换流">
+<meta property="og:description" content="Java中的IOIO解决的问题解决设备与设备之间的数据传输问题，比如 硬盘—-&amp;gt;内存 内存—–&amp;gt;硬盘 字节流什么情况使用字节流：读取到数据不需要经过编码或者解码的情况下这时候使用字节流，比如：图片数据 输入字节流InputStream 所有输入字节流的基类，抽象类 FileInputStream 读取文件的输入字节流 BufferedInputStream 缓冲输入字节流，该类内部其实">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-09-26T14:49:18.779Z">
+<meta property="og:updated_time" content="2019-10-03T13:35:23.029Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="I&#x2F;O相关内容">
-<meta name="twitter:description" content="Java中的IOIO解决的问题字节流输入字节流输出字节流字符流输入字符流输出字符流转换流">
+<meta name="twitter:description" content="Java中的IOIO解决的问题解决设备与设备之间的数据传输问题，比如 硬盘—-&amp;gt;内存 内存—–&amp;gt;硬盘 字节流什么情况使用字节流：读取到数据不需要经过编码或者解码的情况下这时候使用字节流，比如：图片数据 输入字节流InputStream 所有输入字节流的基类，抽象类 FileInputStream 读取文件的输入字节流 BufferedInputStream 缓冲输入字节流，该类内部其实">
 
 
 
@@ -486,12 +486,24 @@
                 
               
 
-              <time title="Erstellt: 2019-09-26 22:44:50 / Geändert am: 22:49:18" itemprop="dateCreated datePublished" datetime="2019-09-26T22:44:50+08:00">2019-09-26</time>
+              <time title="Erstellt: 2019-09-26 22:44:50" itemprop="dateCreated datePublished" datetime="2019-09-26T22:44:50+08:00">2019-09-26</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Bearbeitet am</span>
+                
+                <time title="Geändert am: 2019-10-03 21:35:23" itemprop="dateModified" datetime="2019-10-03T21:35:23+08:00">2019-10-03</time>
               
             
           </span>
@@ -544,7 +556,7 @@
                 
                   <span class="post-meta-item-text">Symbole im Artikel gezählt: </span>
                 
-                <span title="Symbole im Artikel gezählt">44</span>
+                <span title="Symbole im Artikel gezählt">3.2k</span>
               
 
               
@@ -558,7 +570,7 @@
                 
                   <span class="post-meta-item-text">Lesezeit &asymp;</span>
                 
-                <span title="Lesezeit">1 minuten.</span>
+                <span title="Lesezeit">3 minuten.</span>
               
             </div>
           
@@ -578,7 +590,30 @@
       
 
       
-        <h2 id="Java中的IO"><a href="#Java中的IO" class="headerlink" title="Java中的IO"></a>Java中的IO</h2><h3 id="IO解决的问题"><a href="#IO解决的问题" class="headerlink" title="IO解决的问题"></a>IO解决的问题</h3><h3 id="字节流"><a href="#字节流" class="headerlink" title="字节流"></a>字节流</h3><h4 id="输入字节流"><a href="#输入字节流" class="headerlink" title="输入字节流"></a>输入字节流</h4><h4 id="输出字节流"><a href="#输出字节流" class="headerlink" title="输出字节流"></a>输出字节流</h4><h3 id="字符流"><a href="#字符流" class="headerlink" title="字符流"></a>字符流</h3><h4 id="输入字符流"><a href="#输入字符流" class="headerlink" title="输入字符流"></a>输入字符流</h4><h4 id="输出字符流"><a href="#输出字符流" class="headerlink" title="输出字符流"></a>输出字符流</h4><h3 id="转换流"><a href="#转换流" class="headerlink" title="转换流"></a>转换流</h3>
+        <h2 id="Java中的IO"><a href="#Java中的IO" class="headerlink" title="Java中的IO"></a>Java中的IO</h2><h3 id="IO解决的问题"><a href="#IO解决的问题" class="headerlink" title="IO解决的问题"></a>IO解决的问题</h3><p>解决设备与设备之间的数据传输问题，比如 硬盘—-&gt;内存 内存—–&gt;硬盘</p>
+<h3 id="字节流"><a href="#字节流" class="headerlink" title="字节流"></a>字节流</h3><p><strong>什么情况使用字节流</strong>：读取到数据不需要经过编码或者解码的情况下这时候使用字节流，比如：图片数据</p>
+<h4 id="输入字节流"><a href="#输入字节流" class="headerlink" title="输入字节流"></a>输入字节流</h4><p>InputStream 所有输入字节流的基类，抽象类</p>
+<p>FileInputStream 读取文件的输入字节流</p>
+<p>BufferedInputStream 缓冲输入字节流，该类内部其实就是维护一个8KB字节数组而已。该类出现的目的是为了提高读取文件数据的效率</p>
+<h4 id="输出字节流"><a href="#输出字节流" class="headerlink" title="输出字节流"></a>输出字节流</h4><p>OutputStream 所有输出字节流的基类，抽象类</p>
+<p>FileOutputStream 向文件输出数据的输出字节流</p>
+<p>BufferedOutputStream 缓冲输出字节流，该类出现的目的是为了提高向文件写数据的效率，该类内部其实也是维护了一个8KB的字节数据而已</p>
+<h3 id="字符流"><a href="#字符流" class="headerlink" title="字符流"></a>字符流</h3><p>字符流=字节流+编码(解码)，如果读写的都是字符数据，这时候我们就使用字符流</p>
+<h4 id="输入字符流"><a href="#输入字符流" class="headerlink" title="输入字符流"></a>输入字符流</h4><p>Reader 所有输入字符流的基类，抽象类</p>
+<p>FileReader 读取文件字符的输入字符流</p>
+<p>BufferedReader 缓冲输入字符流，该类出现的目的是为了提高读取文件字符的效率并且拓展了功能(readLine())，它内部其实就是维护了一个8192个长度的数组</p>
+<h4 id="输出字符流"><a href="#输出字符流" class="headerlink" title="输出字符流"></a>输出字符流</h4><p>Writer 所有输出字符流的基类，抽象类</p>
+<p>FileWriter 向文件输出字符数据的输出字符流</p>
+<p>BufferedWriter 缓冲输出字符流，该类出现的目的是为了提高写文件字符的效率并且拓展了功能(newLine())，它内部其实就是维护了一个8192个长度的数组</p>
+<h3 id="转换流"><a href="#转换流" class="headerlink" title="转换流"></a>转换流</h3><p>输入字节流的转换流 ：</p>
+<p>输入字节流 转换成输入字符流<br>InputStreamReader</p>
+<p>输出字节流的转换流<br>OutputStreamWriter</p>
+<h4 id="转换流的作用"><a href="#转换流的作用" class="headerlink" title="转换流的作用"></a>转换流的作用</h4><ol>
+<li>可以把对应的字节流转换成字符流使用</li>
+<li>可以指定码表进行读写文件的数据</li>
+</ol>
+<p>FileReader FileWriter这2个类默认是使用的是gbk编码表，不能由你指定码表</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> cn.xlucas.io;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">import</span> java.io.BufferedReader;</span><br><span class="line"><span class="keyword">import</span> java.io.FileInputStream;</span><br><span class="line"><span class="keyword">import</span> java.io.FileNotFoundException;</span><br><span class="line"><span class="keyword">import</span> java.io.FileOutputStream;</span><br><span class="line"><span class="keyword">import</span> java.io.FileReader;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> java.io.InputStream;</span><br><span class="line"><span class="keyword">import</span> java.io.InputStreamReader;</span><br><span class="line"><span class="keyword">import</span> java.io.OutputStream;</span><br><span class="line"><span class="keyword">import</span> java.io.OutputStreamWriter;</span><br><span class="line"><span class="keyword">import</span> java.net.InetAddress;</span><br><span class="line"><span class="keyword">import</span> java.net.Socket;</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">IoDemo1</span> </span>&#123;</span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        <span class="comment">//testInput();</span></span><br><span class="line">        writeFile();</span><br><span class="line">        readFile();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//将文件的内容读取出来</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">readFile</span><span class="params">()</span> <span class="keyword">throws</span> IOException</span>&#123;</span><br><span class="line">        <span class="comment">//建立文件与程序的输入数据通道</span></span><br><span class="line">        FileInputStream filein=<span class="keyword">new</span> FileInputStream(<span class="string">"F:\\a.txt"</span>);</span><br><span class="line">        <span class="comment">//创建输入字节流的转换流并且指定码表进行读取</span></span><br><span class="line">        InputStreamReader inputin=<span class="keyword">new</span> InputStreamReader(filein,<span class="string">"utf-8"</span>);</span><br><span class="line"> </span><br><span class="line">        <span class="comment">//FileReader filein =new FileReader("F:\\a.txt");//这种会出现乱码的情况 </span></span><br><span class="line"> </span><br><span class="line">        <span class="keyword">int</span> context=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>((context=inputin.read())!=-<span class="number">1</span>)&#123;</span><br><span class="line">            System.out.print((<span class="keyword">char</span>)context);</span><br><span class="line">        &#125;</span><br><span class="line"> </span><br><span class="line">        <span class="comment">//关闭资源</span></span><br><span class="line">        inputin.close();</span><br><span class="line">        filein.close();</span><br><span class="line"> </span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">    <span class="comment">//将内容用utf-8的格式写入文件中</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">writeFile</span><span class="params">()</span> <span class="keyword">throws</span> IOException</span>&#123;</span><br><span class="line">        <span class="comment">//建立了文件与程序的数据 通道</span></span><br><span class="line">        FileOutputStream fileout=<span class="keyword">new</span> FileOutputStream(<span class="string">"F:\\a.txt"</span>);</span><br><span class="line">        <span class="comment">//创建一个输出字节流的转换流并且指定码表进行写数据</span></span><br><span class="line">        OutputStreamWriter output=<span class="keyword">new</span> OutputStreamWriter(fileout,<span class="string">"utf-8"</span>);</span><br><span class="line">        output.write(<span class="string">"中国"</span>);</span><br><span class="line">        output.close();</span><br><span class="line">        fileout.close();</span><br><span class="line"> </span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">testOutput</span><span class="params">()</span> <span class="keyword">throws</span> Exception</span>&#123;</span><br><span class="line">        Socket socket = <span class="keyword">new</span> Socket(InetAddress.getLocalHost(),<span class="number">9090</span>);</span><br><span class="line">        <span class="comment">//获取到socket的输出流对象。</span></span><br><span class="line">        OutputStream outputStream = socket.getOutputStream();</span><br><span class="line">        <span class="comment">//把输出字节流转换成输出字符流</span></span><br><span class="line">        OutputStreamWriter  outputStreamWriter = <span class="keyword">new</span> OutputStreamWriter(outputStream);</span><br><span class="line">        outputStreamWriter.write(<span class="string">"不饿!"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">testInput</span><span class="params">()</span> <span class="keyword">throws</span> IOException</span>&#123;</span><br><span class="line">     InputStream in=System.in;</span><br><span class="line">     <span class="comment">//输入转换流</span></span><br><span class="line">     InputStreamReader input=<span class="keyword">new</span> InputStreamReader(in);</span><br><span class="line">     BufferedReader buffer=<span class="keyword">new</span> BufferedReader(input);<span class="comment">//用来做缓冲</span></span><br><span class="line">     <span class="comment">//int context =in.read();// 每次只会读取到一个字节的数据</span></span><br><span class="line">     System.out.print(buffer.readLine());<span class="comment">//读取一行数据</span></span><br><span class="line"> </span><br><span class="line">     <span class="comment">//关闭字眼</span></span><br><span class="line">     buffer.close();</span><br><span class="line">     input.close();</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -1044,7 +1079,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Java中的IO"><span class="nav-number">1.</span> <span class="nav-text">Java中的IO</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#IO解决的问题"><span class="nav-number">1.1.</span> <span class="nav-text">IO解决的问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#字节流"><span class="nav-number">1.2.</span> <span class="nav-text">字节流</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#输入字节流"><span class="nav-number">1.2.1.</span> <span class="nav-text">输入字节流</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#输出字节流"><span class="nav-number">1.2.2.</span> <span class="nav-text">输出字节流</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#字符流"><span class="nav-number">1.3.</span> <span class="nav-text">字符流</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#输入字符流"><span class="nav-number">1.3.1.</span> <span class="nav-text">输入字符流</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#输出字符流"><span class="nav-number">1.3.2.</span> <span class="nav-text">输出字符流</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#转换流"><span class="nav-number">1.4.</span> <span class="nav-text">转换流</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Java中的IO"><span class="nav-number">1.</span> <span class="nav-text">Java中的IO</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#IO解决的问题"><span class="nav-number">1.1.</span> <span class="nav-text">IO解决的问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#字节流"><span class="nav-number">1.2.</span> <span class="nav-text">字节流</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#输入字节流"><span class="nav-number">1.2.1.</span> <span class="nav-text">输入字节流</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#输出字节流"><span class="nav-number">1.2.2.</span> <span class="nav-text">输出字节流</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#字符流"><span class="nav-number">1.3.</span> <span class="nav-text">字符流</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#输入字符流"><span class="nav-number">1.3.1.</span> <span class="nav-text">输入字符流</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#输出字符流"><span class="nav-number">1.3.2.</span> <span class="nav-text">输出字符流</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#转换流"><span class="nav-number">1.4.</span> <span class="nav-text">转换流</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#转换流的作用"><span class="nav-number">1.4.1.</span> <span class="nav-text">转换流的作用</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -1086,7 +1121,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="Insgesamt gezählte Symbole">116k</span>
+    <span title="Insgesamt gezählte Symbole">119k</span>
   
 
   
@@ -1095,7 +1130,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="Insgesamte Lesezeit">1:46</span>
+    <span title="Insgesamte Lesezeit">1:48</span>
   
 </div>
 
