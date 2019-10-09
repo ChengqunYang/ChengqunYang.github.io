@@ -121,7 +121,7 @@
 <meta property="og:image" content="https://chengqunyang.github.io/2019/04/15/数据库/整体图.png">
 <meta property="og:image" content="https://chengqunyang.github.io/2019/04/15/数据库/thing.png">
 <meta property="og:image" content="https://chengqunyang.github.io/2019/04/15/数据库/数据库索引.png">
-<meta property="og:updated_time" content="2019-10-07T07:48:34.963Z">
+<meta property="og:updated_time" content="2019-10-09T14:50:45.608Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据库">
 <meta name="twitter:description" content="数据库Mysql数据库 Mysql语句 SQL： Structure Query Language:结构化查询语言 DDL：数据定义语言：定义数据库，数据表他们的结构：create(创建) drop(删除) alert(修改) DML：数据操纵语言：主要用来操作数据 insert(插入) update(修改）delete（删除） DCL：数据控制语言：定义访问权限，取消访问权限，安全设置 gran">
@@ -507,7 +507,7 @@
                 
                   <span class="post-meta-item-text">Bearbeitet am</span>
                 
-                <time title="Geändert am: 2019-10-07 15:48:34" itemprop="dateModified" datetime="2019-10-07T15:48:34+08:00">2019-10-07</time>
+                <time title="Geändert am: 2019-10-09 22:50:45" itemprop="dateModified" datetime="2019-10-09T22:50:45+08:00">2019-10-09</time>
               
             
           </span>
@@ -1127,7 +1127,7 @@ from product p;</code></p>
 <p>  KeyedHandler,</p>
 <p>  ScalarHandler</p>
 <h3 id="MySQL数据库引擎"><a href="#MySQL数据库引擎" class="headerlink" title="MySQL数据库引擎"></a>MySQL数据库引擎</h3><p>myisam：读取速度比较快，不占用大批量资源，但是又两个缺点，1、不支持事物，2、容错不好。硬盘崩溃了，数据就没了，如果说坚持要用在那个关键程序，要通过其复制特性实时的去备份数据，，MySQL能够支持这样的备份应用程序。MyISAM类型的二进制数据文件可以在不同操作系统中迁移。也就是可以直接从Windows系统拷贝到linux系统中使用。</p>
-<p>Innodb：它提供了事务控制能力功能，它确保一组命令全部执行成功，或者当任何一个命令出现错误时所有命令的结果都被回退，在电子银行中事务控制能力是非常重要的。支持COMMIT、ROLLBACK和其他事务特性。目前数据库表结构设计的时候一般都选择这种存储引擎。但是速度慢，占用磁盘空间比较多。</p>
+<p>Innodb：支持事务,外键,行锁它提供了事务控制能力功能，它确保一组命令全部执行成功，或者当任何一个命令出现错误时所有命令的结果都被回退，在电子银行中事务控制能力是非常重要的。支持COMMIT、ROLLBACK和其他事务特性。目前数据库表结构设计的时候一般都选择这种存储引擎。但是速度慢，占用磁盘空间比较多。</p>
 <p>MyISAM和InnoDB的区别:</p>
 <ol>
 <li><p>存储结构</p>
@@ -1170,8 +1170,8 @@ from product p;</code></p>
 </ol>
 </li>
 <li>表主键<ol>
-<li>MyISAM：允许没有任何索引和主键的表存在，索引都是保存行的地址。</li>
-<li>InnoDB：如果没有设定主键或者非空唯一索引，就会自动生成一个6字节的主键(用户不可见)，数据是主索引的一部分，附加索引保存的是主索引的值。</li>
+<li>MyISAM：允许没有任何索引和主键的表存在，索引都是保存行的地址。非聚集索引</li>
+<li>InnoDB：如果没有设定主键或者非空唯一索引，就会自动生成一个6字节的主键(用户不可见)，数据是主索引的一部分，附加索引保存的是主索引的值。聚集索引</li>
 </ol>
 </li>
 <li>表的具体行数<ol>
