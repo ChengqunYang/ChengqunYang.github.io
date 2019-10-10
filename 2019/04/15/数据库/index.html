@@ -121,7 +121,7 @@
 <meta property="og:image" content="https://chengqunyang.github.io/2019/04/15/数据库/整体图.png">
 <meta property="og:image" content="https://chengqunyang.github.io/2019/04/15/数据库/thing.png">
 <meta property="og:image" content="https://chengqunyang.github.io/2019/04/15/数据库/数据库索引.png">
-<meta property="og:updated_time" content="2019-10-09T14:50:45.608Z">
+<meta property="og:updated_time" content="2019-10-10T14:30:29.005Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据库">
 <meta name="twitter:description" content="数据库Mysql数据库 Mysql语句 SQL： Structure Query Language:结构化查询语言 DDL：数据定义语言：定义数据库，数据表他们的结构：create(创建) drop(删除) alert(修改) DML：数据操纵语言：主要用来操作数据 insert(插入) update(修改）delete（删除） DCL：数据控制语言：定义访问权限，取消访问权限，安全设置 gran">
@@ -507,7 +507,7 @@
                 
                   <span class="post-meta-item-text">Bearbeitet am</span>
                 
-                <time title="Geändert am: 2019-10-09 22:50:45" itemprop="dateModified" datetime="2019-10-09T22:50:45+08:00">2019-10-09</time>
+                <time title="Geändert am: 2019-10-10 22:30:29" itemprop="dateModified" datetime="2019-10-10T22:30:29+08:00">2019-10-10</time>
               
             
           </span>
@@ -553,7 +553,7 @@
                 
                   <span class="post-meta-item-text">Symbole im Artikel gezählt: </span>
                 
-                <span title="Symbole im Artikel gezählt">20k</span>
+                <span title="Symbole im Artikel gezählt">21k</span>
               
 
               
@@ -567,7 +567,7 @@
                 
                   <span class="post-meta-item-text">Lesezeit &asymp;</span>
                 
-                <span title="Lesezeit">18 minuten.</span>
+                <span title="Lesezeit">19 minuten.</span>
               
             </div>
           
@@ -1214,6 +1214,22 @@ from product p;</code></p>
 <li>需要定期归档数据</li>
 </ul>
 <h3 id="Mysql索引"><a href="#Mysql索引" class="headerlink" title="Mysql索引"></a>Mysql索引</h3><p><img src="/2019/04/15/数据库/数据库索引.png" alt></p>
+<p>B树：二叉树，每个结点只存储一个关键字，等于则命中，小于走左结点，大于</p>
+<p>走右结点；</p>
+<p>B-树：多路搜索树，每个结点存储M/2到M个关键字，非叶子结点存储指向关键</p>
+<p>字范围的子结点；所有关键字在整颗树中出现，且只出现一次，非叶子结点可以命中；</p>
+<p>B+树：在B-树基础上，为叶子结点增加链表指针，所有关键字都在叶子结点</p>
+<p>中出现，非叶子结点作为叶子结点的索引；B+树总是到叶子结点才命中；</p>
+<p>B*树：在B+树基础上，为非叶子结点也增加链表指针，将结点的最低利用率</p>
+<p>从1/2提高到2/3；</p>
+<p>红黑树</p>
+<p>红黑树（Red-Black Tree）是二叉搜索树（Binary Search Tree）的一种改进。我们知道二叉搜索树在最坏的情况下可能会变成一个链表（当所有节点按从小到大的顺序依次插入后）。而红黑树在每一次插入或删除节点之后都会花O（log N）的时间来对树的结构作修改，以保持树的平衡。也就是说，红黑树的查找方法与二叉搜索树完全一样；插入和删除节点的的方法前半部分节与二叉搜索树完全一样，而后半部分添加了一些修改树的结构的操作。红黑树的每个节点上的属性除了有一个key、3个指针：parent、lchild、rchild以外，还多了一个属性：color。它只能是两种颜色：红或黑。而红黑树除了具有二叉搜索树的所有性质之外，还具有以下4点性质：</p>
+<ol>
+<li>根节点是黑色的。</li>
+<li>空节点是黑色的（红黑树中，根节点的parent以及所有叶节点lchild、rchild都不指向NULL，而是指向一个定义好的空节点）。</li>
+<li>红色节点的父、左子、右子节点都是黑色。</li>
+<li>在任何一棵子树中，每一条从根节点向下走到空节点的路径上包含的黑色节点数量都相同。</li>
+</ol>
 <h2 id="Redis数据库"><a href="#Redis数据库" class="headerlink" title="Redis数据库"></a>Redis数据库</h2><h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><ul>
 <li>redis是一款高性能的NOSQL系列的非关系型数据库</li>
 <li>NoSQL(NoSQL = Not Only SQL)，意即“不仅仅是SQL”，是一项全新的数据库理念，泛指非关系型的数据库。</li>
@@ -1958,7 +1974,7 @@ from product p;</code></p>
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="Insgesamt gezählte Symbole">137k</span>
+    <span title="Insgesamt gezählte Symbole">138k</span>
   
 
   
@@ -1967,7 +1983,7 @@ from product p;</code></p>
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="Insgesamte Lesezeit">2:04</span>
+    <span title="Insgesamte Lesezeit">2:05</span>
   
 </div>
 
