@@ -121,7 +121,7 @@
 <meta property="og:image" content="https://chengqunyang.github.io/2019/04/15/数据库/整体图.png">
 <meta property="og:image" content="https://chengqunyang.github.io/2019/04/15/数据库/thing.png">
 <meta property="og:image" content="https://chengqunyang.github.io/2019/04/15/数据库/数据库索引.png">
-<meta property="og:updated_time" content="2019-10-10T14:30:29.005Z">
+<meta property="og:updated_time" content="2019-10-10T14:32:04.102Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据库">
 <meta name="twitter:description" content="数据库Mysql数据库 Mysql语句 SQL： Structure Query Language:结构化查询语言 DDL：数据定义语言：定义数据库，数据表他们的结构：create(创建) drop(删除) alert(修改) DML：数据操纵语言：主要用来操作数据 insert(插入) update(修改）delete（删除） DCL：数据控制语言：定义访问权限，取消访问权限，安全设置 gran">
@@ -507,7 +507,7 @@
                 
                   <span class="post-meta-item-text">Bearbeitet am</span>
                 
-                <time title="Geändert am: 2019-10-10 22:30:29" itemprop="dateModified" datetime="2019-10-10T22:30:29+08:00">2019-10-10</time>
+                <time title="Geändert am: 2019-10-10 22:32:04" itemprop="dateModified" datetime="2019-10-10T22:32:04+08:00">2019-10-10</time>
               
             
           </span>
@@ -1222,8 +1222,7 @@ from product p;</code></p>
 <p>中出现，非叶子结点作为叶子结点的索引；B+树总是到叶子结点才命中；</p>
 <p>B*树：在B+树基础上，为非叶子结点也增加链表指针，将结点的最低利用率</p>
 <p>从1/2提高到2/3；</p>
-<p>红黑树</p>
-<p>红黑树（Red-Black Tree）是二叉搜索树（Binary Search Tree）的一种改进。我们知道二叉搜索树在最坏的情况下可能会变成一个链表（当所有节点按从小到大的顺序依次插入后）。而红黑树在每一次插入或删除节点之后都会花O（log N）的时间来对树的结构作修改，以保持树的平衡。也就是说，红黑树的查找方法与二叉搜索树完全一样；插入和删除节点的的方法前半部分节与二叉搜索树完全一样，而后半部分添加了一些修改树的结构的操作。红黑树的每个节点上的属性除了有一个key、3个指针：parent、lchild、rchild以外，还多了一个属性：color。它只能是两种颜色：红或黑。而红黑树除了具有二叉搜索树的所有性质之外，还具有以下4点性质：</p>
+<p>红黑树:红黑树（Red-Black Tree）是二叉搜索树（Binary Search Tree）的一种改进。我们知道二叉搜索树在最坏的情况下可能会变成一个链表（当所有节点按从小到大的顺序依次插入后）。而红黑树在每一次插入或删除节点之后都会花O（log N）的时间来对树的结构作修改，以保持树的平衡。也就是说，红黑树的查找方法与二叉搜索树完全一样；插入和删除节点的的方法前半部分节与二叉搜索树完全一样，而后半部分添加了一些修改树的结构的操作。红黑树的每个节点上的属性除了有一个key、3个指针：parent、lchild、rchild以外，还多了一个属性：color。它只能是两种颜色：红或黑。而红黑树除了具有二叉搜索树的所有性质之外，还具有以下4点性质：</p>
 <ol>
 <li>根节点是黑色的。</li>
 <li>空节点是黑色的（红黑树中，根节点的parent以及所有叶节点lchild、rchild都不指向NULL，而是指向一个定义好的空节点）。</li>
