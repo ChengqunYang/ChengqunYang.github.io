@@ -121,7 +121,7 @@
 <meta property="og:image" content="https://chengqunyang.github.io/2019/04/15/数据库/整体图.png">
 <meta property="og:image" content="https://chengqunyang.github.io/2019/04/15/数据库/thing.png">
 <meta property="og:image" content="https://chengqunyang.github.io/2019/04/15/数据库/数据库索引.png">
-<meta property="og:updated_time" content="2019-10-10T14:32:04.102Z">
+<meta property="og:updated_time" content="2019-10-15T05:38:18.824Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据库">
 <meta name="twitter:description" content="数据库Mysql数据库 Mysql语句 SQL： Structure Query Language:结构化查询语言 DDL：数据定义语言：定义数据库，数据表他们的结构：create(创建) drop(删除) alert(修改) DML：数据操纵语言：主要用来操作数据 insert(插入) update(修改）delete（删除） DCL：数据控制语言：定义访问权限，取消访问权限，安全设置 gran">
@@ -507,7 +507,7 @@
                 
                   <span class="post-meta-item-text">Bearbeitet am</span>
                 
-                <time title="Geändert am: 2019-10-10 22:32:04" itemprop="dateModified" datetime="2019-10-10T22:32:04+08:00">2019-10-10</time>
+                <time title="Geändert am: 2019-10-15 13:38:18" itemprop="dateModified" datetime="2019-10-15T13:38:18+08:00">2019-10-15</time>
               
             
           </span>
@@ -728,6 +728,27 @@
 <li><p>修改表的字符集</p>
 <ul>
 <li><code>alter table student character set utf8;</code></li>
+</ul>
+</li>
+<li><p>修改存储引擎：修改为myisam</p>
+<ul>
+<li><code>alter table tableName engine=myisam;</code></li>
+</ul>
+</li>
+<li><p>删除外键约束：keyName是外键别名</p>
+<ul>
+<li><code>alter table tableName drop foreign key keyName;</code></li>
+</ul>
+</li>
+<li><p>创建索引</p>
+<ul>
+<li><code>CREATE INDEX indexName ON mytable(username(length));</code></li>
+<li><code>ALTER TABLE</code>table_name<code>ADD INDEX index_name (</code>column1<code>,</code>column2<code>,</code>column3<code>);</code></li>
+</ul>
+</li>
+<li><p>使用sql语句创建唯一索引，格式如下：</p>
+<ul>
+<li><code>create unique index 索引名 on 表名(列名1,列名2……);</code></li>
 </ul>
 </li>
 </ul>
@@ -1058,19 +1079,21 @@ from product p;</code></p>
 <li><p>脏读，不可重复读，幻读</p>
 <blockquote>
 <p>脏读：一个事务读到了另一个事物还未提交的数据。  隔离级别为：读未提交</p>
-<p>不可重复读：一个事务可以读到另一个事务提交的数据（产生两次读出不一样的问题）。 幻读：一个事务读到了另一个事务已提交的插入的数据，导致多次查询结果不一样。隔离级别：读已提交</p>
+<p>不可重复读：一个事务可以读到另一个事务提交的数据（产生两次读出不一样的问题）。 </p>
+<p>幻读：一个事务读到了另一个事务已提交的插入的数据，导致多次查询结果不一样。</p>
+<p>隔离级别：读已提交,一个事务只能读取到另一个事务提交了的数据</p>
 <p>隔离级别：可重复读，即使一个事务已提交数据的更改，但在另一个事务里数据仍不会变化，这是为了让事务与事务之间不产生相对影响。但是还是会产生幻读问题</p>
 <p>隔离级别：可串行化：最高达隔离级别.当一个事务要操作一个表时，必须得等之前的事务提交了数据或者回滚了才能执行，否则会等待。</p>
 </blockquote>
 </li>
 </ol>
-<p>重复读是为了保证在一个事务中，相同查询条件下读取的数据值不发生改变，但是不能保证下次同样条件查询，结果记录数不会增加。</p>
+<p>可重复读是为了保证在一个事务中，相同查询条件下读取的数据值不发生改变，但是不能保证下次同样条件查询，结果记录数不会增加。</p>
+</li>
+</ul>
 <p>可串行化就是为了解决这个问题而存在的，他将这个查询范围都加锁了，所以就不能再往这个范围内插入数据，这就是SERIALIZABLE 隔离级别做的事情。</p>
 <ol start="2">
 <li>丢失更新：<br>如果a和b事务都对同一个表进行了操作，那么第二次对数据的更新可能会导致第一次更新丢失。  </li>
 </ol>
-</li>
-</ul>
 <pre><code>解决方法:  
 &gt;悲观锁：可以在查询的时候给查询语句后面加上 for update （数据库的锁机制： 排他锁）  
 
@@ -1079,12 +1102,17 @@ from product p;</code></p>
 <li><p>数据库的连接对象创建工作比较耗费性能。</p>
 <p>一开始就在内存中开辟一块空间（集合），一开始先往池子里面放置多个连接对象，后面需要连接的话直接从池子里面去取，不要自己创建连接了，使用完毕，要记得归还连接，确保连接对象能够循环利用。</p>
 <ol>
-<li><p>DBCP:数据库连接池，通过数据库连接池，可以让程序自动管理数据库的释放和断开。</p>
-</li>
-<li><p>C3P0:数据库连接池，实现了数据源和JNDI绑定，目前大量使用。</p>
-</li>
+<li>DBCP:数据库连接池，通过数据库连接池，可以让程序自动管理数据库的释放和断开。</li>
 </ol>
 </li>
+</ul>
+<ol start="2">
+<li>C3P0:数据库连接池，实现了数据源和JNDI绑定，目前大量使用。<ol start="3">
+<li>Druid:Java语言中最好的数据库连接池，由阿里巴巴团队开发。Druid能够提供强大的<strong>监控</strong>和<strong>扩展</strong>功能。</li>
+</ol>
+</li>
+</ol>
+<ul>
 <li><p>DBCP怎么使用：</p>
 <ol>
 <li><p>导入jar文件</p>
@@ -1973,7 +2001,7 @@ from product p;</code></p>
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="Insgesamt gezählte Symbole">139k</span>
+    <span title="Insgesamt gezählte Symbole">140k</span>
   
 
   
@@ -1982,7 +2010,7 @@ from product p;</code></p>
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="Insgesamte Lesezeit">2:06</span>
+    <span title="Insgesamte Lesezeit">2:07</span>
   
 </div>
 

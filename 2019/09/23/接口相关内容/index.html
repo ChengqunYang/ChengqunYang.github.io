@@ -118,7 +118,7 @@
 <meta property="og:site_name" content="Talk is cheap.  Show me the code.">
 <meta property="og:description" content="接口:定义：接口，是Java语言中一种引用类型，是方法的集合，如果说类的内部封装了成员变量、构造方法和成员方法，那么接口的内部主要就是封装了的方法，包含抽象方法和常量（JDK 7及以前），默认方法和静态方法（JDK 8），私有方法（JDK 9）。 格式：123public interface 接口名称&amp;#123;	//接口内容&amp;#125; 备注:换成了interface关键字之后,编译生成的字节码">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-10-14T06:19:44.901Z">
+<meta property="og:updated_time" content="2019-10-15T15:25:11.572Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="接口相关内容">
 <meta name="twitter:description" content="接口:定义：接口，是Java语言中一种引用类型，是方法的集合，如果说类的内部封装了成员变量、构造方法和成员方法，那么接口的内部主要就是封装了的方法，包含抽象方法和常量（JDK 7及以前），默认方法和静态方法（JDK 8），私有方法（JDK 9）。 格式：123public interface 接口名称&amp;#123;	//接口内容&amp;#125; 备注:换成了interface关键字之后,编译生成的字节码">
@@ -503,7 +503,7 @@
                 
                   <span class="post-meta-item-text">Bearbeitet am</span>
                 
-                <time title="Geändert am: 2019-10-14 14:19:44" itemprop="dateModified" datetime="2019-10-14T14:19:44+08:00">2019-10-14</time>
+                <time title="Geändert am: 2019-10-15 23:25:11" itemprop="dateModified" datetime="2019-10-15T23:25:11+08:00">2019-10-15</time>
               
             
           </span>
@@ -549,7 +549,7 @@
                 
                   <span class="post-meta-item-text">Symbole im Artikel gezählt: </span>
                 
-                <span title="Symbole im Artikel gezählt">2.5k</span>
+                <span title="Symbole im Artikel gezählt">2.7k</span>
               
 
               
@@ -675,6 +675,13 @@
 <ol>
 <li>多个父接口当中的抽象方法如果重复,没关系(因为抽象方法没有方法体,子接口一定会继承这个相同的抽象方法,不存在冲突,子接口的非抽象实现类将会重写该相同的抽象方法)</li>
 <li>多个父接口当中的默认方法如果重复,那么子接口必须进行默认方法的重写和覆盖,而且必须带着default关键字</li>
+</ol>
+<h3 id="类中各个模块的执行顺序"><a href="#类中各个模块的执行顺序" class="headerlink" title="类中各个模块的执行顺序"></a>类中各个模块的执行顺序</h3><ol>
+<li><p>只有一个类时：静态代码块&gt;主程序&gt;非静态代码块,接下来顺序执行main里边的语句</p>
+</li>
+<li><p>子类继承父类时： 静态代码块内容最先执行（只执行一次），当然父类的静态代码块一定先于子类的静态代码块执行，接着执行父类非静态代码块和构造方法，然后执行子类非静态代码块和构造方法。</p>
+<p>注意:子类的构造方法，不管这个构造方法带不带参数，默认的它都会先去寻找父类的不带参数的构造方法。如果父类没有不带参数的构造方法，那么子类必须用super关键子来调用父类带参数的构造方法，否则编译不能通过。</p>
+</li>
 </ol>
 
       
@@ -1144,7 +1151,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#接口"><span class="nav-number">1.</span> <span class="nav-text">接口:</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#定义："><span class="nav-number">1.1.</span> <span class="nav-text">定义：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#格式："><span class="nav-number">1.2.</span> <span class="nav-text">格式：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#接口的使用"><span class="nav-number">1.3.</span> <span class="nav-text">接口的使用:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#抽象方法的使用"><span class="nav-number">1.4.</span> <span class="nav-text">抽象方法的使用:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#默认方法的使用"><span class="nav-number">1.5.</span> <span class="nav-text">默认方法的使用:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#静态方法的使用"><span class="nav-number">1.6.</span> <span class="nav-text">静态方法的使用:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#私有方法的使用"><span class="nav-number">1.7.</span> <span class="nav-text">私有方法的使用:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#常量的使用"><span class="nav-number">1.8.</span> <span class="nav-text">常量的使用:</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#抽象类和接口的区别"><span class="nav-number">2.</span> <span class="nav-text">抽象类和接口的区别:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用接口的注意事项"><span class="nav-number">3.</span> <span class="nav-text">使用接口的注意事项:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#继承与实现关系"><span class="nav-number">4.</span> <span class="nav-text">继承与实现关系:</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#接口"><span class="nav-number">1.</span> <span class="nav-text">接口:</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#定义："><span class="nav-number">1.1.</span> <span class="nav-text">定义：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#格式："><span class="nav-number">1.2.</span> <span class="nav-text">格式：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#接口的使用"><span class="nav-number">1.3.</span> <span class="nav-text">接口的使用:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#抽象方法的使用"><span class="nav-number">1.4.</span> <span class="nav-text">抽象方法的使用:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#默认方法的使用"><span class="nav-number">1.5.</span> <span class="nav-text">默认方法的使用:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#静态方法的使用"><span class="nav-number">1.6.</span> <span class="nav-text">静态方法的使用:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#私有方法的使用"><span class="nav-number">1.7.</span> <span class="nav-text">私有方法的使用:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#常量的使用"><span class="nav-number">1.8.</span> <span class="nav-text">常量的使用:</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#抽象类和接口的区别"><span class="nav-number">2.</span> <span class="nav-text">抽象类和接口的区别:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用接口的注意事项"><span class="nav-number">3.</span> <span class="nav-text">使用接口的注意事项:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#继承与实现关系"><span class="nav-number">4.</span> <span class="nav-text">继承与实现关系:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#类中各个模块的执行顺序"><span class="nav-number">5.</span> <span class="nav-text">类中各个模块的执行顺序</span></a></li></ol></div>
             
 
           </div>
@@ -1186,7 +1193,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="Insgesamt gezählte Symbole">139k</span>
+    <span title="Insgesamt gezählte Symbole">140k</span>
   
 
   
@@ -1195,7 +1202,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="Insgesamte Lesezeit">2:06</span>
+    <span title="Insgesamte Lesezeit">2:07</span>
   
 </div>
 
