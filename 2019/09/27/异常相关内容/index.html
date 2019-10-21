@@ -118,7 +118,7 @@
 <meta property="og:site_name" content="Talk is cheap.  Show me the code.">
 <meta property="og:description" content="异常java.lang.Throwable:类是Java语言中所有异常和错误的超类 ​             Exception:编译期异常,进行编译(写代码)java程序出现的异常 ​                 RuntimeException:运行期异常,java程序运行过程中出现问题 ​             异常就相当于程序得了一个小毛病,把异常处理掉,程序就可以继续执行了 ​">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-09-28T03:33:09.959Z">
+<meta property="og:updated_time" content="2019-10-20T03:03:55.095Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="异常相关内容">
 <meta name="twitter:description" content="异常java.lang.Throwable:类是Java语言中所有异常和错误的超类 ​             Exception:编译期异常,进行编译(写代码)java程序出现的异常 ​                 RuntimeException:运行期异常,java程序运行过程中出现问题 ​             异常就相当于程序得了一个小毛病,把异常处理掉,程序就可以继续执行了 ​">
@@ -503,7 +503,7 @@
                 
                   <span class="post-meta-item-text">Bearbeitet am</span>
                 
-                <time title="Geändert am: 2019-09-28 11:33:09" itemprop="dateModified" datetime="2019-09-28T11:33:09+08:00">2019-09-28</time>
+                <time title="Geändert am: 2019-10-20 11:03:55" itemprop="dateModified" datetime="2019-10-20T11:03:55+08:00">2019-10-20</time>
               
             
           </span>
@@ -556,7 +556,7 @@
                 
                   <span class="post-meta-item-text">Symbole im Artikel gezählt: </span>
                 
-                <span title="Symbole im Artikel gezählt">2.5k</span>
+                <span title="Symbole im Artikel gezählt">2.4k</span>
               
 
               
@@ -619,10 +619,8 @@
 <ol>
 <li><p>throws关键字必须写在方法声明处</p>
 </li>
-<li><p>throws关键字后面声明的异常,那么throws后面必须也声明多个异常</p>
-</li>
 <li><p>方法内部如果抛出了多个异常对象,那么throws后面必须声明多个异常</p>
-<p>如果抛出的多个异常之间有字符类关系,则只需要声明父类即可</p>
+<p>如果抛出的多个异常之间有子父类关系,则只需要声明父类即可</p>
 </li>
 <li><p>调用一个声明了抛出异常的方法,我们就必须处理声明的异常</p>
 <p>要么直接使用throws声明抛出,交给方法的调用者处理,最终交给JVM</p>

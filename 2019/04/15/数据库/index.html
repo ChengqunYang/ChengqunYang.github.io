@@ -121,7 +121,7 @@
 <meta property="og:image" content="https://chengqunyang.github.io/2019/04/15/数据库/整体图.png">
 <meta property="og:image" content="https://chengqunyang.github.io/2019/04/15/数据库/thing.png">
 <meta property="og:image" content="https://chengqunyang.github.io/2019/04/15/数据库/数据库索引.png">
-<meta property="og:updated_time" content="2019-10-15T05:38:18.824Z">
+<meta property="og:updated_time" content="2019-10-20T14:15:06.246Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据库">
 <meta name="twitter:description" content="数据库Mysql数据库 Mysql语句 SQL： Structure Query Language:结构化查询语言 DDL：数据定义语言：定义数据库，数据表他们的结构：create(创建) drop(删除) alert(修改) DML：数据操纵语言：主要用来操作数据 insert(插入) update(修改）delete（删除） DCL：数据控制语言：定义访问权限，取消访问权限，安全设置 gran">
@@ -507,7 +507,7 @@
                 
                   <span class="post-meta-item-text">Bearbeitet am</span>
                 
-                <time title="Geändert am: 2019-10-15 13:38:18" itemprop="dateModified" datetime="2019-10-15T13:38:18+08:00">2019-10-15</time>
+                <time title="Geändert am: 2019-10-20 22:15:06" itemprop="dateModified" datetime="2019-10-20T22:15:06+08:00">2019-10-20</time>
               
             
           </span>
@@ -1327,16 +1327,19 @@ from product p;</code></p>
 </li>
 <li><p>哈希类型 hash</p>
 <ol>
-<li>存储： hset key field value<br> 127.0.0.1:6379&gt; hset myhash username lisi<br> (integer) 1<br> 127.0.0.1:6379&gt; hset myhash password 123<br> (integer) 1</li>
+<li><p>存储： hset key field value</p>
+<p> 127.0.0.1:6379&gt; hset myhash username lisi<br> (integer) 1</p>
+<p> 127.0.0.1:6379&gt; hset myhash password 123<br> (integer) 1</p>
+</li>
 <li><p>获取： </p>
 <ul>
-<li>hget key field: 获取指定的field对应的值<br>  127.0.0.1:6379&gt; hget myhash username<br>  “lisi”</li>
-<li>hgetall key：获取所有的field和value<br>  127.0.0.1:6379&gt; hgetall myhash<br>  1) “username”<br>  2) “lisi”<br>  3) “password”<br>  4) “123”</li>
+<li>hget key field: 获取指定的field对应的值<br> 127.0.0.1:6379&gt; hget myhash username<br> “lisi”</li>
+<li>hgetall key：获取所有的field和value<br> 127.0.0.1:6379&gt; hgetall myhash<br> 1) “username”<br> 2) “lisi”<br> 3) “password”<br> 4) “123”</li>
 </ul>
 </li>
-<li><p>删除： hdel key field<br> 127.0.0.1:6379&gt; hdel myhash username<br> (integer) 1</p>
-</li>
 </ol>
+</li>
+<li><p>删除： hdel key field<br>   127.0.0.1:6379&gt; hdel myhash username<br>   (integer) 1</p>
 </li>
 <li><p>列表类型 list:可以添加一个元素到列表的头部（左边）或者尾部（右边）</p>
 <ol>
@@ -1345,7 +1348,9 @@ from product p;</code></p>
 <li><p>lpush key value: 将元素加入列表左表</p>
 </li>
 <li><p>rpush key value：将元素加入列表右边</p>
-<p> 127.0.0.1:6379&gt; lpush myList a<br> (integer) 1<br> 127.0.0.1:6379&gt; lpush myList b<br> (integer) 2<br> 127.0.0.1:6379&gt; rpush myList c<br> (integer) 3</p>
+<p> 127.0.0.1:6379&gt; lpush myList a<br> (integer) 1</p>
+<p> 127.0.0.1:6379&gt; lpush myList b<br> (integer) 2</p>
+<p> 127.0.0.1:6379&gt; rpush myList c<br> (integer) 3</p>
 </li>
 </ol>
 </li>
