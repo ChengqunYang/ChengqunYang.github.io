@@ -110,20 +110,18 @@
 
 
 
-  <meta name="description" content="JSP:1. 概念: Java Server Pages:java服务器端页面  可以理解为一个特殊的页面,其中既可以指定定义html,又可以定义java代码  用于简化书写  JSP本质上就是一个Servlet  JSP的脚本:JSP定义Java代码的方式  &amp;lt;% 代码 %&amp;gt;:定义的Java代码,在service方法中.service方法中可以定义什么,该脚本就可以定义什么 &amp;lt;">
-<meta name="keywords" content="JavaWeb,Java">
+  <meta name="description" content="一个优秀的工程师和一个普通的工程师的区别，不是满天飞舞的构架图，他的功底体现在所写的每一行代码上。 编程规约命名风格 【强制】代码中的命名均不能以下划线或美元符号开始，也不能以下划线或美元符号结束  【强制】代码中的命名严禁使用拼音与英文混合的方式，更不允许直接使用中文的方式  【强制】类名使用UpperCamelCase风格，但以下情形例外：DO / BO / DTO / VO / AO / P">
+<meta name="keywords" content="Java,编程规范">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JSP相关内容">
-<meta property="og:url" content="https://ChengqunYang.github.io/2019/07/29/JSP/index.html">
+<meta property="og:title" content="阿里规约学习心得（一）">
+<meta property="og:url" content="https://ChengqunYang.github.io/2019/11/14/阿里规约学习心得（一）/index.html">
 <meta property="og:site_name" content="Talk is cheap.  Show me the code.">
-<meta property="og:description" content="JSP:1. 概念: Java Server Pages:java服务器端页面  可以理解为一个特殊的页面,其中既可以指定定义html,又可以定义java代码  用于简化书写  JSP本质上就是一个Servlet  JSP的脚本:JSP定义Java代码的方式  &amp;lt;% 代码 %&amp;gt;:定义的Java代码,在service方法中.service方法中可以定义什么,该脚本就可以定义什么 &amp;lt;">
+<meta property="og:description" content="一个优秀的工程师和一个普通的工程师的区别，不是满天飞舞的构架图，他的功底体现在所写的每一行代码上。 编程规约命名风格 【强制】代码中的命名均不能以下划线或美元符号开始，也不能以下划线或美元符号结束  【强制】代码中的命名严禁使用拼音与英文混合的方式，更不允许直接使用中文的方式  【强制】类名使用UpperCamelCase风格，但以下情形例外：DO / BO / DTO / VO / AO / P">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="https://chengqunyang.github.io/2019/07/29/JSP/软件开发的三层架构.png">
-<meta property="og:updated_time" content="2019-09-15T11:05:12.070Z">
+<meta property="og:updated_time" content="2019-11-14T12:49:37.654Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JSP相关内容">
-<meta name="twitter:description" content="JSP:1. 概念: Java Server Pages:java服务器端页面  可以理解为一个特殊的页面,其中既可以指定定义html,又可以定义java代码  用于简化书写  JSP本质上就是一个Servlet  JSP的脚本:JSP定义Java代码的方式  &amp;lt;% 代码 %&amp;gt;:定义的Java代码,在service方法中.service方法中可以定义什么,该脚本就可以定义什么 &amp;lt;">
-<meta name="twitter:image" content="https://chengqunyang.github.io/2019/07/29/JSP/软件开发的三层架构.png">
+<meta name="twitter:title" content="阿里规约学习心得（一）">
+<meta name="twitter:description" content="一个优秀的工程师和一个普通的工程师的区别，不是满天飞舞的构架图，他的功底体现在所写的每一行代码上。 编程规约命名风格 【强制】代码中的命名均不能以下划线或美元符号开始，也不能以下划线或美元符号结束  【强制】代码中的命名严禁使用拼音与英文混合的方式，更不允许直接使用中文的方式  【强制】类名使用UpperCamelCase风格，但以下情形例外：DO / BO / DTO / VO / AO / P">
 
 
 
@@ -131,7 +129,7 @@
 
   
   
-  <link rel="canonical" href="https://ChengqunYang.github.io/2019/07/29/JSP/">
+  <link rel="canonical" href="https://ChengqunYang.github.io/2019/11/14/阿里规约学习心得（一）/">
 
 
 
@@ -141,7 +139,7 @@
   };
 </script>
 
-  <title>JSP相关内容 | Talk is cheap.  Show me the code.</title>
+  <title>阿里规约学习心得（一） | Talk is cheap.  Show me the code.</title>
   
 
 
@@ -445,7 +443,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ChengqunYang.github.io/2019/07/29/JSP/">
+    <link itemprop="mainEntityOfPage" href="https://ChengqunYang.github.io/2019/11/14/阿里规约学习心得（一）/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="CQY">
@@ -462,7 +460,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">JSP相关内容
+          <h2 class="post-title" itemprop="name headline">阿里规约学习心得（一）
 
               
             
@@ -488,24 +486,12 @@
                 
               
 
-              <time title="Erstellt: 2019-07-29 14:06:13" itemprop="dateCreated datePublished" datetime="2019-07-29T14:06:13+08:00">2019-07-29</time>
+              <time title="Erstellt: 2019-11-14 17:37:22 / Geändert am: 20:49:37" itemprop="dateCreated datePublished" datetime="2019-11-14T17:37:22+08:00">2019-11-14</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Bearbeitet am</span>
-                
-                <time title="Geändert am: 2019-09-15 19:05:12" itemprop="dateModified" datetime="2019-09-15T19:05:12+08:00">2019-09-15</time>
               
             
           </span>
@@ -551,7 +537,7 @@
                 
                   <span class="post-meta-item-text">Symbole im Artikel gezählt: </span>
                 
-                <span title="Symbole im Artikel gezählt">3.9k</span>
+                <span title="Symbole im Artikel gezählt">6.7k</span>
               
 
               
@@ -565,7 +551,7 @@
                 
                   <span class="post-meta-item-text">Lesezeit &asymp;</span>
                 
-                <span title="Lesezeit">4 minuten.</span>
+                <span title="Lesezeit">6 minuten.</span>
               
             </div>
           
@@ -585,246 +571,164 @@
       
 
       
-        <h2 id="JSP"><a href="#JSP" class="headerlink" title="JSP:"></a>JSP:</h2><h3 id="1-概念"><a href="#1-概念" class="headerlink" title="1. 概念:"></a>1. 概念:</h3><ul>
-<li><p>Java Server Pages:java服务器端页面</p>
-<ul>
-<li><p>可以理解为一个特殊的页面,其中既可以指定定义html,又可以定义java代码</p>
+        <p>一个优秀的工程师和一个普通的工程师的区别，不是满天飞舞的构架图，他的功底体现在所写的每一行代码上。</p>
+<h1 id="编程规约"><a href="#编程规约" class="headerlink" title="编程规约"></a>编程规约</h1><h2 id="命名风格"><a href="#命名风格" class="headerlink" title="命名风格"></a>命名风格</h2><ol>
+<li><p>【强制】代码中的命名均不能以下划线或美元符号开始，也不能以下划线或美元符号结束</p>
 </li>
-<li><p>用于简化书写</p>
+<li><p>【强制】代码中的命名严禁使用拼音与英文混合的方式，更不允许直接使用中文的方式</p>
 </li>
-<li><p>JSP本质上就是一个Servlet</p>
+<li><p>【强制】类名使用UpperCamelCase风格，但以下情形例外：DO / BO / DTO / VO / AO / PO等</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">正例：MarcoPolo / UserDO / XmlService / TcpUdpDeal / TaPromotion</span><br><span class="line">反例：macroPolo / UserDo / XMLService / TCPUDPDeal / TAPromotion</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">分层领域模型规约：</span><br><span class="line">DO（ Data Object）：与数据库表结构一一对应，通过DAO层向上传输数据源对象。</span><br><span class="line"></span><br><span class="line">DTO（ Data Transfer Object）：数据传输对象，Service或Manager向外传输的对象。</span><br><span class="line"></span><br><span class="line">BO（ Business Object）：业务对象。 由Service层输出的封装业务逻辑的对象。</span><br><span class="line"></span><br><span class="line">AO（ Application Object）：应用对象。 在Web层与Service层之间抽象的复用对象模型，极为贴近展示层，复用度不高。</span><br><span class="line"></span><br><span class="line">VO（ View Object）：显示层对象，通常是Web向模板渲染引擎层传输的对象。</span><br><span class="line"></span><br><span class="line">POJO（ Plain Ordinary Java Object）：在本手册中， POJO专指只有setter/getter/toString的简单类，包括DO/DTO/BO/VO等。</span><br><span class="line"></span><br><span class="line">Query：数据查询对象，各层接收上层的查询请求。 注意超过2个参数的查询封装，禁止使用Map类来传输。</span><br><span class="line"></span><br><span class="line">领域模型命名规约：</span><br><span class="line"></span><br><span class="line">数据对象：xxxDO，xxx即为数据表名。</span><br><span class="line"></span><br><span class="line">数据传输对象：xxxDTO，xxx为业务领域相关的名称。</span><br><span class="line"></span><br><span class="line">展示对象：xxxVO，xxx一般为网页名称。</span><br><span class="line"></span><br><span class="line">POJO是DO/DTO/BO/VO的统称，禁止命名成xxxPOJO</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>JSP的脚本:JSP定义Java代码的方式</p>
-<ul>
-<li>&lt;% 代码 %&gt;:定义的Java代码,在service方法中.service方法中可以定义什么,该脚本就可以定义什么</li>
-<li>&lt;%! 代码 %&gt;:定义的Java代码,在JSP转换后的Java类的成员位置</li>
-<li>&lt;%= 代码 %&gt;:定义的Java代码在service方法中,会输出到页面上,输出语句中可以定义什么,该脚本中就可以定义什么</li>
-</ul>
+<li><p>【强制】方法名、参数名、成员变量、局部变量都统一使用lowerCamelCase风格，必须遵从驼峰形式</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">正例： localValue / getHttpMessage() / inputUserId</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>JSP的内置对象:</p>
-<ul>
-<li><p>在JSP页面中不需要获取和创建的,可以直接使用的对象</p>
+<li><p>【强制】常量命名全部大写，单词间用下划线隔开，力求语义表达完整清楚，不要嫌名字长。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">正例：MAX_STOCK_COUNT 反例：MAX_COUNT</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>JSP一共有9个内置对象</p>
+<li><p>【强制】抽象类命名使用Abstract或Base开头；异常类命名使用Exception结尾；测试类命名以它要测试的类名开始，以Test结尾</p>
+</li>
+<li><p>【强制】类型与中括号紧挨相连来定义数组。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">正例： 定义整形数组 int[] arrayDemo; int[] arrayDemo;</span><br><span class="line">反例： 在 main 参数中，使用 String args[] 来定义</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>【强制】POJO(简单的Java对象，实际就是普通JavaBeans)类中布尔类型的变量，都不要加is前缀，否则部分框架解析会引起序列化错误。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">反例：定义为基本数据类型Boolean isDeleted；的属性，它的方法也是isDeleted()，RPC</span><br><span class="line">框架在反向解析的时候，“误以为”对应的属性名称是deleted，导致属性获取不到，进而抛出异常。</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>【强制】包名统一使用小写，点分隔符之间有且仅有一个自然语义的英语单词。包名统一使用单数形式，但是类名如果有复数含义，类名可以使用复数形式。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">正例：应用工具类包名为com.alibaba.ai.util、类名为MessageUtils（此规则参考spring的框架结构）</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>【强制】杜绝完全不规范的缩写，避免望文不知义。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">反例：AbstractClass“缩写”命名成AbsClass；condition“缩写”命名成 condi，此类随意缩写严重降低了代码的可阅读性。</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>【推荐】为了达到代码自解释的目标，任何定义编程元素在命名时使用尽量完整单词 组合来表达其意。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">正例： 从远程 仓库 拉取代码的类 命名 为 PullCodeFromRemoteRepository 。 </span><br><span class="line">反例： 变量 int a;  的随意命名 方式。</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>【推荐】如果模块、接口、类、方法使用了设计模式，在命名时体现出具体模式,将设计模式体现在名字中，有利于阅读者快速理解架构设计理念</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">正例：</span><br><span class="line">public class OrderFactory; </span><br><span class="line">public class LoginProxy; </span><br><span class="line">public class ResourceObserver;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>【推荐】接口类中的方法和属性不要加任何修饰符号（public 也不要加），保持代码的简洁性，并加上有效的Javadoc注释。尽量不要在接口里定义变量，如果一定要定义变量，肯定是与接口方法相关，并且是整个应用的基础常量。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">正例：接口方法签名void commit();</span><br><span class="line">接口基础常量String COMPANY = &quot;alibaba&quot;; </span><br><span class="line">反例：接口方法定义public abstract void commit(); </span><br><span class="line">说明：JDK8中接口允许有默认实现，那么这个default方法，是对所有实现类都有价值的默认实现。</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>接口和实现类的命名有两套规则:</p>
 <ol>
-<li><p>request</p>
+<li><p>【强制】对于Service和DAO类，基于SOA的理念，暴露出来的服务一定是接口，内部的实现类用Impl的后缀与接口区别</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">正例：CacheServiceImpl实现CacheService接口。</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>response</p>
-</li>
-<li><p>out:字符输出流.可以将数据输出到页面上,和response.getWriter()类似</p>
-<ul>
-<li><p>response.getWriter()和out.write()的区别: </p>
-<ul>
-<li>在tomcat服务器真正给客户端做出相应之前,会先找response缓冲区数据再找out缓冲区数据</li>
-<li>response.getWriter()数据输出永远在out.write()之前</li>
-</ul>
-</li>
-</ul>
+<li><p>【推荐】 如果是形容能力的接口名称，取对应的形容词为接口名（通常是–able的形式）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">正例：AbstractTranslator实现 Translatable。</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 </li>
-</ul>
+<li><p>【参考】枚举类名建议带上Enum后缀，枚举成员名称需要全大写，单词间用下划线隔开。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">说明：枚举其实就是特殊的常量类，且构造方法被默认强制是私有。 </span><br><span class="line">正例：枚举名字为ProcessStatusEnum的成员名称：SUCCESS / UNKNOWN_REASON。</span><br></pre></td></tr></table></figure>
 </li>
-</ul>
-</li>
-</ul>
-<h3 id="2-指令"><a href="#2-指令" class="headerlink" title="2.指令:"></a>2.指令:</h3><ul>
-<li>作用:用于配置JSP页面,导入资源文件</li>
-<li>格式:<ul>
-<li>&lt;%@ 指令名称 属性名1=属性值1 属性名2=属性值2 …%&gt;</li>
-</ul>
-</li>
-<li>分类:<ol>
-<li>page:配置JSP页面的<ul>
-<li>contentType:等同于response.setContentType()<ol>
-<li>设置响应体的mime类型和字符集</li>
-<li>设置当前jsp页面的编码(只能是高级的IDE才能生效,如果使用低级工具,则需要设置pageEncoding属性设置当前页面的字符集)</li>
-</ol>
-</li>
-<li>language:支持的语言,目前只支持java</li>
-<li>buffer:缓冲区大小,默认8kb(out对象有缓冲区)</li>
-<li>import:导包</li>
-<li>errorPage::当前页面发生异常后,会自动跳转到指定的错误页面</li>
-<li>isErrorPage:标识当前页面是否是错误页面<ol>
-<li>true:是,可以使用内置对象exception(可用于输出错误信息)</li>
-<li>false:否,默认值,不可以使用内置对象exception</li>
-</ol>
-</li>
-</ul>
-</li>
-<li>include:页面包含的.导入页面的资源文件(当多个页面有重复内容时,可以提取出相同部分,在其他页面中导入,来简化书写)</li>
-<li>taglib:导入资源库<ul>
-<li>&lt;%@ taglib prefix=”c” url=”<a href="http://java.sun.com/jsp/jstl/core&quot;" target="_blank" rel="noopener">http://java.sun.com/jsp/jstl/core&quot;</a> %&gt;<ul>
-<li>prefix:前缀,自定义的,如:在使用导入的标签时,使用&lt;c:</li>
-</ul>
-</li>
-</ul>
+<li><p>【参考】各层命名规约：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">Service/DAO层方法命名规约 </span><br><span class="line">1） 获取单个对象的方法用get作前缀。</span><br><span class="line">2） 获取多个对象的方法用list作前缀。 </span><br><span class="line">3） 获取统计值的方法用count作前缀。 </span><br><span class="line">4） 插入的方法用save/insert作前缀。 </span><br><span class="line">5） 删除的方法用remove/delete作前缀。</span><br><span class="line">6） 修改的方法用update作前缀。</span><br><span class="line"></span><br><span class="line">领域模型命名规约</span><br><span class="line">1） 数据对象：xxxDO，xxx即为数据表名。</span><br><span class="line">2） 数据传输对象：xxxDTO，xxx为业务领域相关的名称。 </span><br><span class="line">3） 展示对象：xxxVO，xxx一般为网页名称。</span><br><span class="line">4） POJO是DO/DTO/BO/VO的统称，禁止命名成xxxPOJO。</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
+<h2 id="常量定义"><a href="#常量定义" class="headerlink" title="常量定义"></a>常量定义</h2><ol>
+<li><p>【强制】不允许任何魔法值（即未经预先定义的常量）直接出现在代码中。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">反例：String key = &quot;Id#taobao_&quot; + tradeId; cache.put(key, value);</span><br></pre></td></tr></table></figure>
 </li>
-</ul>
-<h3 id="3-注释"><a href="#3-注释" class="headerlink" title="3.注释:"></a>3.注释:</h3><ul>
-<li>html注释:<ul>
-<li><code>&lt;!--  --&gt;</code>:只能注释html代码片段</li>
-</ul>
+<li><p>【强制】long或者Long初始赋值时，使用大写的L，不能是小写的l，小写容易跟数字1混淆，造成误解。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">说明：Long a = 2l; 写的是数字的21，还是Long型的2?</span><br></pre></td></tr></table></figure>
 </li>
-<li>JSP注释:(推荐使用)<ul>
-<li><code>&lt;%-- --%&gt;</code>:可以注释所有</li>
-</ul>
+<li><p>【推荐】不要使用一个常量类维护所有常量，按常量功能进行归类，分开维护。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">说明：大而全的常量类，非得使用查找功能才能定位到修改的常量，不利于理解和维护。</span><br><span class="line">正例：缓存相关常量放在类CacheConsts下；系统配置相关常量放在类ConfigConsts下。</span><br></pre></td></tr></table></figure>
 </li>
-</ul>
-<h3 id="4-内置对象"><a href="#4-内置对象" class="headerlink" title="4.内置对象"></a>4.内置对象</h3><p>​                变量名                :真实类型                      :                     作用</p>
-<ul>
-<li>pageContext         :      PageContext                     :   当前页面共享数据 ,还可以获取其他8个内置对象</li>
-<li>request                  :      HttpServletRequest         :    一次请求访问的多个资源(转发)</li>
-<li>session                  :       HttpSession                     :    一次会话的多次请求间</li>
-<li>application           :        ServletContext                :   所有的用户间共享数据</li>
-<li>rseponse              :        HttpServletResponse     :   响应对象</li>
-<li>page                      :        Object                              :   当前页面(Servlet)的对象,    this</li>
-<li>out                         :        JspWriter                         :    输出对象,数据输出到页面上</li>
-<li>config                    :        ServletConfig                 :     Servlet的配置对象</li>
-<li>exception             :         Throwable                     :      异常对象  </li>
-</ul>
-<h2 id="MVC"><a href="#MVC" class="headerlink" title="MVC:"></a>MVC:</h2><ol>
-<li>M:Model ,模型, JavaBean<ul>
-<li>完成具体的业务操作,如:查询数据库,封装对象</li>
-</ul>
-</li>
-<li>V:View,视图,JSP<ul>
-<li>展示数据</li>
-</ul>
-</li>
-<li>C:Controller,控制器,Servlet<ul>
-<li>获取用户的输入</li>
-<li>调用模型</li>
-<li>将数据交给视图进行展示</li>
-</ul>
-</li>
-</ol>
-<h2 id="EL表达式"><a href="#EL表达式" class="headerlink" title="EL表达式:"></a>EL表达式:</h2><ol>
-<li>概念:Expresssion language 表达式语言</li>
-<li>作用:替换和简化JSP页面中Java代码的缩写</li>
-<li>语法:${表达式}</li>
-<li>注意:<ol>
-<li>JSP默认是支持el表达式的,如果要忽略el表达式<ul>
-<li>设置jsp中的page指令中的 :ELIgnored=”true”  忽略当前页面中所有的el表达式</li>
-<li>\${}  :忽略当前这个el表达式</li>
-</ul>
-</li>
-</ol>
-</li>
-<li>使用:<ol>
-<li>运算:<ul>
-<li>运算符:<ol>
-<li>算数运算符:+ - * /(div) %(mod)</li>
-<li>比较运算符:&gt;  &lt; &gt;=  &lt;= == !=</li>
-<li>逻辑运算符: &amp;&amp;(and)  ||(or)   !(not)</li>
-<li>空运算符:empty<ul>
-<li>功能: 用于判断字符串,集合,数组对象是否为null,或者长度是否为0</li>
-<li>${empty list}:判断字符串,集合,数组,对象是否为null,或者长度是否为0</li>
-<li>${not empty list}:表示判断字符串,集合,数组是否不为null,并且长度&gt;0</li>
-</ul>
-</li>
-</ol>
-</li>
-</ul>
-</li>
-<li>获取值:   <ol>
-<li>el表达式只能从域对象中获取值  </li>
-<li>语法:<ol>
-<li>${域名称.键名}  :从指定域中获取值<ul>
-<li>域名称:<ol>
-<li>pageScope     —&gt;  pageContext</li>
-<li>requestScope  —&gt;  request</li>
-<li>sessionScope  —&gt;   session</li>
-<li>applicationScope —&gt; application</li>
-</ol>
-</li>
-<li>举例:在request域中存储了name :张三</li>
-<li>获取:${requestScope.name}</li>
-</ul>
-</li>
-<li>${域名}:表示依次从最小的域中查找是否有该键对应的值,直到找到为止</li>
-<li>获取对象,List集合,Map集合的值<ol>
-<li>对象:${域名称.键名.属性名}<ul>
-<li>本质上会去调用对象的getter方法</li>
-</ul>
-</li>
-<li>List集合:${域名称.键名.[索引]},索引越界会显示空字符串(什么都不显示,不会报错)</li>
-<li>Map集合:<ul>
-<li>${域名称.键名.Key名称}</li>
-<li>${域名称.键名[“Key名称”]}</li>
-</ul>
-</li>
-</ol>
-</li>
-</ol>
-</li>
-<li>隐式对象:<ul>
-<li>el表达式中有11个隐式对象</li>
-<li>pageContext:<ol>
-<li>获取jsp其他八个内置对象<ul>
-<li>${pageContext.request.contextPath}:动态获取虚拟目录</li>
-</ul>
-</li>
-</ol>
-</li>
-</ul>
-</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-<h2 id="JSTL"><a href="#JSTL" class="headerlink" title="JSTL:"></a>JSTL:</h2><ol>
-<li><p>概念:JavaServer Pages Tag Library :JSP标准标签库</p>
-<ul>
-<li>是由Apache组织提供的开源的免费的jsp标签</li>
-</ul>
-</li>
-<li><p>作用:用于简化和替换jsp页面上的Java代码</p>
-</li>
-<li><p>使用步骤:</p>
+<li><p>【推荐】常量的复用层有5层:跨应用共享常量,应用内共享常量,子工程内共享常量,包内共享常量,类内共享常量</p>
 <ol>
-<li>导入jstl相关的jar包</li>
-<li>引入标签库: taglib指令:  &lt;%@ taglib %&gt;</li>
-<li>使用标签库</li>
+<li><p>跨应用共享常量:防止在二方库中,通常是在Client.jar中的constant目录下</p>
+</li>
+<li><p>应用内共享常量:放置在一方库中,通常是在子模块中的constant目录下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">反例:易懂变量也要统一定义成应用内共享变量,两位工程师在两个类中分别定义了表示&quot;是&quot;的变量:</span><br><span class="line">类A中:public static final String YES = &quot;yes&quot;;</span><br><span class="line">类B中:public static final String YES = &quot;y&quot;;</span><br><span class="line">A.YES.equals(B.YES),预期是true,但返回的是false,导致了先上问题</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>子工程内部共享变量:即在当前子工程的constant目录下</p>
+</li>
+<li><p>包内共享变量:即在当前包下单独的constant目录下</p>
+</li>
+<li><p>类内共享常量:直接在类内部private static final 定义</p>
+</li>
 </ol>
 </li>
-<li><p>常用的JSTL标签</p>
-<ol>
-<li><p>if                :c:if标签没有else情况,想要else情况,则可以在定义一个c:if标签</p>
+<li><p>【推荐】如果变量值仅在一个固定范围内变化用enum类型来定义。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">说明：如果存在名称之外的延伸属性使用enum类型，下面正例中的数字就是延伸信息，表示一年中的第几个季节。</span><br><span class="line">正例： </span><br><span class="line">public enum SeasonEnum &#123; </span><br><span class="line">    SPRING(1), SUMMER(2), AUTUMN(3), WINTER(4); </span><br><span class="line">    int seq; </span><br><span class="line">    SeasonEnum(int seq)&#123; this.seq = seq; </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="代码格式"><a href="#代码格式" class="headerlink" title="代码格式"></a>代码格式</h2><ol>
+<li><p>【强制】大括号的使用约定。如果是大括号内为空，则简洁地写成{}即可，不需要换行；如果是非空代码块则：</p>
 <ul>
-<li>c: if标签    1.属性,       必须属性:test  接收boolean表达式           </li>
-<li>如果表达式为true,则显示if标签体内容,如果为false,则不显示标签体内容       <ul>
-<li>一般情况下,test属性值会结合el表达式一起使用</li>
+<li>左大括号前不换行。</li>
+<li>左大括号后换行。</li>
+<li>右大括号前换行。</li>
+<li>右大括号后还有else等代码则不换行；</li>
+<li>表示终止的右大括号后必须换行。</li>
 </ul>
 </li>
-</ul>
+<li><p>【强制】 左小括号和字符之间不出现空格；同样，右小括号和字符之间也不出现空格。</p>
 </li>
-<li><p>choose   : 相当于java代码中的switch语句</p>
-<ol>
-<li>使用choose标签取出数字      //相当于switch声明</li>
-<li>使用when标签做数字判断      //相当于 case</li>
-<li>otherwise标签做其他情况的声明  //相当于default</li>
-</ol>
+<li><p>【强制】if/for/while/switch/do等保留字与括号之间都必须加空格</p>
 </li>
-<li>foreach:相当于java代码中的for语句</li>
-</ol>
+<li><p>【强制】任何二目、三目运算符的左右两边都需要加一个空格。</p>
 </li>
-<li><p>练习:</p>
+<li><p>【强制】采用四个空格缩进,禁止使用tab控制符</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">如果采用tab缩进,必须设置1个tab为四个空格.idea设置tab为四个空格时,请勿勾选use tab character;而在Eclipse中,必须勾选insert space for tabs</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>【强制】注释的双斜线与内容之间有且仅一个空格。</p>
+</li>
+<li><p>【强制】单行字符数限不超过 120 个，超出需要换行时 遵循如下原则：</p>
 <ul>
-<li>需求:在request域中有一个存有User对象的List集合,需要使用jstl标签将list集合数据展示到jsp页面的表格table中</li>
+<li>第二行相对一缩进 4个空格，从第三行开始不再继续缩进</li>
+<li>运算符与下文一起换行。</li>
+<li>方法调用的点符号与下文一起换行。</li>
+<li>方法调用时，多个参数，需要换行时，在逗号后进行。</li>
+<li>在括号前不要换行，见反例。</li>
 </ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">正例：</span><br><span class="line">StringBuffer sb = new StringBuffer();</span><br><span class="line">// 超过120个字符的情况下，换行缩进4个空格，点号和方法名称一起换行</span><br><span class="line">sb.append(&quot;zi&quot;).append(&quot;xin&quot;)...</span><br><span class="line">.append(&quot;huang&quot;)...</span><br><span class="line">.append(&quot;huang&quot;)...</span><br><span class="line">.append(&quot;huang&quot;);</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">反例：</span><br><span class="line">StringBuffer sb = new StringBuffer();</span><br><span class="line">// 超过120个字符的情况下，不要在括号前换行</span><br><span class="line">sb.append(&quot;zi&quot;).append(&quot;xin&quot;)...append</span><br><span class="line">(&quot;huang&quot;);</span><br><span class="line">// 参数很多的方法调用可能超过120个字符，不要在逗号前换行</span><br><span class="line">method(args1, args2, args3, ...</span><br><span class="line">, argsX);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>【强制】方法参数在定义和传入时，多个参数逗号后边必须加空格。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">正例：下例中实参的&quot;a&quot;,后边必须要有一个空格。</span><br><span class="line">method(&quot;a&quot;, &quot;b&quot;, &quot;c&quot;);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>【强制】IDE的text file encoding设置为UTF-8; IDE中文件的换行符使用Unix格式，不要使用Windows格式。</p>
+</li>
+<li><p>【推荐】没有必要增加若干空格来使某一行的字符与上一行对应位置的字符对齐。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">正例：</span><br><span class="line">int a = 3;</span><br><span class="line">long b = 4L;</span><br><span class="line">float c = 5F;</span><br><span class="line">StringBuffer sb = new StringBuffer();</span><br><span class="line">说明：增加sb这个变量，如果需要对齐，则给a、b、c都要增加几个空格，在变量比较多的情况下，是非常累赘的事情。</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>【推荐】不同逻辑、不同语义、不同业务的代码之间插入一个空行分隔开来以提升可读性。</p>
 </li>
 </ol>
-<h2 id="三层架构"><a href="#三层架构" class="headerlink" title="三层架构:"></a>三层架构:</h2><p>软件设计架构:</p>
+<h2 id="OOP规约"><a href="#OOP规约" class="headerlink" title="OOP规约"></a>OOP规约</h2><ol>
+<li><p>【强制】避免通过一个类的对象引用访问此类的静态变量或静态方法，无谓增加编译器解析成本，直接用类名来访问即可</p>
+</li>
+<li><p>【强制】所有的覆写方法，必须加@Override注解。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@Override注解可以准确判断是否覆盖成功,另外,如果在抽象类中对方法签名进行了修改,其实现类会马上编译报错</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>相同参数类型,相同业务含义,才可以使用Java的可变参数,避免使用Object</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">说明:可变参数必须放置在参数列表的最后(建议工程师们尽量不适用可变参数编程)</span><br><span class="line">正例:public User listUsers(String type, Long ...ids)&#123;...&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>【强制】外部正在调用或者二方库依赖的接口，不允许修改方法签名，避免对接口调用方产生影响。接口过时必须加@Deprecated注解，并清晰地说明采用的新接口或者新服务是什么。</p>
+</li>
+<li><p>【强制】不能使用过时的类或方法。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">说明:java.net.URLDecoder中的方法decode(String encodeStr)已经过时,应该使用双参数decode(String source, String encode)。接口提供方既然明确是过时接口,那么有义务同时提供新的接口;作为接口的调用方来说,有义务去考证过时方法的新实现是什么</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>【强制】Object的equals方法容易抛空指针异常，应使用常量或确定有值的对象来调用equals。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">正例：&quot;test&quot;.equals(object); </span><br><span class="line">反例：object.equals(&quot;test&quot;);</span><br><span class="line">说明：推荐使用java.util.Objects#equals（JDK7引入的工具类）</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>【强制】所有的相同类型的包装类对象之间值的比较，全部使用equals方法比较。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">说明：</span><br><span class="line">对于Integer var = ? 在-128至127范围内的赋值，Integer对象是在IntegerCache.cache产生，会复用已有对象，这个区间内的Integer值可以直接使用==进行判断，但是这个区间之外的所有数据，都会在堆上产生，并不会复用已有对象，这是一个大坑，推荐使用equals方法进行判断。</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>关于基本数据类型与包装数据类型的使用标准如下:</p>
 <ol>
-<li>界面层(表示层):用户看的界面,用户可以通过界面上的组件和服务器进行交互</li>
-<li>业务逻辑层:处理业务逻辑的</li>
-<li>数据访问层:操作数据存储文件<ul>
-<li><img src="/2019/07/29/JSP/软件开发的三层架构.png" alt="软件开发的三层架构"></li>
-</ul>
+<li>【强制】所有的POJO属性必须使用包装数据类型</li>
+<li>【强制】RPC方法的返回值和参数必须使用包装数据类型</li>
+<li>【推荐】所有的局部变量使用基本数据类型</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">说明:POJO类属性没有初值,是要提醒使用者在使用时,必须自己显式的进行赋值,任何NPE问题,或者入库检查,都由使用者来保证</span><br><span class="line">正例:数据库的查询结果可能是null,因为自动拆箱,所以用基本数据类型接收有NPE风险</span><br><span class="line">反例:如果显示成交总额涨跌情况,即正负X%,x为基本数据类型,调用的RPC服务在调用不成功时,返回的是默认值,页面显示0%,这是不合理的,应该显示成中画线,所以包装数据类型的null值,能够表示额外的信息,如:远程调用失败,异常退出等</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>【强制】在定义DO/DTO/VO等POJO类时,不要设定任何属性默认值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">反例:POJO类的gmtCreate默认值为new Date();,但是这个属性在数据提取时并没有置入具体值,在更新其他字段时又附带更新了此字段,导致创建时间被修改成为当前时间</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 
@@ -894,7 +798,7 @@
   <li class="post-copyright-link">
     <strong>Beitragslink: </strong>
     
-    <a href="https://ChengqunYang.github.io/2019/07/29/JSP/" title="JSP相关内容">https://ChengqunYang.github.io/2019/07/29/JSP/</a>
+    <a href="https://ChengqunYang.github.io/2019/11/14/阿里规约学习心得（一）/" title="阿里规约学习心得（一）">https://ChengqunYang.github.io/2019/11/14/阿里规约学习心得（一）/</a>
   </li>
   <li class="post-copyright-license">
     <strong>Urheberrechtshinweis:  </strong>Alle Artikel in diesem Blog sind unter <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> lizenziert, außer es wird anders angegeben.</li>
@@ -907,9 +811,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/JavaWeb/" rel="tag"><i class="fa fa-tag"></i> JavaWeb</a>
-          
             <a href="/tags/Java/" rel="tag"><i class="fa fa-tag"></i> Java</a>
+          
+            <a href="/tags/编程规范/" rel="tag"><i class="fa fa-tag"></i> 编程规范</a>
           
         </div>
       
@@ -980,8 +884,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/07/28/Cookie和Session/" rel="next" title="Cookie和Session">
-                <i class="fa fa-chevron-left"></i> Cookie和Session
+              <a href="/2019/10/03/各种排序算法/" rel="next" title="各种排序算法">
+                <i class="fa fa-chevron-left"></i> 各种排序算法
               </a>
             
           </div>
@@ -989,10 +893,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/09/02/SpringMVC的相关配置/" rel="prev" title="SpringMVC的相关配置">
-                SpringMVC的相关配置 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -1297,7 +1197,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#JSP"><span class="nav-number">1.</span> <span class="nav-text">JSP:</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-概念"><span class="nav-number">1.1.</span> <span class="nav-text">1. 概念:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-指令"><span class="nav-number">1.2.</span> <span class="nav-text">2.指令:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-注释"><span class="nav-number">1.3.</span> <span class="nav-text">3.注释:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-内置对象"><span class="nav-number">1.4.</span> <span class="nav-text">4.内置对象</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MVC"><span class="nav-number">2.</span> <span class="nav-text">MVC:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#EL表达式"><span class="nav-number">3.</span> <span class="nav-text">EL表达式:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JSTL"><span class="nav-number">4.</span> <span class="nav-text">JSTL:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三层架构"><span class="nav-number">5.</span> <span class="nav-text">三层架构:</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#编程规约"><span class="nav-number">1.</span> <span class="nav-text">编程规约</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#命名风格"><span class="nav-number">1.1.</span> <span class="nav-text">命名风格</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常量定义"><span class="nav-number">1.2.</span> <span class="nav-text">常量定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码格式"><span class="nav-number">1.3.</span> <span class="nav-text">代码格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#OOP规约"><span class="nav-number">1.4.</span> <span class="nav-text">OOP规约</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -1485,7 +1385,7 @@
   
     <script>
   window.livereOptions = {
-    refer: '2019/07/29/JSP/'
+    refer: '2019/11/14/阿里规约学习心得（一）/'
   };
   (function(d, s) {
     var j, e = d.getElementsByTagName(s)[0];
