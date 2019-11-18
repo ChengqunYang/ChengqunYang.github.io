@@ -118,7 +118,7 @@
 <meta property="og:site_name" content="Talk is cheap.  Show me the code.">
 <meta property="og:description" content="一个优秀的工程师和一个普通的工程师的区别，不是满天飞舞的构架图，他的功底体现在所写的每一行代码上。 编程规约命名风格 【强制】代码中的命名均不能以下划线或美元符号开始，也不能以下划线或美元符号结束  【强制】代码中的命名严禁使用拼音与英文混合的方式，更不允许直接使用中文的方式  【强制】类名使用UpperCamelCase风格，但以下情形例外：DO / BO / DTO / VO / AO / P">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-11-17T14:56:35.427Z">
+<meta property="og:updated_time" content="2019-11-18T12:59:52.818Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="阿里规约学习心得（一）">
 <meta name="twitter:description" content="一个优秀的工程师和一个普通的工程师的区别，不是满天飞舞的构架图，他的功底体现在所写的每一行代码上。 编程规约命名风格 【强制】代码中的命名均不能以下划线或美元符号开始，也不能以下划线或美元符号结束  【强制】代码中的命名严禁使用拼音与英文混合的方式，更不允许直接使用中文的方式  【强制】类名使用UpperCamelCase风格，但以下情形例外：DO / BO / DTO / VO / AO / P">
@@ -503,7 +503,7 @@
                 
                   <span class="post-meta-item-text">Bearbeitet am</span>
                 
-                <time title="Geändert am: 2019-11-17 22:56:35" itemprop="dateModified" datetime="2019-11-17T22:56:35+08:00">2019-11-17</time>
+                <time title="Geändert am: 2019-11-18 20:59:52" itemprop="dateModified" datetime="2019-11-18T20:59:52+08:00">2019-11-18</time>
               
             
           </span>
@@ -549,7 +549,7 @@
                 
                   <span class="post-meta-item-text">Symbole im Artikel gezählt: </span>
                 
-                <span title="Symbole im Artikel gezählt">8.6k</span>
+                <span title="Symbole im Artikel gezählt">14k</span>
               
 
               
@@ -563,7 +563,7 @@
                 
                   <span class="post-meta-item-text">Lesezeit &asymp;</span>
                 
-                <span title="Lesezeit">8 minuten.</span>
+                <span title="Lesezeit">12 minuten.</span>
               
             </div>
           
@@ -786,6 +786,67 @@
 <li>如果自定义对象作为Map的键，那么必须重写hashCode和equals</li>
 </ol>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">说明：String重写了hashCode和equals方法，所以我们可以非常愉快的将String对象作为key来使用</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>【强制】ArrayList的subList结果不可以强转为ArrayList，否则会抛出ClassCastException异常，即java.util.RandomAccessSubList cannot be cast to java.util.ArrayList。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">说明：sublist返回的是ArrayList的内部类subList，并不是ArrayList，而是ArrayList的一个视图，对与subList子列表的操作，最终都会反应到原始列表上。</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>【强制】在subList场景中，高度注意对原集合元素个数的修改，会导致子列表的遍历、增加、删除均产生ConcurrentModificationException异常。</p>
+</li>
+<li><p>【强制】使用集合转数组的方法，必须使用集合的toArray(T[] arrray),传入的是类型完全一样的数组，大小就是list.size()。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">说明：当使用toArray带参方法，入参分配的数组空间不够大时，toArray方法内部将重新分配内存空间，并返回新数组地址，如果数组元素大于实际所需，下标为[list.size()]的数组元素将被置为null,其它数组元素保持原值，因此最好将方法入参数组大小定义为与集合元素个数一致。</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">正例：</span><br><span class="line">List&lt;String&gt; list = new ArrayList&lt;Sting&gt; (2);</span><br><span class="line">list.add(&quot;guan&quot;);</span><br><span class="line">list.add(&quot;bao&quot;);</span><br><span class="line">String[] array = new String[list.size()];</span><br><span class="line">array = list.toArray(array);</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">反例：</span><br><span class="line">直接使用toArray无参方法存在问题，此方法返回的值只能是Object[]类，若强制转化为其他类型，数据将出现ClassCastException错误。</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>【强制】在使用工具Arrays.asList()把数组转化为集合时，不能使用其修改集合相关的方法，他的add/remove/clear方法会抛出 UnsupportedOperationException异常。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">说明：asList的返回对象是一个Arrays内部类，并没有实现集合的修改方法，Arrays.asList体现的是适配器模式，只是转化接口，后台数据仍是数组。</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">String[] str = new String[] &#123;&quot;you&quot;,&quot;wu&quot;&#125;;</span><br><span class="line">List list = Arrays.asList(str);</span><br><span class="line">第一种情况：</span><br><span class="line">list.add(&quot;hhh&quot;) 运行时异常。</span><br><span class="line">第二种情况：</span><br><span class="line">如果str[0] = &quot;metoo&quot;; 那么list.get(0) 也会随之改变。</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>【强制】泛型通配符&lt;? extends T&gt;用来接收返回的数据，此写法的泛型集合不能使用add方法，而&lt;? super T&gt;不能使用get方法，因为其作为接口调用赋值时容易出错。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">说明：</span><br><span class="line">扩展说一下 PESC(Producer Extends Consumer Super)原则：第一，频繁往外读取内容的，适合用&lt;? extends T&gt;;第二，经常往里插入的，适合使用&lt;? super T&gt;。</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>【强制】不要在foreach循环里进行元素的remove/add操作，remove元素请使用Iterator方式，如果并发操作，需要对Iterator对象加锁。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">正例：</span><br><span class="line">Iterator&lt;Sting&gt; iterator = list.iterator();</span><br><span class="line">while(iterator.hasNext()) &#123;</span><br><span class="line">	String item = iterator.next();</span><br><span class="line">	if(删除元素的条件) &#123;</span><br><span class="line">		iterator.remove();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">反例：</span><br><span class="line">List&lt;String&gt; list = new ArrayList&lt;String&gt;();</span><br><span class="line">	list.add(&quot;1&quot;);</span><br><span class="line">	list.add(&quot;2&quot;);</span><br><span class="line">	for(String item : list) &#123;</span><br><span class="line">		if(&quot;1&quot;.equals(item))&#123;</span><br><span class="line">			list.remove(item);   // 直接调用集合的remove方法，会导致迭代器的hasnext方法出现故障，导致异常。</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>【强制】在JDk 7 及以上版本中，Comparator要满足如下三个条件，不然Arrays.sort,Collections.sort会报IllegalArgumentException异常。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">说明：三个条件如下。</span><br><span class="line">1. x,y的比较结果和y,x的比较结果相反</span><br><span class="line">2. x&gt;y,y&gt;z,则x&gt;z。</span><br><span class="line">3. x=y,则x,z比较结果和y,z比较结果相同</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">反例：</span><br><span class="line">下例中没有处理相等的情况，交换两个对象判断结果相同。不符合第三个条件，在实际使用中可能会出现异常。</span><br><span class="line">new Comparator&lt;Student&gt; () &#123;</span><br><span class="line">	@Override</span><br><span class="line">	public int compare(Student o1,Student o2) &#123;</span><br><span class="line">		return o1.getId()&gt;o2.getId() ? 1 : -1;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>【推荐】在集合初始化时，指定集合初始值大小</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">说明:HashMap使用HashMap(int initialCapacity)初始化</span><br><span class="line">正例：</span><br><span class="line">initialCapacity = (需要存储的元素的个数/负载因子) + 1。注意负载因子（即loader factor) 默认为0.75，如果暂时无法确定初始值大小，请设置为16（即默认值）</span><br><span class="line">反例：</span><br><span class="line">HashMap 需要放置1024个元素，由于没有设置容量初始大小，随着元素不断增加，容量被迫扩大7次，resize需要重新建hash表，这严重影响性能。</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>【推荐】使用entrySet遍历Map类集合K/V,而不是用KeySet方式遍历。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">说明：keySet其实遍历了2次，一次是转为Iterator对象，另一次是从hashMap中取出key所对应的value。如果是jdk 8 ，使用map.foreach方法。</span><br><span class="line">正例：</span><br><span class="line">values()返回的是V值集合，是一个list集合对象，；keySet()返回的是一个K值集合，是一个Set集合对象；entrySet()返回的是K/V值组合集合。</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>【推荐】高度注意Map类集合K/V能不能存储null值的情况。</p>
+<p>| 集合类            | Key          | Value        | Super       | 说明                    |<br>| —————– | ———— | ———— | ———– | ———————– |<br>| Hashtable         | 不允许为null | 不允许为null | Dictionary  | 线程安全                |<br>| ConcurrentHashMap | 不允许为null | 不允许为null | AbstractMap | 锁分段技术（JDK 8:CAS） |<br>| TreeMap           | 不允许为null | 允许为null   | AbstractMap | 线程不安全              |<br>| HashMap           | 允许为null   | 允许为null   | AbstractMap | 线程不安全              |</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">反例：由于HashMap的干扰，很多人认为ConcurrentHashMap是可以置入null值的，而事实上存储null值时会抛出NPE异常</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>【参考】合理利用集合的有序性（sort）和稳定性（order），避免集合的无序性（unsort）和不稳定性（unorder）带来的负面影响。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">说明：有序性是指遍历的结果是按某种比较规则依次排列的。稳定性是值集合每次遍历的元素次序是一定的。如：ArrayList是order/unsort；HashMap是 unorder/unsort; TreeSet是order/sort。</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>【参考】利用Set元素唯一的特性，可以快速对一个集合进行去重操作，避免使用List的contains方法进行遍历、对比、去重操作</p>
+</li>
+</ol>
+<h2 id="并发处理"><a href="#并发处理" class="headerlink" title="并发处理"></a>并发处理</h2><ol>
+<li><p>【强制】获取单例对象需要保证线程安全,其中的方法也要保证线程安全。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">说明：资源驱动类、工具类、单例工厂类都需要注意。</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>【强制】在创建对象或者线程池时，请指定有意义的线程名称，方便出错时回溯。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">正例：</span><br><span class="line">public class TimerTashThread extends Thread &#123;</span><br><span class="line">	public TimerTashThread() &#123;</span><br><span class="line">	super.setName(&quot;TimerTaskThread&quot;);</span><br><span class="line">	...</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>【强制】线程资源必须通过线程池提供，不允许在应用中自己显式的创建线程。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">说明：使用线程池的好处是减少在创建和销毁线程上所消耗的时间和系统资源，解决资源不足的问题。如果不使用线程池，有可能造成系统创建大量同类线程而导致消耗完内存或者“过度切换”的问题。</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>【强制】线程池不允许使用Executors创建，而是通过ThreadPoolExecutor的方式创建,这样的处理方式能够让编写代码的工程师更加明确线程池的运行规则,规避资源耗尽的风险。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">说明:Executors返回的线程池的弊端如下：</span><br><span class="line">1. FixedThreadPool和SingleThreadPool: 允许的请求队列长度为Integer.MAX_VALUE,可能会堆积大量的请求，从而导致OOM。</span><br><span class="line">2. CachedThreadPool和ScheduledThreadPool: 允许的创建线程数量为Integer.MAX_VALUE,可能会创建大量的线程，从而导致OOM。</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>【强制】SimpleDateFormat 是线程不安全的类,一般不要定义为static变量,如果定义为static,必须加锁,或者使用DateUtils工具类。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">正例：注意线程安全，使用DateUtils，推荐处理如下：</span><br><span class="line">private static final ThreadLocal&lt;DateFormat&gt; df = new ThreadLocal &lt;DateFormat&gt;() &#123;</span><br><span class="line">	@Override</span><br><span class="line">	protected DateFormat initialValue() &#123;</span><br><span class="line">		return new SimpleDateFormat(&quot;yyyy-MM-dd&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">说明：如果是JDK 8的应用，可以使用Instant 代替Date,LocalDateTime代替Calendar,DateTimeFormatter代替SimpleDateFormat,官方给出的解释：simple beautiful strong immutable thread-safe。</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>【强制】在高并发场景中，同步调用应该去考量锁的性能损耗，能用无锁的数据结构，就不要用锁；能锁区块，就不要锁整个方法体；能用对象锁，就不要用类锁。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">说明：使加锁的代码块工作量尽可能小，避免在锁代码块中调用RPC方法。</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 
@@ -1254,7 +1315,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#编程规约"><span class="nav-number">1.</span> <span class="nav-text">编程规约</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#命名风格"><span class="nav-number">1.1.</span> <span class="nav-text">命名风格</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常量定义"><span class="nav-number">1.2.</span> <span class="nav-text">常量定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码格式"><span class="nav-number">1.3.</span> <span class="nav-text">代码格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#OOP规约"><span class="nav-number">1.4.</span> <span class="nav-text">OOP规约</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#集合处理"><span class="nav-number">1.5.</span> <span class="nav-text">集合处理</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#编程规约"><span class="nav-number">1.</span> <span class="nav-text">编程规约</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#命名风格"><span class="nav-number">1.1.</span> <span class="nav-text">命名风格</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常量定义"><span class="nav-number">1.2.</span> <span class="nav-text">常量定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码格式"><span class="nav-number">1.3.</span> <span class="nav-text">代码格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#OOP规约"><span class="nav-number">1.4.</span> <span class="nav-text">OOP规约</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#集合处理"><span class="nav-number">1.5.</span> <span class="nav-text">集合处理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#并发处理"><span class="nav-number">1.6.</span> <span class="nav-text">并发处理</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -1296,7 +1357,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="Insgesamt gezählte Symbole">149k</span>
+    <span title="Insgesamt gezählte Symbole">154k</span>
   
 
   
@@ -1305,7 +1366,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="Insgesamte Lesezeit">2:15</span>
+    <span title="Insgesamte Lesezeit">2:20</span>
   
 </div>
 
