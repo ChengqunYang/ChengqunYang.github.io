@@ -118,7 +118,7 @@
 <meta property="og:site_name" content="Talk is cheap.  Show me the code.">
 <meta property="og:description" content="一个优秀的工程师和一个普通的工程师的区别，不是满天飞舞的构架图，他的功底体现在所写的每一行代码上。 编程规约命名风格 【强制】代码中的命名均不能以下划线或美元符号开始，也不能以下划线或美元符号结束  【强制】代码中的命名严禁使用拼音与英文混合的方式，更不允许直接使用中文的方式  【强制】类名使用UpperCamelCase风格，但以下情形例外：DO / BO / DTO / VO / AO / P">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-11-18T12:59:52.818Z">
+<meta property="og:updated_time" content="2019-11-19T03:15:53.445Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="阿里规约学习心得（一）">
 <meta name="twitter:description" content="一个优秀的工程师和一个普通的工程师的区别，不是满天飞舞的构架图，他的功底体现在所写的每一行代码上。 编程规约命名风格 【强制】代码中的命名均不能以下划线或美元符号开始，也不能以下划线或美元符号结束  【强制】代码中的命名严禁使用拼音与英文混合的方式，更不允许直接使用中文的方式  【强制】类名使用UpperCamelCase风格，但以下情形例外：DO / BO / DTO / VO / AO / P">
@@ -503,7 +503,7 @@
                 
                   <span class="post-meta-item-text">Bearbeitet am</span>
                 
-                <time title="Geändert am: 2019-11-18 20:59:52" itemprop="dateModified" datetime="2019-11-18T20:59:52+08:00">2019-11-18</time>
+                <time title="Geändert am: 2019-11-19 11:15:53" itemprop="dateModified" datetime="2019-11-19T11:15:53+08:00">2019-11-19</time>
               
             
           </span>
@@ -549,7 +549,7 @@
                 
                   <span class="post-meta-item-text">Symbole im Artikel gezählt: </span>
                 
-                <span title="Symbole im Artikel gezählt">14k</span>
+                <span title="Symbole im Artikel gezählt">15k</span>
               
 
               
@@ -563,7 +563,7 @@
                 
                   <span class="post-meta-item-text">Lesezeit &asymp;</span>
                 
-                <span title="Lesezeit">12 minuten.</span>
+                <span title="Lesezeit">14 minuten.</span>
               
             </div>
           
@@ -847,6 +847,29 @@
 </li>
 <li><p>【强制】在高并发场景中，同步调用应该去考量锁的性能损耗，能用无锁的数据结构，就不要用锁；能锁区块，就不要锁整个方法体；能用对象锁，就不要用类锁。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">说明：使加锁的代码块工作量尽可能小，避免在锁代码块中调用RPC方法。</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>【强制】在对多个资源、数据库表、对象同时加锁时，需要保持一致的加锁顺序，否则可能会造成死锁。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">说明：如果线程1需要对表A、B、C一次全部加锁后才可以进行更新操作，那么线程2的加锁顺序也必须是A、B、C，否则可能出现死锁。</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>【强制】在并发修改同一个记录时，为了避免更新丢失，需要加锁。要么在应用层加锁，要么在缓存层加锁，要么在数据库层使用乐观锁，使用version作为更新依据。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">说明:如果每次访问冲突概率小于20%,推荐使用乐观锁,否则使用悲观锁,乐观锁的重试次数不得小于三次</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>【强制】对于多线程并行处理定时任务的情况,在Timer运行多个TimerTask时,只要其中之一没有捕获抛出的异常,洽谈任务便会自动终止运行,如果在处理定时任务时使用ScheduledExecutorService,则没有这个问题</p>
+</li>
+<li><p>【推荐】使用CountDownLatch进行异步转同步操作,每个线程退出前必须调用countDown方法,线程执行代码注意catch异常,确保countDown方法被执行,避免主线程无法执行至await方法,直到超时才返回结果 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">说明:子线程抛出异常堆栈,不能在主线程try-catch到</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>【推荐】避免Random实例被多个线程使用，虽然共享该实例是线程安全的，但会因竞争同一个seed导致性能下降。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">说明：Random实例包括java.util.Random的实例或者Math.random()的方式。</span><br><span class="line">正例：在JDK 7 之后可以直接使用API ThreadLocalRandom,而在JDK 7 之前，需要编码保证每个线程持有一个实例。</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>【推荐】在并发场景下，通过双重检查锁（double-checked locking）实现延迟初始化的优化问题隐患，推荐解决方案中较为简单的一种（适用于JDK 5及之后），即目标属性声明为volatile型。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">反例：</span><br><span class="line">class Singleton&#123;</span><br><span class="line">	private Helper helper = null;</span><br><span class="line">	public Helper getHelper() &#123;</span><br><span class="line">		if(helper == null) </span><br><span class="line">		synchronizde(this) &#123;</span><br><span class="line">			if(helper == null)&#123;</span><br><span class="line">			helper = new Helper();</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		return helper;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>【参考】volatile 解决多线程内存不可见的问题，对于一写多读，可以解决变量同步的问题，但是如果多写，同样无法解决线程安全问题。如果是count++操作，使用如下类实现：AtomicInteger count = new AtomicInteger();count.addAndGet(1);如果是JDK 8 ，推荐使用LongAdder对象，它比AtomicLong性能更好（减少乐观锁的重试次数）。</p>
+</li>
+<li><p>【参考】HashMap在容量不够时进行resize时，由于高并发可能出现死链，导致CPU占用飙升，在开发过程中可以使用其他数据结构或者加锁来规避此风险。</p>
+</li>
+<li><p>【参考】ThreadLocal无法解决共享对象的更新问题，ThreadLocal对象建议使用static修饰，这个变量是针对一个线程内所有操作共享的，所以设置为静态变量，所有此类实例共享此静态变量，也就是说，在类第一次被使用时加载，只分配一块存储空间，所有此类的对象（只要是这个线程内定义的）都可以操控这个变量。</p>
 </li>
 </ol>
 
@@ -1357,7 +1380,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="Insgesamt gezählte Symbole">154k</span>
+    <span title="Insgesamt gezählte Symbole">155k</span>
   
 
   
@@ -1366,7 +1389,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="Insgesamte Lesezeit">2:20</span>
+    <span title="Insgesamte Lesezeit">2:21</span>
   
 </div>
 
