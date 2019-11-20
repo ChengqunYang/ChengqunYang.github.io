@@ -118,7 +118,7 @@
 <meta property="og:site_name" content="Talk is cheap.  Show me the code.">
 <meta property="og:description" content="一个优秀的工程师和一个普通的工程师的区别，不是满天飞舞的构架图，他的功底体现在所写的每一行代码上。 编程规约命名风格 【强制】代码中的命名均不能以下划线或美元符号开始，也不能以下划线或美元符号结束  【强制】代码中的命名严禁使用拼音与英文混合的方式，更不允许直接使用中文的方式  【强制】类名使用UpperCamelCase风格，但以下情形例外：DO / BO / DTO / VO / AO / P">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-11-19T03:15:53.445Z">
+<meta property="og:updated_time" content="2019-11-20T15:08:57.175Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="阿里规约学习心得（一）">
 <meta name="twitter:description" content="一个优秀的工程师和一个普通的工程师的区别，不是满天飞舞的构架图，他的功底体现在所写的每一行代码上。 编程规约命名风格 【强制】代码中的命名均不能以下划线或美元符号开始，也不能以下划线或美元符号结束  【强制】代码中的命名严禁使用拼音与英文混合的方式，更不允许直接使用中文的方式  【强制】类名使用UpperCamelCase风格，但以下情形例外：DO / BO / DTO / VO / AO / P">
@@ -503,7 +503,7 @@
                 
                   <span class="post-meta-item-text">Bearbeitet am</span>
                 
-                <time title="Geändert am: 2019-11-19 11:15:53" itemprop="dateModified" datetime="2019-11-19T11:15:53+08:00">2019-11-19</time>
+                <time title="Geändert am: 2019-11-20 23:08:57" itemprop="dateModified" datetime="2019-11-20T23:08:57+08:00">2019-11-20</time>
               
             
           </span>
@@ -549,7 +549,7 @@
                 
                   <span class="post-meta-item-text">Symbole im Artikel gezählt: </span>
                 
-                <span title="Symbole im Artikel gezählt">15k</span>
+                <span title="Symbole im Artikel gezählt">17k</span>
               
 
               
@@ -563,7 +563,7 @@
                 
                   <span class="post-meta-item-text">Lesezeit &asymp;</span>
                 
-                <span title="Lesezeit">14 minuten.</span>
+                <span title="Lesezeit">16 minuten.</span>
               
             </div>
           
@@ -870,6 +870,49 @@
 <li><p>【参考】HashMap在容量不够时进行resize时，由于高并发可能出现死链，导致CPU占用飙升，在开发过程中可以使用其他数据结构或者加锁来规避此风险。</p>
 </li>
 <li><p>【参考】ThreadLocal无法解决共享对象的更新问题，ThreadLocal对象建议使用static修饰，这个变量是针对一个线程内所有操作共享的，所以设置为静态变量，所有此类实例共享此静态变量，也就是说，在类第一次被使用时加载，只分配一块存储空间，所有此类的对象（只要是这个线程内定义的）都可以操控这个变量。</p>
+</li>
+</ol>
+<h2 id="控制语句"><a href="#控制语句" class="headerlink" title="控制语句"></a>控制语句</h2><ol>
+<li><p>【强制】在一个switch块内，每个case要么通过break/return等来终止，要么注释说明程序将继续执行到哪一个case为止；在一个switch块内，都必须包含一个default语句并且放在最后，即使它没有任何内容。</p>
+</li>
+<li><p>【强制】在if/else/for/while/do语句中必须使用大括号。即使只有一行代码，也应避免采用单行的编码方式：if(condition) statements;。</p>
+</li>
+<li><p>【强制】在高并发场景中，避免使用 ”等于 ”判断作为中断或退出的条件。 判断作为中或退出的条件。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">说明： 如果并发控制没有处理好，容易产生等值判断被“击穿 ”的情况，使用大于或小区间判断条件来代替。 </span><br><span class="line">反例： 判断剩余奖品数量等于 0时，终止发放奖品但因为并处理错误导致数量瞬间变成了负数， 这样的话，活动无法终止。</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>【推荐】表达异常的分支时，少用if-else方式，这种方式可以改写成:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">if (condition) &#123;</span><br><span class="line">	...</span><br><span class="line">	return obj;</span><br><span class="line">&#125;</span><br><span class="line">// 接着写else的业务逻辑代码;</span><br><span class="line">说明：如果非得使用if()...else if()...else...方式表达逻辑，【强制】避免后续代码维护困难，请勿超过3层。</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>【推荐】除常用方法（如getXxx/isXxx）等外，不要在条件判断中执行其它复杂的语句，将复杂逻辑判断的结果赋值给一个有意义的布尔变量名，以提高可读性。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">说明：很多if语句内的逻辑相当复杂，阅读者需要分析条件表达式的最终结果，理解成本非常高。如果赋值给一个非常好理解的布尔变量则是件令人赏心悦目的事情。</span><br><span class="line">正例：</span><br><span class="line">// 伪代码如下</span><br><span class="line">final boolean existed = (file.open(fileName, &quot;w&quot;) != null) &amp;&amp; (...) || (...);</span><br><span class="line">if (existed) &#123;</span><br><span class="line">	...</span><br><span class="line">&#125;</span><br><span class="line">反例： </span><br><span class="line">if ((file.open(fileName, &quot;w&quot;) != null) &amp;&amp; (...) || (...)) &#123;</span><br><span class="line">	...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>【推荐】循环体中的语句要考量性能，以下操作尽量移至循环体外处理，如定义对象、变量、获取数据库连接，避免进行不必要的try-catch操作。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">说明：对循环体内的try-catch操作，需要思考是否可以移至循环体外。</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>【推荐】避免采用取反逻辑运算符。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">说明： 取反逻辑不利于快速理解，并且写法必然存在对应的正向。</span><br><span class="line">正例： 使用 if (x &lt; 628) if (x &lt; 628) if (x &lt; 628) 来表达 x 小于 628 。</span><br><span class="line">反例： 使用 if (!(x &gt;= 628)) if (!(x &gt;= 628)) if (!(x &gt;= 628)) 来表达 x 小于 628 。</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>【推荐】接口入参保护，这种场景常见的是用作批量操作的接口。</p>
+</li>
+<li><p>【参考】下列情形，需要进行参数校验：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1. 调用频次低的方法。</span><br><span class="line">2. 执行时间开销很大的方法。此情形中，参数校验时间几乎可以忽略不计,但如果因为参数错误导致中间执行回退，或者错误，那得不偿失。</span><br><span class="line">3. 需要极高稳定性和可用性的方法。</span><br><span class="line">4. 对外提供的开放接口，不管是RPC/API/HTTP接口。</span><br><span class="line">5. 敏感权限入口。</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>【参考】下列情形，不需要进行参数校验：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1. 极有可能被循环调用的方法。但在方法说明里必须注明外部参数检查要求。</span><br><span class="line">2. 底层调用频度比较高的方法。毕竟是像纯净水过滤的最后一道，参数错误不太可能到底层才会暴露问题。一般DAO层与Service层都在同一个应用中，部署在同一台服务器中，所以DAO的参数校验，可以省略。</span><br><span class="line">3. 被声明成private只会被自己代码所调用的方法，如果能够确定调用方法的代码传入参数已经做过检查或者肯定不会有问题，此时可以不校验参数</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="注释规约"><a href="#注释规约" class="headerlink" title="注释规约"></a>注释规约</h2><ol>
+<li><p>【强制】类、类属性、类方法的注释必须使用Javadoc规范，使用<code>/**内容*/格式，不得使用// xxx方式。</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">说明：说明：在IDE编辑窗口中，Javadoc方式会提示相关注释，生成Javadoc可以正确输出相应注释；在IDE中，工程调用方法时，不进入方法即可悬浮提示方法、参数、返回值的意义，提高阅读效率。</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>【强制】所有的抽象方法（包括接口中的方法），必须要用Javadoc注释，除了返回值、参数、异常说明外，还必须指出该方法做什么事情，实现什么功能。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">说明：对子类的实现要求，或者调用注意事项，请一并说明。</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>【强制】所有的类都必须添加创建者和创建日期。</p>
+</li>
+<li><p>【强制】方法内部单行注释，在被注释语句上方另起一行，使用//注释。方法内部多行注释使用/ /注释，注意与代码对齐。</p>
+</li>
+<li><p>【强制】所有的枚举类型字段必须要有注释，说明每个数据项的用途。</p>
 </li>
 </ol>
 
@@ -1338,7 +1381,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#编程规约"><span class="nav-number">1.</span> <span class="nav-text">编程规约</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#命名风格"><span class="nav-number">1.1.</span> <span class="nav-text">命名风格</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常量定义"><span class="nav-number">1.2.</span> <span class="nav-text">常量定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码格式"><span class="nav-number">1.3.</span> <span class="nav-text">代码格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#OOP规约"><span class="nav-number">1.4.</span> <span class="nav-text">OOP规约</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#集合处理"><span class="nav-number">1.5.</span> <span class="nav-text">集合处理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#并发处理"><span class="nav-number">1.6.</span> <span class="nav-text">并发处理</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#编程规约"><span class="nav-number">1.</span> <span class="nav-text">编程规约</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#命名风格"><span class="nav-number">1.1.</span> <span class="nav-text">命名风格</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常量定义"><span class="nav-number">1.2.</span> <span class="nav-text">常量定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码格式"><span class="nav-number">1.3.</span> <span class="nav-text">代码格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#OOP规约"><span class="nav-number">1.4.</span> <span class="nav-text">OOP规约</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#集合处理"><span class="nav-number">1.5.</span> <span class="nav-text">集合处理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#并发处理"><span class="nav-number">1.6.</span> <span class="nav-text">并发处理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#控制语句"><span class="nav-number">1.7.</span> <span class="nav-text">控制语句</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#注释规约"><span class="nav-number">1.8.</span> <span class="nav-text">注释规约</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -1380,7 +1423,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="Insgesamt gezählte Symbole">155k</span>
+    <span title="Insgesamt gezählte Symbole">157k</span>
   
 
   
@@ -1389,7 +1432,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="Insgesamte Lesezeit">2:21</span>
+    <span title="Insgesamte Lesezeit">2:23</span>
   
 </div>
 
